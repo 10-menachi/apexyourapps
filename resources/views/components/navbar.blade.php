@@ -5,8 +5,6 @@
                 <i class="fa-solid fa-bars"></i>
             </span>
             <span class="hidden ml-2 text-white capitalize">All Categories</span>
-
-            <!-- dropdown -->
             <div
                 class="absolute left-0 invisible w-full py-3 transition duration-300 bg-white divide-y divide-gray-300 shadow-md opacity-0 top-full divide-dashed group-hover:opacity-100 group-hover:visible">
                 <a href="#" class="flex items-center px-6 py-3 transition hover:bg-gray-100">
@@ -38,12 +36,14 @@
 
         <div class="flex items-center justify-between flex-grow py-5 md:pl-12">
             <div class="flex items-center space-x-6 capitalize">
-                <a href="index.html" class="text-gray-200 transition hover:text-white">Home</a>
-                <a href="pages/shop.html" class="text-gray-200 transition hover:text-white">Shop</a>
-                <a href="#" class="text-gray-200 transition hover:text-white">About us</a>
-                <a href="#" class="text-gray-200 transition hover:text-white">Contact us</a>
+                <a href="{{ route('welcome') }}" class="text-gray-200 transition hover:text-white">Home</a>
+                <a href="{{ route('shop') }}" class="text-gray-200 transition hover:text-white">Shop</a>
+                <a href="{{ route('about') }}" class="text-gray-200 transition hover:text-white">About us</a>
+                <a href="{{ route('contact') }}" class="text-gray-200 transition hover:text-white">Contact us</a>
             </div>
-            <a href="pages/login.html" class="text-gray-200 transition hover:text-white">Login</a>
+            @if (!Auth::check())
+                <a href="{{ route('login') }}" class="text-gray-200 transition hover:text-white">Login</a>
+            @endif
         </div>
     </div>
 </nav>
