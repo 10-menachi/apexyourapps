@@ -44,6 +44,13 @@
     @include('components.account.bonuses')
     @include('components.account.header')
     @yield('content')
+
+    <script>
+        document.getElementById('dob').addEventListener('change', function() {
+            document.getElementById('dob-hidden').value = this.value;
+        });
+    </script>
+
 </body>
 
 </html>

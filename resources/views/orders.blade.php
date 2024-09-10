@@ -96,11 +96,14 @@
                                 </a>
                             </nav>
                             <nav class="pt-3 list-group list-group-borderless">
-                                <a class="list-group-item list-group-item-action d-flex align-items-center"
-                                    href="account-signin.html">
-                                    <i class="opacity-75 ci-log-out fs-base me-2"></i>
-                                    Log out
-                                </a>
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button type="submit"
+                                        class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <i class="opacity-75 ci-log-out fs-base me-2"></i>
+                                        Log out
+                                    </button>
+                                </form>
                             </nav>
                         </div>
                     </div>
