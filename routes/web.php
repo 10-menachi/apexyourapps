@@ -40,6 +40,30 @@ Route::get('/dashboard', function () {
     return view('home-electronics');
 })->name('dashboard');
 
+Route::get('/payment-methods', function () {
+    return view('payment-methods');
+})->name('payment-methods');
+
+Route::get('/reviews', function () {
+    return view('reviews');
+})->name('reviews');
+
+Route::get('/addresses', function () {
+    return view('addresses');
+})->name('addresses');
+
+Route::get('/notifications', function () {
+    return view('notifications');
+})->name('notifications');
+
+Route::get('/help', function () {
+    return view('help');
+})->name('help');
+
+Route::get('/terms-conditions', function () {
+    return view('terms-conditions');
+})->name('terms-conditions');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
