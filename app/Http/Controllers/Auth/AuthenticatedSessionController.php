@@ -26,16 +26,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        try {
-            $request->authenticate();
 
-            $request->session()->regenerate();
+        $request->authenticate();
 
-            return redirect()->intended(route('homepage.view', absolute: false));
-        } catch (Exception $e) {
-            Log::error();
-            return redirect()->back()->with('error', 'Invalid credentials');
-        }
+        $request->session()->regenerate();
+
+        return redirect()->intended(route('homepage.view', absolute: false));
     }
 
     /**

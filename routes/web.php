@@ -24,6 +24,18 @@ Route::get('contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('orders', function () {
+    return view('orders');
+})->name('orders');
+
+Route::get('categories', function () {
+    return view('categories');
+})->name('categories');
+
+Route::get('privacy-policy', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

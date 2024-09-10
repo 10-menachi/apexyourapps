@@ -1,8 +1,6 @@
 @extends('layouts.guest')
 
 @section('title', 'Login')
-{{ Log::info('Login page visited') }}
-{{ Log::info($errors) }}
 @section('content')
     <main class="px-3 mx-auto content-wrapper w-100 ps-lg-5 pe-lg-4" style="max-width: 1920px">
         <div class="d-lg-flex">
@@ -41,6 +39,7 @@
                             @enderror
                         </div>
                     </div>
+
 
                     <div class="mb-4 d-flex align-items-center justify-content-end">
                         <div class="nav">
@@ -103,18 +102,5 @@
             </div>
         </div>
     </main>
-
-
-    <!-- Customizer toggle -->
-    <div class="pb-4 floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4">
-        <a class="shadow btn btn-sm btn-outline-secondary text-uppercase bg-body rounded-pill animate-rotate ms-2 me-n5"
-            href="#customizer" style="font-size: .625rem; letter-spacing: .05rem;" data-bs-toggle="offcanvas" role="button"
-            aria-controls="customizer">
-            Customize<i class="ci-settings fs-base ms-1 me-n2 animate-target"></i>
-        </a>
-    </div>
-
-
-    <!-- Bootstrap + Theme scripts -->
     <script src="assets/js/theme.min.js"></script>
 @endsection
