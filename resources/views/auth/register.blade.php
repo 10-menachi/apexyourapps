@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <input type="password" name="confirm_password"
+                    <input type="password" name="password_confirmation"
                         class="form-control form-control-lg @error('password') is-invalid @enderror"
                         placeholder="Confirm Password" required>
                     @error('password')
