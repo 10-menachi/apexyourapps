@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
     <!-- SEO Meta Tags -->
-    <title> @yield('title')</title>
+    <title>Apex | @yield('title')</title>
     <meta name="description" content="Apex Your Apps Ltd -  E-Commerce">
     <meta name="keywords"
         content="online shop, e-commerce, online store, market, 
@@ -53,22 +53,22 @@
 <!-- Body -->
 
 <body>
-   @include('components.customizer-offcanvas-and-shopping-cart-offcanvas')
-  
+    @include('components.customizer-offcanvas-and-shopping-cart-offcanvas')
 
-  @include('components.header')
+
+    @include('components.header')
 
     <!-- Page content -->
     <main class="content-wrapper">
 
-     @yield('content')
-      
+        @yield('content')
+
     </main>
 
 
-   @include('components.footer')
+    @include('components.footer')
 
-   @include('components.back-to-top-button')
+    @include('components.back-to-top-button')
 
 
 
