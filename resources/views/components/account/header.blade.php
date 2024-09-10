@@ -107,8 +107,6 @@
         </div>
         <div class="pb-1 navbar-stuck-hide"></div>
     </div>
-    <div class="flex-shrink-0 mb-0 h5 d-flex justify-content-center align-items-center text-primary bg-primary-subtle lh-1 rounded-circle"
-        style="width: 3rem; height: 3rem">{{ Auth::user()->name[0] }}</div>
     <div class="collapse position-absolute top-100 z-2 w-100 bg-dark d-lg-none" id="searchBar">
         <div class="container my-3 position-relative" data-bs-theme="dark">
             <i class="text-white ci-search position-absolute top-50 translate-middle-y d-flex fs-lg ms-3"></i>

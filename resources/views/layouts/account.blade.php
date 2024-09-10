@@ -41,8 +41,8 @@
 </head>
 
 <body>
-    @include('components.account.bonuses')
     @include('components.account.header')
+    @include('components.account.bonuses')
     @yield('content')
 
     <script>
