@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -19,16 +20,14 @@ Route::get('contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('categories', function () {
-    return view('categories');
-})->name('categories');
+Route::resource('categories', CategoriesController::class);
 
 Route::get('privacy-policy', function () {
     return view('privacy-policy');
 })->name('privacy-policy');
 
 Route::get('/dashboard', function () {
-    return view('home-electronics');
+    return redirect()->route('homepage.view');
 })->name('dashboard');
 
 require __DIR__ . '/auth.php';

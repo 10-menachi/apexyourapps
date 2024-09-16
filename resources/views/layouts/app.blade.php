@@ -53,12 +53,15 @@
 <!-- Body -->
 
 <body>
-    @include('components.customizer-offcanvas-and-shopping-cart-offcanvas')
 
+    @if (Auth::check())
+        @include('components.account.header')
+    @else
+        @include('components.header')
+    @endif
 
-    @include('components.header')
+    @include('components.cart')
 
-    <!-- Page content -->
     <main class="content-wrapper">
 
         @yield('content')

@@ -1,4 +1,3 @@
-  <!-- Navigation bar (Page header) -->
   <header class="p-0 navbar navbar-expand-lg navbar-dark bg-dark d-block z-fixed"
       data-sticky-navbar="{&quot;offset&quot;: 500}">
       <div class="container py-1 d-block py-lg-3" data-bs-theme="dark">
@@ -6,20 +5,16 @@
           <div class="row flex-nowrap align-items-center g-0">
               <div class="col col-lg-3 d-flex align-items-center">
 
-                  <!-- Mobile offcanvas menu toggler (Hamburger) -->
                   <button type="button" class="navbar-toggler me-4 me-lg-0" data-bs-toggle="offcanvas"
                       data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                   </button>
 
-                  <!-- Navbar brand (Logo) -->
-                  <a href="index.html" class="navbar-brand me-0">
+                  <a href="{{ route('dashboard') }}" class="navbar-brand me-0">
                       <img src="{{ asset('logo.png') }}" alt="Logo" class="w-75">
                   </a>
               </div>
               <div class="col col-lg-9 d-flex align-items-center justify-content-end">
-
-                  <!-- Search visible on screens > 991px wide (lg breakpoint) -->
                   <div class="position-relative flex-fill d-none d-lg-block pe-4 pe-xl-5">
                       <i class="text-white ci-search position-absolute top-50 translate-middle-y d-flex fs-lg ms-3"></i>
                       <input type="search"
@@ -27,7 +22,6 @@
                           placeholder="Search the products">
                   </div>
 
-                  <!-- Sale link visible on screens > 1200px wide (xl breakpoint) -->
                   <a class="d-none d-xl-flex align-items-center text-decoration-none animate-shake navbar-stuck-hide me-3 me-xl-4 me-xxl-5"
                       href="shop-catalog-electronics.html">
                       <div
@@ -160,17 +154,13 @@
               <div class="py-3 offcanvas-body py-lg-0">
                   <div class="container px-0 px-lg-3">
                       <div class="row">
-
-                          <!-- Categories mega menu -->
                           <div class="col-lg-3">
                               <div class="navbar-nav">
                                   <div class="dropdown w-100">
-
-                                      <!-- Buttton visible on screens > 991px wide (lg breakpoint) -->
                                       <div class="cursor-pointer d-none d-lg-block" data-bs-toggle="dropdown"
                                           data-bs-trigger="hover" data-bs-theme="dark">
                                           <a class="top-0 position-absolute start-0 w-100 h-100"
-                                              href="shop-categories-electronics.html">
+                                              href="{{ route('categories.index') }}">
                                               <span class="visually-hidden">Categories</span>
                                           </a>
                                           <button type="button"
@@ -179,8 +169,6 @@
                                               <span class="ms-2 me-auto">Categories</span>
                                           </button>
                                       </div>
-
-                                      <!-- Buttton visible on screens < 992px wide (lg breakpoint) -->
                                       <button type="button"
                                           class="mb-2 btn btn-lg btn-secondary dropdown-toggle w-100 justify-content-start d-lg-none"
                                           data-bs-toggle="dropdown" data-bs-auto-close="outside">
@@ -193,7 +181,7 @@
                                           style="--cz-dropdown-spacer: 0; --cz-dropdown-item-padding-y: .625rem; --cz-dropdown-item-spacer: 0">
                                           <li class="pt-2 d-lg-none">
                                               <a class="dropdown-item fw-medium"
-                                                  href="shop-categories-electronics.html">
+                                                  href="{{ route('categories.index') }}">
                                                   <i class="ci-grid fs-xl opacity-60 pe-1 me-2"></i>
                                                   All Categories
                                                   <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -1878,7 +1866,7 @@
                                                   <ul class="gap-2 mt-0 nav flex-column">
                                                       <li class="pt-1 d-flex w-100">
                                                           <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                              href="shop-categories-electronics.html">Categories
+                                                              href="{{ route('categories.index') }}">Categories
                                                               Page</a>
                                                       </li>
                                                       <li class="pt-1 d-flex w-100">
