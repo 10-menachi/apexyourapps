@@ -14,11 +14,11 @@
                         <ul class="gap-2 mt-0 nav flex-column">
                             <li class="pt-1 d-flex w-100">
                                 <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                    href="{{ route('categories.index') }}">Categories</a>
+                                    href="#">Categories</a>
                             </li>
                             <li class="pt-1 d-flex w-100">
                                 <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                    href="{{ route('categories.index') }}">Catalog</a>
+                                    href="#">Catalog</a>
                             </li>
                             <li class="pt-1 d-flex w-100">
                                 <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"

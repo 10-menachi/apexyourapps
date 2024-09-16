@@ -22,7 +22,6 @@ Route::get('contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::resource('categories', CategoryController::class);
 Route::resource('products', ProductController::class);
 
 Route::get('privacy-policy', function () {

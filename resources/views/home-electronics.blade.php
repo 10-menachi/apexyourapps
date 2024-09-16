@@ -53,7 +53,7 @@
                                         <div class="pt-5 text-center swiper-slide text-xl-start py-xl-5">
                                             <p class="text-body">Virtual reality glasses</p>
                                             <h2 class="pb-2 display-4 pb-xl-4">Experience New Reality</h2>
-                                            <a class="btn btn-lg btn-primary" href="{{ route('categories.index') }}">
+                                            <a class="btn btn-lg btn-primary" href="#">
                                                 Shop now
                                                 <i class="ci-arrow-up-right fs-lg ms-2 me-n1"></i>
                                             </a>
@@ -421,7 +421,7 @@
             <div class="pb-3 d-flex align-items-center justify-content-between border-bottom pb-md-4">
                 <h2 class="mb-0 h3">Trending products</h2>
                 <div class="nav ms-3">
-                    <a class="px-0 py-2 nav-link animate-underline" href="{{ route('categories.index') }}">
+                    <a class="px-0 py-2 nav-link animate-underline" href="#">
                         <span class="animate-target">View all</span>
                         <i class="ci-chevron-right fs-base ms-1"></i>
                     </a>
@@ -1349,7 +1349,7 @@
                     </div>
                 </div>
                 <div class="nav ms-3">
-                    <a class="px-0 py-2 nav-link animate-underline" href="{{ route('categories.index') }}">
+                    <a class="px-0 py-2 nav-link animate-underline" href="#">
                         <span class="animate-target text-nowrap">View all</span>
                         <i class="ci-chevron-right fs-base ms-1"></i>
                     </a>
@@ -1829,7 +1829,7 @@
         <section class="container pt-4 pb-5 mb-2 pt-md-5 mt-sm-2 mb-sm-3 mb-md-4 mb-lg-5">
             <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 g-md-4 g-lg-3 g-xl-4">
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="{{ route('categories.index') }}">
+                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="#">
                         <img src="assets/img/shop/electronics/brands/apple-light-mode.svg" class="d-none-dark"
                             alt="Apple">
                         <img src="assets/img/shop/electronics/brands/apple-dark-mode.svg" class="d-none d-block-dark"
@@ -1837,7 +1837,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="{{ route('categories.index') }}">
+                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="#">
                         <img src="assets/img/shop/electronics/brands/motorola-light-mode.svg" class="d-none-dark"
                             alt="Apple">
                         <img src="assets/img/shop/electronics/brands/motorola-dark-mode.svg" class="d-none d-block-dark"
@@ -1845,7 +1845,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="{{ route('categories.index') }}">
+                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="#">
                         <img src="assets/img/shop/electronics/brands/canon-light-mode.svg" class="d-none-dark"
                             alt="Apple">
                         <img src="assets/img/shop/electronics/brands/canon-dark-mode.svg" class="d-none d-block-dark"
@@ -1853,7 +1853,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="{{ route('categories.index') }}">
+                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="#">
                         <img src="assets/img/shop/electronics/brands/samsung-light-mode.svg" class="d-none-dark"
                             alt="Apple">
                         <img src="assets/img/shop/electronics/brands/samsung-dark-mode.svg" class="d-none d-block-dark"
@@ -1861,7 +1861,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="{{ route('categories.index') }}">
+                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="#">
                         <img src="assets/img/shop/electronics/brands/sony-light-mode.svg" class="d-none-dark"
                             alt="Apple">
                         <img src="assets/img/shop/electronics/brands/sony-dark-mode.svg" class="d-none d-block-dark"
@@ -1869,8 +1869,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 h-100 rounded-4"
-                        href="{{ route('categories.index') }}">
+                    <a class="p-3 btn btn-outline-secondary w-100 h-100 rounded-4" href="#">
                         All brands
                         <i class="ci-plus-circle fs-base ms-2"></i>
                     </a>

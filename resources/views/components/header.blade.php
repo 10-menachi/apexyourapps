@@ -23,7 +23,7 @@
 
                   <!-- Sale link visible on screens > 1200px wide (xl breakpoint) -->
                   <a class="d-none d-xl-flex align-items-center text-decoration-none animate-shake navbar-stuck-hide me-3 me-xl-4 me-xxl-5"
-                      href="{{ route('categories.index') }}">
+                      href="#">
                       <div
                           class="bg-opacity-75 btn btn-icon btn-lg fs-lg text-primary bg-body-secondary pe-none rounded-circle">
                           <i class="ci-percent animate-target"></i>

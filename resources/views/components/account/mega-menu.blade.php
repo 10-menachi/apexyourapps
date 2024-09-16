@@ -1,6 +1,8 @@
 <div class="col-lg-3">
     <div class="navbar-nav">
         <div class="dropdown w-100">
+
+            <!-- Buttton visible on screens > 991px wide (lg breakpoint) -->
             <div class="cursor-pointer d-none d-lg-block" data-bs-toggle="dropdown" data-bs-trigger="hover"
                 data-bs-theme="dark">
                 <a class="top-0 position-absolute start-0 w-100 h-100" href="#">
@@ -12,13 +14,17 @@
                     <span class="ms-2 me-auto">Categories</span>
                 </button>
             </div>
+
+            <!-- Buttton visible on screens < 992px wide (lg breakpoint) -->
             <button type="button"
                 class="mb-2 btn btn-lg btn-secondary dropdown-toggle w-100 justify-content-start d-lg-none"
                 data-bs-toggle="dropdown" data-bs-auto-close="outside">
                 <i class="ci-grid fs-lg"></i>
                 <span class="ms-2 me-auto">Categories</span>
             </button>
-            <ul class="py-1 dropdown-menu dropdown-menu-static w-100 rounded-top-0 rounded-bottom-4 p-lg-1"
+
+            <!-- Mega menu -->
+            <ul class="py-1 dropdown-menu w-100 rounded-top-0 rounded-bottom-4 p-lg-1"
                 style="--cz-dropdown-spacer: 0; --cz-dropdown-item-padding-y: .625rem; --cz-dropdown-item-spacer: 0">
                 <li class="pt-2 d-lg-none">
                     <a class="dropdown-item fw-medium" href="#">
@@ -28,7 +34,7 @@
                     </a>
                 </li>
                 @foreach ($categories as $category)
-                    @include('components.mega-menu-item', ['category' => $category])
+                    @include('components.account.mega-menu-item', ['category' => $category])
                 @endforeach
             </ul>
         </div>

@@ -225,7 +225,7 @@
                             </div>
                         </div>
 
-                        <a class="btn btn-lg btn-primary w-100" href="{{ route('categories.index') }}">
+                        <a class="btn btn-lg btn-primary w-100" href="#">
                             Continue shopping
                             <i class="ci-chevron-right fs-lg ms-1 me-n1"></i>
                         </a>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AddressesController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
@@ -13,7 +14,8 @@ Route::middleware('auth')->group(function () {
     })->name('orders');
 
     Route::get('favorites', function () {
-        return view('profile.favorites');
+        $categories = Category::all();
+        return view('profile.favorites', compact('categories'));
     })->name('favorites');
 
     Route::get('/payment-methods', function () {

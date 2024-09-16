@@ -8,18 +8,23 @@
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <a href="{{ route('homepage.view') }}" class="navbar-brand me-0">
                     <img src="{{ asset('logo.png') }}" alt="Logo" class="w-75">
                 </a>
             </div>
             <div class="col col-lg-9 d-flex align-items-center justify-content-end">
+
+                <!-- Search visible on screens > 991px wide (lg breakpoint) -->
                 <div class="position-relative flex-fill d-none d-lg-block pe-4 pe-xl-5">
                     <i class="text-white ci-search position-absolute top-50 translate-middle-y d-flex fs-lg ms-3"></i>
                     <input type="search" class="border-white form-control form-control-lg form-icon-start rounded-pill"
                         placeholder="Search the products">
                 </div>
+
+                <!-- Sale link visible on screens > 1200px wide (xl breakpoint) -->
                 <a class="d-none d-xl-flex align-items-center text-decoration-none animate-shake navbar-stuck-hide me-3 me-xl-4 me-xxl-5"
-                    href="{{ route('shop') }}">
+                    href="#">
                     <div
                         class="bg-opacity-75 btn btn-icon btn-lg fs-lg text-primary bg-body-secondary pe-none rounded-circle">
                         <i class="ci-percent animate-target"></i>
@@ -29,12 +34,18 @@
                         <div class="text-white fw-medium">Super Sale 20%</div>
                     </div>
                 </a>
+
+                <!-- Button group -->
                 <div class="d-flex align-items-center">
+
+                    <!-- Navbar stuck nav toggler -->
                     <button type="button" class="navbar-toggler d-none navbar-stuck-show me-3"
                         data-bs-toggle="collapse" data-bs-target="#stuckNav" aria-controls="stuckNav"
                         aria-expanded="false" aria-label="Toggle navigation in navbar stuck state">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+
+                    <!-- Theme switcher (light/dark/auto) -->
                     <div class="dropdown">
                         <button type="button"
                             class="border-0 theme-switcher btn btn-icon btn-lg btn-outline-secondary fs-lg rounded-circle animate-scale"
@@ -76,20 +87,26 @@
                             </li>
                         </ul>
                     </div>
+
+                    <!-- Search toggle button visible on screens < 992px wide (lg breakpoint) -->
                     <button type="button"
                         class="border-0 btn btn-icon btn-lg fs-xl btn-outline-secondary rounded-circle animate-shake d-lg-none"
                         data-bs-toggle="collapse" data-bs-target="#searchBar" aria-controls="searchBar"
                         aria-expanded="false" aria-label="Toggle search bar">
                         <i class="ci-search animate-target"></i>
                     </button>
+
+                    <!-- Account button logged in state visible on screens > 768px wide (md breakpoint) -->
                     <div class="position-relative" id="accountBtn">
                         <a class="btn btn-icon btn-lg btn-secondary animate-scale fs-5 fw-normal position-relative rounded-circle ms-2 d-none d-md-inline-flex"
-                            href="{{ route('profile.edit') }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            href="{{ route('orders') }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
                             data-bs-custom-class="tooltip-sm text-nowrap" data-bs-container="#accountBtn"
                             title="{{ Auth::user()->name }}">
                             <span class="animate-target">{{ Auth::user()->name[0] }}</span>
                         </a>
                     </div>
+
+                    <!-- Cart button -->
                     <button type="button"
                         class="btn btn-icon btn-lg btn-secondary position-relative rounded-circle ms-2"
                         data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart"
@@ -107,6 +124,8 @@
         </div>
         <div class="pb-1 navbar-stuck-hide"></div>
     </div>
+
+    <!-- Search visible on screens < 992px wide (lg breakpoint). It is hidden inside collapse by default -->
     <div class="collapse position-absolute top-100 z-2 w-100 bg-dark d-lg-none" id="searchBar">
         <div class="container my-3 position-relative" data-bs-theme="dark">
             <i class="text-white ci-search position-absolute top-50 translate-middle-y d-flex fs-lg ms-3"></i>
@@ -114,43 +133,20 @@
                 placeholder="Search the products" data-autofocus="collapse">
         </div>
     </div>
+
+    <!-- Main navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
     <div class="collapse navbar-stuck-hide" id="stuckNav">
         <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
             <div class="py-3 offcanvas-header">
-                <h5 class="offcanvas-title" id="navbarNavLabel">Browse</h5>
+                <h5 class="offcanvas-title" id="navbarNavLabel">Browse Cartzilla</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="py-3 offcanvas-body py-lg-0">
                 <div class="container px-0 px-lg-3">
                     <div class="row">
-                        <div class="col-lg-3">
-                            <div class="navbar-nav">
-                                <div class="dropdown w-100">
-                                    <div class="cursor-pointer d-none d-lg-block" data-bs-toggle="dropdown"
-                                        data-bs-trigger="hover" data-bs-theme="dark">
-                                        <a class="top-0 position-absolute start-0 w-100 h-100"
-                                            href="{{ route('categories') }}">
-                                            <span class="visually-hidden">Categories</span>
-                                        </a>
-                                        <button type="button"
-                                            class="btn btn-lg btn-secondary dropdown-toggle w-100 rounded-bottom-0 justify-content-start pe-none">
-                                            <i class="ci-grid fs-lg"></i>
-                                            <span class="ms-2 me-auto">Categories</span>
-                                        </button>
-                                    </div>
 
-                                    <!-- Buttton visible on screens < 992px wide (lg breakpoint) -->
-                                    <button type="button"
-                                        class="mb-2 btn btn-lg btn-secondary dropdown-toggle w-100 justify-content-start d-lg-none"
-                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                        <i class="ci-grid fs-lg"></i>
-                                        <span class="ms-2 me-auto">Categories</span>
-                                    </button>
+                        @include('components.account.mega-menu')
 
-                                    @include('components.mega-menu')
-                                </div>
-                            </div>
-                        </div>
                         @include('components.navbar')
                     </div>
                 </div>
@@ -158,17 +154,10 @@
             <div class="py-3 mt-3 offcanvas-header border-top d-md-none">
                 <a class="d-flex align-items-center text-decoration-none" href="#accountSidebar"
                     data-bs-toggle="offcanvas" aria-controls="accountSidebar">
-                    @if (Auth::user()->avatar)
-                        <img class="flex-shrink-0 rounded-circle me-2"
-                            src="{{ asset('storage/' . Auth::user()->avatar) }}" width="48" alt="Avatar">
-                    @else
-                        <div class="flex-shrink-0 mb-0 h5 d-flex justify-content-center align-items-center text-primary bg-primary-subtle lh-1 rounded-circle"
-                            style="width: 3rem; height: 3rem">
-                            <span>{{ Auth::user()->name[0] }}</span>
-                        </div>
-                    @endif
+                    <div class="flex-shrink-0 mb-0 h5 d-flex justify-content-center align-items-center text-primary bg-primary-subtle lh-1 rounded-circle"
+                        style="width: 3rem; height: 3rem">S</div>
                     <div class="ps-3">
-                        <h5 class="mb-1 h6">{{ Auth::user()->name }}</h5>
+                        <h5 class="mb-1 h6">Susan Gardner</h5>
                         <div class="d-flex flex-nowrap fs-sm text-body">
                             <svg class="flex-shrink-0 text-warning me-2" xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor">
