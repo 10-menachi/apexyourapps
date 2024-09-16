@@ -4,8 +4,8 @@
 @section('content')
 
     <!-- Page content -->
-    <main class="content-wrapper">
-
+   
+ <main class="content-wrapper">
         <!-- Hero slider -->
         <section class="container pt-4">
             <div class="row">
