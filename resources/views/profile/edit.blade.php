@@ -165,6 +165,7 @@
 
                         <!-- Password -->
                         <div class="py-4 border-bottom">
+                            <!-- Password Change Section -->
                             <div class="pb-1 mb-3 nav flex-nowrap align-items-center justify-content-between">
                                 <div class="gap-3 d-flex align-items-center me-4">
                                     <h2 class="mb-0 h6">Password</h2>
@@ -184,16 +185,15 @@
                                     @csrf
                                     @method('PUT')
                                     <div class="col-sm-6">
-                                        <label for="update_password_current_password" class="form-label">Current
-                                            Password</label>
+                                        <label for="current_password" class="form-label">Current Password</label>
                                         <div class="password-toggle">
                                             <input type="password"
                                                 class="form-control @error('current_password') is-invalid @enderror"
-                                                id="update_password_current_password" name="current_password"
+                                                id="current_password" name="current_password"
                                                 placeholder="Enter your current password" required>
                                             <label class="password-toggle-button" aria-label="Show/hide password">
                                                 <input type="checkbox" class="btn-check"
-                                                    onclick="togglePasswordVisibility('update_password_current_password', this)">
+                                                    onclick="togglePasswordVisibility('current_password', this)">
                                             </label>
                                         </div>
                                         @error('current_password')
@@ -204,18 +204,18 @@
                                     </div>
 
                                     <div class="col-sm-6">
-                                        <label for="update_password_password" class="form-label">New Password</label>
+                                        <label for="password" class="form-label">New Password</label>
                                         <div class="password-toggle">
                                             <input type="password"
-                                                class="form-control @error('new_password') is-invalid @enderror"
-                                                id="update_password_password" name="new_password"
-                                                placeholder="Create new password" required>
+                                                class="form-control @error('password') is-invalid @enderror"
+                                                id="password" name="password" placeholder="Create new password"
+                                                required>
                                             <label class="password-toggle-button" aria-label="Show/hide password">
                                                 <input type="checkbox" class="btn-check"
-                                                    onclick="togglePasswordVisibility('update_password_password', this)">
+                                                    onclick="togglePasswordVisibility('password', this)">
                                             </label>
                                         </div>
-                                        @error('new_password')
+                                        @error('password')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
@@ -223,19 +223,18 @@
                                     </div>
 
                                     <div class="col-sm-6">
-                                        <label for="update_password_password" class="form-label">Confirm New
-                                            Password</label>
+                                        <label for="password_confirmation" class="form-label">Confirm New Password</label>
                                         <div class="password-toggle">
                                             <input type="password"
-                                                class="form-control @error('new_password') is-invalid @enderror"
-                                                id="update_password_password" name="password_confirmation"
+                                                class="form-control @error('password') is-invalid @enderror"
+                                                id="password_confirmation" name="password_confirmation"
                                                 placeholder="Confirm new password" required>
                                             <label class="password-toggle-button" aria-label="Show/hide password">
                                                 <input type="checkbox" class="btn-check"
-                                                    onclick="togglePasswordVisibility('update_password_password', this)">
+                                                    onclick="togglePasswordVisibility('password_confirmation', this)">
                                             </label>
                                         </div>
-                                        @error('new_password')
+                                        @error('password_confirmation')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
@@ -254,14 +253,58 @@
                             </div>
                         </div>
 
-                        <!-- Delete account -->
+                        <!-- Delete Account Section -->
                         <div class="pt-3 mt-2 mt-sm-3">
-                            <h2 class="h6">Delete account</h2>
-                            <p class="fs-sm">When you delete your account, your public profile will be deactivated
-                                immediately. If you change your mind before the 14 days are up, sign in with your email
-                                and password, and we'll send you a link to reactivate your account.</p>
-                            <a class="text-danger fs-sm fw-medium" href="#!">Delete account</a>
+                            <div class="pb-1 mb-3 nav flex-nowrap align-items-center justify-content-between">
+                                <h2 class="h6">Delete Account</h2>
+                                <a class="p-0 nav-link hiding-collapse-toggle text-decoration-underline collapsed"
+                                    href=".delete-account" data-bs-toggle="collapse" aria-expanded="false"
+                                    aria-controls="deleteAccountPreview deleteAccountEdit">Delete</a>
+                            </div>
+
+                            <div class="collapse delete-account" id="deleteAccountPreview">
+                                <p class="fs-sm">When you delete your account, your public profile will be deactivated
+                                    immediately.
+                                    If you change your mind before the 14 days are up, sign in with your email and password,
+                                    and we'll
+                                    send you a link to reactivate your account.</p>
+                            </div>
+
+                            <div class="collapse delete-account" id="deleteAccountEdit">
+                                <form action="{{ route('profile.destroy') }}" method="POST" class="row g-3 g-sm-4">
+                                    @csrf
+                                    @method('DELETE')
+                                    <div class="col-sm-6">
+                                        <label for="password" class="form-label">Current Password</label>
+                                        <div class="password-toggle">
+                                            <input type="password"
+                                                class="form-control @error('password') is-invalid @enderror"
+                                                id="password" name="password" placeholder="Enter your current password"
+                                                required>
+                                            <label class="password-toggle-button" aria-label="Show/hide password">
+                                                <input type="checkbox" class="btn-check"
+                                                    onclick="togglePasswordVisibility('password', this)">
+                                            </label>
+                                        </div>
+                                        @error('password')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="gap-3 pt-2 d-flex pt-sm-0">
+                                            <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-toggle="collapse"
+                                                data-bs-target=".delete-account" aria-expanded="true"
+                                                aria-controls="deleteAccountPreview deleteAccountEdit">Close</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
