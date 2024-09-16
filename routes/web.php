@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductsController;
 
 Route::get('cart', function () {
     return view('cart');
@@ -21,6 +22,7 @@ Route::get('contact', function () {
 })->name('contact');
 
 Route::resource('categories', CategoriesController::class);
+Route::resource('products', ProductsController::class);
 
 Route::get('privacy-policy', function () {
     return view('privacy-policy');

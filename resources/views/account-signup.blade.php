@@ -9,8 +9,8 @@
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
     <!-- SEO Meta Tags -->
-    <title>Cartzilla | Account - Sign Up</title>
-    <meta name="description" content="Cartzilla - Multipurpose Bootstrap E-Commerce HTML Template">
+    <title>Apex | Account - Sign Up</title>
+    <meta name="description" content="Apex - Multipurpose Bootstrap E-Commerce HTML Template">
     <meta name="keywords"
         content="online shop, e-commerce, online store, market, multipurpose, product landing, cart, checkout, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
     <meta name="author" content="Createx Studio">
@@ -29,8 +29,8 @@
     <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin="">
 
     <!-- Font icons -->
-    <link rel="preload" href="assets/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="assets/icons/cartzilla-icons.min.css">
+    <link rel="preload" href="assets/icons/Apex-icons.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="stylesheet" href="assets/icons/Apex-icons.min.css">
 
     <!-- Bootstrap + Theme styles -->
     <link rel="preload" href="assets/css/theme.min.css" as="style">
@@ -76,7 +76,7 @@
                                 </defs>
                             </svg>
                         </span>
-                        Cartzilla
+                        Apex
                     </a>
                 </header>
 
@@ -194,7 +194,7 @@
                             style="background: linear-gradient(-90deg, #1b273a 0%, #1f2632 100%)"></span>
                     </div>
                     <div class="text-center position-relative z-2 w-100 px-md-2 p-lg-5">
-                        <h2 class="pb-3 h4">Cartzilla account benefits</h2>
+                        <h2 class="pb-3 h4">Apex account benefits</h2>
                         <div class="mx-auto" style="max-width: 790px">
                             <div class="row row-cols-1 row-cols-sm-2 g-3 g-md-4 g-lg-3 g-xl-4">
                                 <div class="col">

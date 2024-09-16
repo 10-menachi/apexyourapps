@@ -9,8 +9,8 @@
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
     <!-- SEO Meta Tags -->
-    <title>Cartzilla | Help Topics v.1</title>
-    <meta name="description" content="Cartzilla - Multipurpose Bootstrap E-Commerce HTML Template">
+    <title>Apex | Help Topics v.1</title>
+    <meta name="description" content="Apex - Multipurpose Bootstrap E-Commerce HTML Template">
     <meta name="keywords"
         content="online shop, e-commerce, online store, market, multipurpose, product landing, cart, checkout, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
     <meta name="author" content="Createx Studio">
@@ -29,8 +29,8 @@
     <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin="">
 
     <!-- Font icons -->
-    <link rel="preload" href="assets/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="assets/icons/cartzilla-icons.min.css">
+    <link rel="preload" href="assets/icons/Apex-icons.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="stylesheet" href="assets/icons/Apex-icons.min.css">
 
     <!-- Vendor styles -->
     <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
@@ -214,7 +214,7 @@
                                 </defs>
                             </svg>
                         </span>
-                        Cartzilla
+                        Apex
                     </a>
                 </div>
                 <div class="col col-lg-9 d-flex align-items-center justify-content-end">
@@ -348,7 +348,7 @@
         <div class="collapse navbar-stuck-hide" id="stuckNav">
             <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
                 <div class="py-3 offcanvas-header">
-                    <h5 class="offcanvas-title" id="navbarNavLabel">Browse Cartzilla</h5>
+                    <h5 class="offcanvas-title" id="navbarNavLabel">Browse Apex</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -3073,8 +3073,7 @@
                     <div
                         class="pb-3 col-md-4 d-sm-flex flex-md-column align-items-center align-items-md-start mb-sm-4">
                         <h4 class="mb-sm-0 mb-md-4 me-4">
-                            <a class="text-dark-emphasis text-decoration-none"
-                                href="home-electronics.html">Cartzilla</a>
+                            <a class="text-dark-emphasis text-decoration-none" href="home-electronics.html">Apex</a>
                         </h4>
                         <p
                             class="text-body fs-sm text-sm-end text-md-start mb-sm-0 mb-md-3 ms-0 ms-sm-auto ms-md-0 me-4">

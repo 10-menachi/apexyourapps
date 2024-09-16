@@ -35,7 +35,7 @@
                         <div class="ps-3">
                             <div class="mb-2 fs-xs text-body-secondary lh-sm">6:16</div>
                             <a class="p-0 nav-link fs-sm hover-effect-underline stretched-link" href="#!">5
-                                New Cool Gadgets You Must See on Cartzilla - Cheap Budget</a>
+                                New Cool Gadgets You Must See on Apex - Cheap Budget</a>
                         </div>
                     </li>
                     <li class="nav flex-nowrap align-items-center position-relative">
@@ -44,7 +44,7 @@
                         <div class="ps-3">
                             <div class="mb-2 fs-xs text-body-secondary lh-sm">10:20</div>
                             <a class="p-0 nav-link fs-sm hover-effect-underline stretched-link" href="#!">5
-                                Super Useful Gadgets on Cartzilla You Must Have in 2023</a>
+                                Super Useful Gadgets on Apex You Must Have in 2023</a>
                         </div>
                     </li>
                     <li class="nav flex-nowrap align-items-center position-relative">
@@ -53,7 +53,7 @@
                         <div class="ps-3">
                             <div class="mb-2 fs-xs text-body-secondary lh-sm">8:40</div>
                             <a class="p-0 nav-link fs-sm hover-effect-underline stretched-link" href="#!">Top
-                                5 New Amazing Gadgets on Cartzilla You Must See</a>
+                                5 New Amazing Gadgets on Apex You Must See</a>
                         </div>
                     </li>
                 </ul>

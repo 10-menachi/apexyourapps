@@ -32,9 +32,9 @@
         crossorigin="">
 
     <!-- Font icons -->
-    <link rel="preload" href="{{ asset('assets/icons/cartzilla-icons.woff2') }}" as="font" type="font/woff2"
+    <link rel="preload" href="{{ asset('assets/icons/Apex-icons.woff2') }}" as="font" type="font/woff2"
         crossorigin="">
-    <link rel="stylesheet" href="{{ asset('assets/icons/cartzilla-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/icons/Apex-icons.min.css') }}">
 
     <!-- Vendor styles -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}">

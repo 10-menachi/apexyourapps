@@ -17,6 +17,12 @@ class Categories extends Model
 
     public function brands()
     {
-        return $this->hasMany(Brand::class);
+        return [
+            'Apple Iphone',
+            'Samsung',
+            'Xiaomi',
+            'Nokia',
+            'Mazu'
+        ];
     }
 }

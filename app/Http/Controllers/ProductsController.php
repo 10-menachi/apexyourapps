@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categories;
+use App\Models\Products;
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller
+class ProductsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $categories = Categories::all();
-        return view('categories', compact('categories'));
+        //
     }
 
     /**
@@ -35,7 +34,7 @@ class CategoriesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Categories $categories)
+    public function show(Products $products)
     {
         //
     }
@@ -43,7 +42,7 @@ class CategoriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Categories $categories)
+    public function edit(Products $products)
     {
         //
     }
@@ -51,7 +50,7 @@ class CategoriesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Categories $categories)
+    public function update(Request $request, Products $products)
     {
         //
     }
@@ -59,7 +58,7 @@ class CategoriesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categories $categories)
+    public function destroy(Products $products)
     {
         //
     }
