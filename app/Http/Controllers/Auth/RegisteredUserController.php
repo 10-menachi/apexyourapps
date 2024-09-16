@@ -45,6 +45,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('honepage.view', absolute: false));
+        return redirect(route('homepage.view', absolute: false));
     }
 }
