@@ -54,7 +54,7 @@
                                     <span class="badge bg-primary rounded-pill ms-auto">1</span>
                                 </a>
                                 <a class="list-group-item list-group-item-action d-flex align-items-center"
-                                    href="account-wishlist.html">
+                                    href="{{ route('favorites') }}">
                                     <i class="ci-heart fs-base opacity-75 me-2"></i>
                                     Wishlist
                                 </a>

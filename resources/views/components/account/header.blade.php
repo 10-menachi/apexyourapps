@@ -1710,7 +1710,8 @@
                                         aria-expanded="false">Home</a>
                                     <ul class="dropdown-menu">
                                         <li class="px-2 hover-effect-opacity mx-n2">
-                                            <a class="mb-0 dropdown-item d-block" href="{{ route('homepage.view') }}">
+                                            <a class="mb-0 dropdown-item d-block"
+                                                href="{{ route('homepage.view') }}">
                                                 <span class="fw-medium">Electronics Store</span>
                                                 <span class="d-block fs-xs text-body-secondary">Megamenu + Hero
                                                     slider</span>
@@ -1969,7 +1970,7 @@
                                         </li>
                                         <li><a class="dropdown-item" href="account-orders.html">Orders
                                                 History</a></li>
-                                        <li><a class="dropdown-item" href="account-wishlist.html">Wishlist</a>
+                                        <li><a class="dropdown-item" href="{{ route('favorites') }}">Wishlist</a>
                                         </li>
                                         <li><a class="dropdown-item" href="account-payment.html">Payment
                                                 Methods</a></li>

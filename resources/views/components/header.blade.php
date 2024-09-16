@@ -117,7 +117,7 @@
 
                       <!-- Wishlist button visible on screens > 768px wide (md breakpoint) -->
                       <a class="border-0 btn btn-icon btn-lg fs-lg btn-outline-secondary rounded-circle animate-pulse d-none d-md-inline-flex"
-                          href="account-wishlist.html">
+                          href="{{ route('favorites') }}">
                           <i class="ci-heart animate-target"></i>
                           <span class="visually-hidden">Wishlist</span>
                       </a>
@@ -2023,7 +2023,8 @@
                                           </li>
                                           <li><a class="dropdown-item" href="account-orders.html">Orders
                                                   History</a></li>
-                                          <li><a class="dropdown-item" href="account-wishlist.html">Wishlist</a>
+                                          <li><a class="dropdown-item"
+                                                  href="{{ route('favorites') }}">Wishlist</a>
                                           </li>
                                           <li><a class="dropdown-item" href="account-payment.html">Payment
                                                   Methods</a></li>
@@ -2161,7 +2162,7 @@
                           <i class="ci-user fs-lg opacity-60 me-2"></i>
                           Account
                       </a>
-                      <a class="nav-link" href="account-wishlist.html">
+                      <a class="nav-link" href="{{ route('favorites') }}">
                           <i class="ci-heart fs-lg opacity-60 me-2"></i>
                           Wishlist
                       </a>
