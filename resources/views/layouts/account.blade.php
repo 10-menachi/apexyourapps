@@ -24,8 +24,8 @@
     <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin="">
 
     <!-- Font icons -->
-    <link rel="preload" href="assets/icons/Apex-icons.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="assets/icons/Apex-icons.min.css">
+    <link rel="preload" href="assets/icons/cartzillazilla-icons.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="stylesheet" href="assets/icartzilla/cartzilla-icons.min.css">
 
     <!-- Vendor styles -->
     <link rel="stylesheet" href="assets/vendor/choices.js/choices.min.css">
@@ -36,8 +36,6 @@
     <link rel="preload" href="assets/css/theme.rtl.min.css" as="style">
     <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
 
-    <!-- Customizer -->
-    <script src="assets/js/customizer.min.js"></script>
 </head>
 
 <body>

@@ -44,8 +44,6 @@
     <link rel="preload" href="{{ asset('assets/css/theme.rtl.min.css') }}" as="style">
     <link rel="stylesheet" href="{{ asset('assets/css/theme.min.css') }}" id="theme-styles">
 
-    <!-- Customizer -->
-    <script src="{{ asset('assets/js/customizer.min.js') }}"></script>
 </head>
 
 

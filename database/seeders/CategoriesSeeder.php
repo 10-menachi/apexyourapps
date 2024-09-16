@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Category;
+use App\Models\SubCategory;
 
 class CategoriesSeeder extends Seeder
 {
@@ -12,11 +13,11 @@ class CategoriesSeeder extends Seeder
      */
     public function run(): void
     {
-        Category::create([
+        $computers = Category::create([
             'name' => 'Computers',
             'slug' => 'computers',
             'description' => 'Computers and accessories',
-            'image' => 'computers.jpg',
+            'image' => 'computers.png',
         ]);
 
         Category::create([
@@ -87,6 +88,52 @@ class CategoriesSeeder extends Seeder
             'slug' => 'video-games',
             'description' => 'Video Games',
             'image' => 'video-games.jpg',
+        ]);
+
+        /**
+         * Subcategories
+         */
+
+        SubCategory::create([
+            'category_id' => $computers->id,
+            'name' => 'Laptops & Tablets',
+            'slug' => 'laptops-tablets',
+        ]);
+
+        SubCategory::create([
+            'category_id' => $computers->id,
+            'name' => 'Desktop Computers',
+            'slug' => 'desktop-computers',
+        ]);
+
+        SubCategory::create([
+            'category_id' => $computers->id,
+            'name' => 'External Components',
+            'slug' => 'external-components',
+        ]);
+
+        SubCategory::create([
+            'category_id' => $computers->id,
+            'name' => 'Internal Components',
+            'slug' => 'internal-components',
+        ]);
+
+        SubCategory::create([
+            'category_id' => $computers->id,
+            'name' => 'Networking Products (NAS)',
+            'slug' => 'networking-products',
+        ]);
+
+        SubCategory::create([
+            'category_id' => $computers->id,
+            'name' => 'Single Board Computers',
+            'slug' => 'single-board-computers',
+        ]);
+
+        SubCategory::create([
+            'category_id' => $computers->id,
+            'name' => 'Desktop Barebones',
+            'slug' => 'desktop-barebones',
         ]);
     }
 }

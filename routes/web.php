@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Models\Category;
 
 Route::get('cart', function () {
     return view('cart');
@@ -27,7 +28,8 @@ Route::get('privacy-policy', function () {
 })->name('privacy-policy');
 
 Route::get('/dashboard', function () {
-    return view('home-electronics');
+    $categories = Category::all();
+    return view('home-electronics', compact('categories'));
 })->name('dashboard');
 
 require __DIR__ . '/auth.php';
