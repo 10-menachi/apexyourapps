@@ -13,7 +13,7 @@
                   </button>
 
                   <!-- Navbar brand (Logo) -->
-                  <a href="index.html" class="navbar-brand me-0">
+                  <a href="{{ route('homepage.view') }}" class="navbar-brand me-0">
                       <img src="{{ asset('logo.png') }}" alt="Logo" class="w-75">
                   </a>
               </div>
@@ -29,7 +29,7 @@
 
                   <!-- Sale link visible on screens > 1200px wide (xl breakpoint) -->
                   <a class="d-none d-xl-flex align-items-center text-decoration-none animate-shake navbar-stuck-hide me-3 me-xl-4 me-xxl-5"
-                      href="shop-catalog-electronics.html">
+                      href="{{ route('categories.index') }}">
                       <div
                           class="bg-opacity-75 btn btn-icon btn-lg fs-lg text-primary bg-body-secondary pe-none rounded-circle">
                           <i class="ci-percent animate-target"></i>
@@ -154,7 +154,7 @@
       <div class="collapse navbar-stuck-hide" id="stuckNav">
           <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
               <div class="py-3 offcanvas-header">
-                  <h5 class="offcanvas-title" id="navbarNavLabel">Browse Cartzilla</h5>
+                  <h5 class="offcanvas-title" id="navbarNavLabel">Browse Apex</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="py-3 offcanvas-body py-lg-0">
@@ -170,7 +170,7 @@
                                       <div class="cursor-pointer d-none d-lg-block" data-bs-toggle="dropdown"
                                           data-bs-trigger="hover" data-bs-theme="dark">
                                           <a class="top-0 position-absolute start-0 w-100 h-100"
-                                              href="shop-categories-electronics.html">
+                                              href="{{ route('categories.index') }}">
                                               <span class="visually-hidden">Categories</span>
                                           </a>
                                           <button type="button"
@@ -193,7 +193,7 @@
                                           style="--cz-dropdown-spacer: 0; --cz-dropdown-item-padding-y: .625rem; --cz-dropdown-item-spacer: 0">
                                           <li class="pt-2 d-lg-none">
                                               <a class="dropdown-item fw-medium"
-                                                  href="shop-categories-electronics.html">
+                                                  href="{{ route('categories.index') }}">
                                                   <i class="ci-grid fs-xl opacity-60 pe-1 me-2"></i>
                                                   All Categories
                                                   <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -203,7 +203,7 @@
                                               <div class="pt-2 pb-1 rounded position-relative px-lg-2"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-computer fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">Computers &amp; Accessories</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -221,42 +221,42 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Computers</a>
+                                                                  href="{{ route('categories.index') }}">Computers</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Laptops
+                                                                      href="{{ route('categories.index') }}">Laptops
                                                                       &amp; Tablets</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Desktop
+                                                                      href="{{ route('categories.index') }}">Desktop
                                                                       Computers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">External
+                                                                      href="{{ route('categories.index') }}">External
                                                                       Components</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Interal
+                                                                      href="{{ route('categories.index') }}">Interal
                                                                       Components</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Networking
+                                                                      href="{{ route('categories.index') }}">Networking
                                                                       Products (NAS)</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Single
+                                                                      href="{{ route('categories.index') }}">Single
                                                                       Board Computers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Desktop
+                                                                      href="{{ route('categories.index') }}">Desktop
                                                                       Barebones</a>
                                                               </li>
                                                           </ul>
@@ -264,49 +264,49 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Accessories</a>
+                                                                  href="{{ route('categories.index') }}">Accessories</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Monitors</a>
+                                                                      href="{{ route('categories.index') }}">Monitors</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Bags,
+                                                                      href="{{ route('categories.index') }}">Bags,
                                                                       Cases &amp; Sleeves</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Batteries</a>
+                                                                      href="{{ route('categories.index') }}">Batteries</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Charges
+                                                                      href="{{ route('categories.index') }}">Charges
                                                                       &amp; Adapters</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Cooling
+                                                                      href="{{ route('categories.index') }}">Cooling
                                                                       Pads</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Mounts</a>
+                                                                      href="{{ route('categories.index') }}">Mounts</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Replacement
+                                                                      href="{{ route('categories.index') }}">Replacement
                                                                       Screens</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Security
+                                                                      href="{{ route('categories.index') }}">Security
                                                                       Locks</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Stands</a>
+                                                                      href="{{ route('categories.index') }}">Stands</a>
                                                               </li>
                                                           </ul>
                                                       </div>
@@ -327,7 +327,7 @@
                                                                   width="252" alt="Surface Laptop Studio">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -339,7 +339,7 @@
                                               <div class="pb-1 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-smartphone-2 fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">Smartphones &amp; Tablets</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -356,47 +356,47 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Smartphones</a>
+                                                                  href="{{ route('categories.index') }}">Smartphones</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Apple
+                                                                      href="{{ route('categories.index') }}">Apple
                                                                       iPhone</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Google
+                                                                      href="{{ route('categories.index') }}">Google
                                                                       Pixel</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Android
+                                                                      href="{{ route('categories.index') }}">Android
                                                                       Smartphones</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Phablets</a>
+                                                                      href="{{ route('categories.index') }}">Phablets</a>
                                                               </li>
                                                           </ul>
                                                           <div class="pt-4 d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Tablets</a>
+                                                                  href="{{ route('categories.index') }}">Tablets</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Apple
+                                                                      href="{{ route('categories.index') }}">Apple
                                                                       iPad</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Android
+                                                                      href="{{ route('categories.index') }}">Android
                                                                       Tablets</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Tablets
+                                                                      href="{{ route('categories.index') }}">Tablets
                                                                       with Keyboard</a>
                                                               </li>
                                                           </ul>
@@ -404,66 +404,67 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Accessories</a>
+                                                                  href="{{ route('categories.index') }}">Accessories</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Accessory
+                                                                      href="{{ route('categories.index') }}">Accessory
                                                                       Kits</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Batteries
+                                                                      href="{{ route('categories.index') }}">Batteries
                                                                       &amp; Battery Packs</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Bags &amp;
+                                                                      href="{{ route('categories.index') }}">Bags
+                                                                      &amp;
                                                                       Cases</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Cables</a>
+                                                                      href="{{ route('categories.index') }}">Cables</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Car
+                                                                      href="{{ route('categories.index') }}">Car
                                                                       Accessories</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Charges
+                                                                      href="{{ route('categories.index') }}">Charges
                                                                       &amp; Power Adapters</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">FM
+                                                                      href="{{ route('categories.index') }}">FM
                                                                       Transmitters</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Lens
+                                                                      href="{{ route('categories.index') }}">Lens
                                                                       Attachments</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Mounts
+                                                                      href="{{ route('categories.index') }}">Mounts
                                                                       &amp; Standsv</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Repair
+                                                                      href="{{ route('categories.index') }}">Repair
                                                                       Kits</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Replacement
+                                                                      href="{{ route('categories.index') }}">Replacement
                                                                       Parts</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Styluses</a>
+                                                                      href="{{ route('categories.index') }}">Styluses</a>
                                                               </li>
                                                           </ul>
                                                       </div>
@@ -482,7 +483,7 @@
                                                                   width="252" alt="iPad Pro">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -494,7 +495,7 @@
                                               <div class="pb-1 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-monitor-2 fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">TV, Video &amp; Audio</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -511,77 +512,77 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">TV, Video
+                                                                  href="{{ route('categories.index') }}">TV, Video
                                                                   &amp; Audio</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">TV
+                                                                      href="{{ route('categories.index') }}">TV
                                                                       Stes</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Home
+                                                                      href="{{ route('categories.index') }}">Home
                                                                       Theater Systems</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">DVD
+                                                                      href="{{ route('categories.index') }}">DVD
                                                                       Players &amp; Recorders</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Blue-ray
+                                                                      href="{{ route('categories.index') }}">Blue-ray
                                                                       Players &amp; Recorders</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">HD DVD
+                                                                      href="{{ route('categories.index') }}">HD DVD
                                                                       Players &amp; Recorders</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">DVD-VCR
+                                                                      href="{{ route('categories.index') }}">DVD-VCR
                                                                       Combos</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">DTV
+                                                                      href="{{ route('categories.index') }}">DTV
                                                                       Converters</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">AV
+                                                                      href="{{ route('categories.index') }}">AV
                                                                       Receivers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">AV
+                                                                      href="{{ route('categories.index') }}">AV
                                                                       Amplifiers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Projectors</a>
+                                                                      href="{{ route('categories.index') }}">Projectors</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Projection
+                                                                      href="{{ route('categories.index') }}">Projection
                                                                       Screens</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Satelite
+                                                                      href="{{ route('categories.index') }}">Satelite
                                                                       Television</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">TV-DTD
+                                                                      href="{{ route('categories.index') }}">TV-DTD
                                                                       Combos</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Sound
+                                                                      href="{{ route('categories.index') }}">Sound
                                                                       Systems</a>
                                                               </li>
                                                           </ul>
@@ -590,35 +591,35 @@
                                                           <ul class="gap-2 mt-2 nav flex-column mt-lg-0">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Home
+                                                                      href="{{ route('categories.index') }}">Home
                                                                       Cinema Systems</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Streaming
+                                                                      href="{{ route('categories.index') }}">Streaming
                                                                       Media Players</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">VCRs</a>
+                                                                      href="{{ route('categories.index') }}">VCRs</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Video
+                                                                      href="{{ route('categories.index') }}">Video
                                                                       Glasses</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Lens
+                                                                      href="{{ route('categories.index') }}">Lens
                                                                       Attachments</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Subwoofers</a>
+                                                                      href="{{ route('categories.index') }}">Subwoofers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Sound
+                                                                      href="{{ route('categories.index') }}">Sound
                                                                       Boosters</a>
                                                               </li>
                                                           </ul>
@@ -638,7 +639,7 @@
                                                                   width="252" alt="Smart TV">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -650,7 +651,7 @@
                                               <div class="pb-1 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-speaker-2 fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">Speakers &amp; Home Music</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -667,57 +668,57 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Speakers</a>
+                                                                  href="{{ route('categories.index') }}">Speakers</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Smart
+                                                                      href="{{ route('categories.index') }}">Smart
                                                                       Speakers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Bluetooth
+                                                                      href="{{ route('categories.index') }}">Bluetooth
                                                                       Speakers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Bookshelf
+                                                                      href="{{ route('categories.index') }}">Bookshelf
                                                                       Speakers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Ceiling
+                                                                      href="{{ route('categories.index') }}">Ceiling
                                                                       &amp; In-Wall Speakers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Center-Channel
+                                                                      href="{{ route('categories.index') }}">Center-Channel
                                                                       Speakers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Floorstanding
+                                                                      href="{{ route('categories.index') }}">Floorstanding
                                                                       Speakers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Outdoor
+                                                                      href="{{ route('categories.index') }}">Outdoor
                                                                       Speakers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Satellite
+                                                                      href="{{ route('categories.index') }}">Satellite
                                                                       Speakers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Sound
+                                                                      href="{{ route('categories.index') }}">Sound
                                                                       Bars</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Surround
+                                                                      href="{{ route('categories.index') }}">Surround
                                                                       Sound Systems</a>
                                                               </li>
                                                           </ul>
@@ -725,37 +726,39 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Home Audio</a>
+                                                                  href="{{ route('categories.index') }}">Home
+                                                                  Audio</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Home
+                                                                      href="{{ route('categories.index') }}">Home
                                                                       Theater</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Wireless
+                                                                      href="{{ route('categories.index') }}">Wireless
                                                                       &amp; Streaming Audio</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Stereo
+                                                                      href="{{ route('categories.index') }}">Stereo
                                                                       System Components</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Compact
+                                                                      href="{{ route('categories.index') }}">Compact
                                                                       Radios &amp; Stereos</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Home Audio
+                                                                      href="{{ route('categories.index') }}">Home
+                                                                      Audio
                                                                       Accessories</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Subwoofers</a>
+                                                                      href="{{ route('categories.index') }}">Subwoofers</a>
                                                               </li>
                                                           </ul>
                                                       </div>
@@ -775,7 +778,7 @@
                                                                   width="252" alt="Nest Audio">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -787,7 +790,7 @@
                                               <div class="pb-1 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-camera-2 fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">Cameras, Photo &amp; Video</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -804,62 +807,63 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Cameras &amp;
+                                                                  href="{{ route('categories.index') }}">Cameras &amp;
                                                                   Lenses</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Point
+                                                                      href="{{ route('categories.index') }}">Point
                                                                       &amp; Shoot Cameras</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">DSLR
+                                                                      href="{{ route('categories.index') }}">DSLR
                                                                       Cameras</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Mirrorless
+                                                                      href="{{ route('categories.index') }}">Mirrorless
                                                                       Cameras</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Body
+                                                                      href="{{ route('categories.index') }}">Body
                                                                       Mounted Cameras</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Camcorders</a>
+                                                                      href="{{ route('categories.index') }}">Camcorders</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Camcorder
+                                                                      href="{{ route('categories.index') }}">Camcorder
                                                                       Lenses</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Camera
+                                                                      href="{{ route('categories.index') }}">Camera
                                                                       Lenses</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Macro
+                                                                      href="{{ route('categories.index') }}">Macro
                                                                       &amp; Ringlight Flashes</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Shoe Mount
+                                                                      href="{{ route('categories.index') }}">Shoe
+                                                                      Mount
                                                                       Flashes</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Tripods
+                                                                      href="{{ route('categories.index') }}">Tripods
                                                                       &amp; Monopods</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Video
+                                                                      href="{{ route('categories.index') }}">Video
                                                                       Studio</a>
                                                               </li>
                                                           </ul>
@@ -867,62 +871,63 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Accessories</a>
+                                                                  href="{{ route('categories.index') }}">Accessories</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Bags &amp;
+                                                                      href="{{ route('categories.index') }}">Bags
+                                                                      &amp;
                                                                       Cases</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Binoculars
+                                                                      href="{{ route('categories.index') }}">Binoculars
                                                                       &amp; Scopes</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Batteries
+                                                                      href="{{ route('categories.index') }}">Batteries
                                                                       &amp; Chargers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Cables
+                                                                      href="{{ route('categories.index') }}">Cables
                                                                       &amp; Cords</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Camcorder
+                                                                      href="{{ route('categories.index') }}">Camcorder
                                                                       Accessories</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Cleaning
+                                                                      href="{{ route('categories.index') }}">Cleaning
                                                                       Equipment</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Protector
+                                                                      href="{{ route('categories.index') }}">Protector
                                                                       Foils</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Filters
+                                                                      href="{{ route('categories.index') }}">Filters
                                                                       &amp; Accessories</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Remote
+                                                                      href="{{ route('categories.index') }}">Remote
                                                                       Controls</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Rain
+                                                                      href="{{ route('categories.index') }}">Rain
                                                                       Covers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Viewfinders</a>
+                                                                      href="{{ route('categories.index') }}">Viewfinders</a>
                                                               </li>
                                                           </ul>
                                                       </div>
@@ -944,7 +949,7 @@
                                                                   width="252" alt="Canon Camera">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -956,7 +961,7 @@
                                               <div class="pb-1 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-printer-2 fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">Printers &amp; Ink</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -973,59 +978,59 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">By type</a>
+                                                                  href="{{ route('categories.index') }}">By type</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">All-in-One</a>
+                                                                      href="{{ route('categories.index') }}">All-in-One</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Copying</a>
+                                                                      href="{{ route('categories.index') }}">Copying</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Faxing</a>
+                                                                      href="{{ route('categories.index') }}">Faxing</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Photo
+                                                                      href="{{ route('categories.index') }}">Photo
                                                                       Printing</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Printing
+                                                                      href="{{ route('categories.index') }}">Printing
                                                                       Only</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Scanning</a>
+                                                                      href="{{ route('categories.index') }}">Scanning</a>
                                                               </li>
                                                           </ul>
                                                           <div class="pt-4 d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Scanners</a>
+                                                                  href="{{ route('categories.index') }}">Scanners</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Business
+                                                                      href="{{ route('categories.index') }}">Business
                                                                       Card Scanners</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Document
+                                                                      href="{{ route('categories.index') }}">Document
                                                                       Scanners</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Flatbed
+                                                                      href="{{ route('categories.index') }}">Flatbed
                                                                       &amp; Photo Scanners</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Slide
+                                                                      href="{{ route('categories.index') }}">Slide
                                                                       &amp; Negative Scanners</a>
                                                               </li>
                                                           </ul>
@@ -1033,42 +1038,42 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Printers</a>
+                                                                  href="{{ route('categories.index') }}">Printers</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Dot
+                                                                      href="{{ route('categories.index') }}">Dot
                                                                       Matrix Printers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Inkjet
+                                                                      href="{{ route('categories.index') }}">Inkjet
                                                                       Printers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Label
+                                                                      href="{{ route('categories.index') }}">Label
                                                                       Printers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Laser
+                                                                      href="{{ route('categories.index') }}">Laser
                                                                       Printers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Photo
+                                                                      href="{{ route('categories.index') }}">Photo
                                                                       Printers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Wide
+                                                                      href="{{ route('categories.index') }}">Wide
                                                                       Format Printers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Plotter
+                                                                      href="{{ route('categories.index') }}">Plotter
                                                                       Printers</a>
                                                               </li>
                                                           </ul>
@@ -1089,7 +1094,7 @@
                                                                   width="252" alt="Epson Printer">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -1101,7 +1106,7 @@
                                               <div class="pb-1 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-battery-2 fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">Charging Stations</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -1118,43 +1123,43 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Charging
+                                                                  href="{{ route('categories.index') }}">Charging
                                                                   Stations</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Portable
+                                                                      href="{{ route('categories.index') }}">Portable
                                                                       Power Stations</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Inverter
+                                                                      href="{{ route('categories.index') }}">Inverter
                                                                       Power Stations</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Outdoor
+                                                                      href="{{ route('categories.index') }}">Outdoor
                                                                       Generators</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Gasoline
+                                                                      href="{{ route('categories.index') }}">Gasoline
                                                                       Generators</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Cell
+                                                                      href="{{ route('categories.index') }}">Cell
                                                                       Phone Chargers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Power
+                                                                      href="{{ route('categories.index') }}">Power
                                                                       Strips</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Wall
+                                                                      href="{{ route('categories.index') }}">Wall
                                                                       Charges</a>
                                                               </li>
                                                           </ul>
@@ -1178,7 +1183,7 @@
                                                                   width="252" alt="Epson Printer">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -1190,7 +1195,7 @@
                                               <div class="pb-1 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-headphones-2 fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">Headphones</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -1207,67 +1212,67 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Headphones</a>
+                                                                  href="{{ route('categories.index') }}">Headphones</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Earbud
+                                                                      href="{{ route('categories.index') }}">Earbud
                                                                       Headphones</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Over-Ear
+                                                                      href="{{ route('categories.index') }}">Over-Ear
                                                                       Headphones</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">On-Ear
+                                                                      href="{{ route('categories.index') }}">On-Ear
                                                                       Headphones</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Bluetooth
+                                                                      href="{{ route('categories.index') }}">Bluetooth
                                                                       Headphones</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Sports
+                                                                      href="{{ route('categories.index') }}">Sports
                                                                       &amp; Fitness</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Noise-Cancelling</a>
+                                                                      href="{{ route('categories.index') }}">Noise-Cancelling</a>
                                                               </li>
                                                           </ul>
                                                           <div class="pt-4 d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Accessories</a>
+                                                                  href="{{ route('categories.index') }}">Accessories</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Cases
+                                                                      href="{{ route('categories.index') }}">Cases
                                                                       &amp; Sleeves</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Cables
+                                                                      href="{{ route('categories.index') }}">Cables
                                                                       &amp; Cords</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Ear
+                                                                      href="{{ route('categories.index') }}">Ear
                                                                       Pads</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Repair
+                                                                      href="{{ route('categories.index') }}">Repair
                                                                       Kits</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Cleaning
+                                                                      href="{{ route('categories.index') }}">Cleaning
                                                                       Equipment</a>
                                                               </li>
                                                           </ul>
@@ -1290,7 +1295,7 @@
                                                                   width="252" alt="Wireless Headphones">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -1302,7 +1307,7 @@
                                               <div class="pb-1 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-watch-2 fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">Wearable Electronics</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -1319,41 +1324,41 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Wearable
+                                                                  href="{{ route('categories.index') }}">Wearable
                                                                   Gadgets</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Smartwatches</a>
+                                                                      href="{{ route('categories.index') }}">Smartwatches</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Fitness
+                                                                      href="{{ route('categories.index') }}">Fitness
                                                                       Trackers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Smart
+                                                                      href="{{ route('categories.index') }}">Smart
                                                                       Glasses</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Rings</a>
+                                                                      href="{{ route('categories.index') }}">Rings</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Virtual
+                                                                      href="{{ route('categories.index') }}">Virtual
                                                                       Reality</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Clips,
+                                                                      href="{{ route('categories.index') }}">Clips,
                                                                       Arm &amp; Wristbands</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Accessories</a>
+                                                                      href="{{ route('categories.index') }}">Accessories</a>
                                                               </li>
                                                           </ul>
                                                       </div>
@@ -1374,7 +1379,7 @@
                                                                   width="252" alt="Pixel Watch">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -1386,7 +1391,7 @@
                                               <div class="pb-1 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-powerbank fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">Powerbanks</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -1403,56 +1408,56 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Powerbanks</a>
+                                                                  href="{{ route('categories.index') }}">Powerbanks</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Fast
+                                                                      href="{{ route('categories.index') }}">Fast
                                                                       Charging</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Built In
+                                                                      href="{{ route('categories.index') }}">Built In
                                                                       Cable</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Built In
+                                                                      href="{{ route('categories.index') }}">Built In
                                                                       Wall Plug</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">LED
+                                                                      href="{{ route('categories.index') }}">LED
                                                                       Indicator Lights</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Pocket
+                                                                      href="{{ route('categories.index') }}">Pocket
                                                                       Size</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Wireless
+                                                                      href="{{ route('categories.index') }}">Wireless
                                                                       Charging</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Short
+                                                                      href="{{ route('categories.index') }}">Short
                                                                       Circuit Protection</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Scratch
+                                                                      href="{{ route('categories.index') }}">Scratch
                                                                       Resistant</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Flashlight</a>
+                                                                      href="{{ route('categories.index') }}">Flashlight</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Lightweight</a>
+                                                                      href="{{ route('categories.index') }}">Lightweight</a>
                                                               </li>
                                                           </ul>
                                                       </div>
@@ -1472,7 +1477,7 @@
                                                                   width="252" alt="Powerbank">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -1484,7 +1489,7 @@
                                               <div class="pb-1 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-hard-drive-2 fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">HDD/SSD Data Storage</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -1501,48 +1506,49 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Data
+                                                                  href="{{ route('categories.index') }}">Data
                                                                   Storage</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">External
+                                                                      href="{{ route('categories.index') }}">External
                                                                       Hard Drives</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">External
+                                                                      href="{{ route('categories.index') }}">External
                                                                       SSD</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">External
+                                                                      href="{{ route('categories.index') }}">External
                                                                       Zip Drives</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Floppy
+                                                                      href="{{ route('categories.index') }}">Floppy
                                                                       &amp; Tape Drives</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Internal
+                                                                      href="{{ route('categories.index') }}">Internal
                                                                       Hard Drives</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Internal
+                                                                      href="{{ route('categories.index') }}">Internal
                                                                       SSD</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Network
+                                                                      href="{{ route('categories.index') }}">Network
                                                                       Attached Storage</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">USB Flash
+                                                                      href="{{ route('categories.index') }}">USB
+                                                                      Flash
                                                                       Drives</a>
                                                               </li>
                                                           </ul>
@@ -1565,7 +1571,7 @@
                                                                   width="252" alt="SSD">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -1577,7 +1583,7 @@
                                               <div class="pb-2 rounded position-relative px-lg-2" tabindex="0"
                                                   data-bs-toggle="dropdown" data-bs-trigger="hover">
                                                   <a class="dropdown-item fw-medium stretched-link d-none d-lg-flex"
-                                                      href="shop-catalog-electronics.html">
+                                                      href="{{ route('categories.index') }}">
                                                       <i class="ci-game fs-xl opacity-60 pe-1 me-2"></i>
                                                       <span class="text-truncate">Video Games</span>
                                                       <i class="ci-chevron-right fs-base ms-auto me-n1"></i>
@@ -1593,76 +1599,77 @@
                                                       <div style="min-width: 194px">
                                                           <div class="d-flex w-100">
                                                               <a class="animate-underline animate-target d-inline h6 text-dark-emphasis text-decoration-none text-truncate"
-                                                                  href="shop-catalog-electronics.html">Games &amp;
+                                                                  href="{{ route('categories.index') }}">Games &amp;
                                                                   Hardware</a>
                                                           </div>
                                                           <ul class="gap-2 nav flex-column mt-n2">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Video
+                                                                      href="{{ route('categories.index') }}">Video
                                                                       Games</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">PlayStation
+                                                                      href="{{ route('categories.index') }}">PlayStation
                                                                       5</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">PlayStation
+                                                                      href="{{ route('categories.index') }}">PlayStation
                                                                       4</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Xbox
+                                                                      href="{{ route('categories.index') }}">Xbox
                                                                       Series X</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Xbox
+                                                                      href="{{ route('categories.index') }}">Xbox
                                                                       Series S</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Nintendo
+                                                                      href="{{ route('categories.index') }}">Nintendo
                                                                       Switch</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Gaming
+                                                                      href="{{ route('categories.index') }}">Gaming
                                                                       PC</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Gaming
+                                                                      href="{{ route('categories.index') }}">Gaming
                                                                       Laptops</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Wii U</a>
+                                                                      href="{{ route('categories.index') }}">Wii
+                                                                      U</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Wii</a>
+                                                                      href="{{ route('categories.index') }}">Wii</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Nintendo
+                                                                      href="{{ route('categories.index') }}">Nintendo
                                                                       3DS</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Nintendo
+                                                                      href="{{ route('categories.index') }}">Nintendo
                                                                       2DS</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Nintendo
+                                                                      href="{{ route('categories.index') }}">Nintendo
                                                                       DS</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Wii</a>
+                                                                      href="{{ route('categories.index') }}">Wii</a>
                                                               </li>
                                                           </ul>
                                                       </div>
@@ -1670,48 +1677,48 @@
                                                           <ul class="gap-2 mt-2 nav flex-column mt-lg-0">
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Mac</a>
+                                                                      href="{{ route('categories.index') }}">Mac</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">PlayStation
+                                                                      href="{{ route('categories.index') }}">PlayStation
                                                                       Vita</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Sony
+                                                                      href="{{ route('categories.index') }}">Sony
                                                                       PSP</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Retro
+                                                                      href="{{ route('categories.index') }}">Retro
                                                                       Gaming</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Microconsoles</a>
+                                                                      href="{{ route('categories.index') }}">Microconsoles</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Controllers</a>
+                                                                      href="{{ route('categories.index') }}">Controllers</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Accessories</a>
+                                                                      href="{{ route('categories.index') }}">Accessories</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Digital
+                                                                      href="{{ route('categories.index') }}">Digital
                                                                       Games Screens</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">Game
+                                                                      href="{{ route('categories.index') }}">Game
                                                                       Pass</a>
                                                               </li>
                                                               <li class="pt-1 d-flex w-100">
                                                                   <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                                      href="shop-catalog-electronics.html">PlayStation
+                                                                      href="{{ route('categories.index') }}">PlayStation
                                                                       Plus</a>
                                                               </li>
                                                           </ul>
@@ -1734,7 +1741,7 @@
                                                                   width="252" alt="Xbox">
                                                               <div class="mt-4 text-center">
                                                                   <a class="btn btn-sm btn-primary stretched-link"
-                                                                      href="shop-catalog-electronics.html">Shop
+                                                                      href="{{ route('categories.index') }}">Shop
                                                                       now</a>
                                                               </div>
                                                           </div>
@@ -1878,12 +1885,13 @@
                                                   <ul class="gap-2 mt-0 nav flex-column">
                                                       <li class="pt-1 d-flex w-100">
                                                           <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                              href="shop-categories-electronics.html">Categories
+                                                              href="{{ route('categories.index') }}">Categories
                                                               Page</a>
                                                       </li>
                                                       <li class="pt-1 d-flex w-100">
                                                           <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                                              href="shop-catalog-electronics.html">Catalog with Side
+                                                              href="{{ route('categories.index') }}">Catalog with
+                                                              Side
                                                               Filters</a>
                                                       </li>
                                                       <li class="pt-1 d-flex w-100">

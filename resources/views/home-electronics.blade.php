@@ -4,8 +4,8 @@
 @section('content')
 
     <!-- Page content -->
-   
- <main class="content-wrapper">
+
+    <main class="content-wrapper">
         <!-- Hero slider -->
         <section class="container pt-4">
             <div class="row">
@@ -53,7 +53,7 @@
                                         <div class="pt-5 text-center swiper-slide text-xl-start py-xl-5">
                                             <p class="text-body">Virtual reality glasses</p>
                                             <h2 class="pb-2 display-4 pb-xl-4">Experience New Reality</h2>
-                                            <a class="btn btn-lg btn-primary" href="shop-catalog-electronics.html">
+                                            <a class="btn btn-lg btn-primary" href="{{ route('categories.index') }}">
                                                 Shop now
                                                 <i class="ci-arrow-up-right fs-lg ms-2 me-n1"></i>
                                             </a>
@@ -421,7 +421,7 @@
             <div class="pb-3 d-flex align-items-center justify-content-between border-bottom pb-md-4">
                 <h2 class="mb-0 h3">Trending products</h2>
                 <div class="nav ms-3">
-                    <a class="px-0 py-2 nav-link animate-underline" href="shop-catalog-electronics.html">
+                    <a class="px-0 py-2 nav-link animate-underline" href="{{ route('categories.index') }}">
                         <span class="animate-target">View all</span>
                         <i class="ci-chevron-right fs-base ms-1"></i>
                     </a>
@@ -1349,7 +1349,7 @@
                     </div>
                 </div>
                 <div class="nav ms-3">
-                    <a class="px-0 py-2 nav-link animate-underline" href="shop-catalog-electronics.html">
+                    <a class="px-0 py-2 nav-link animate-underline" href="{{ route('categories.index') }}">
                         <span class="animate-target text-nowrap">View all</span>
                         <i class="ci-chevron-right fs-base ms-1"></i>
                     </a>
@@ -1829,7 +1829,7 @@
         <section class="container pt-4 pb-5 mb-2 pt-md-5 mt-sm-2 mb-sm-3 mb-md-4 mb-lg-5">
             <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 g-md-4 g-lg-3 g-xl-4">
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="shop-catalog-electronics.html">
+                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="{{ route('categories.index') }}">
                         <img src="assets/img/shop/electronics/brands/apple-light-mode.svg" class="d-none-dark"
                             alt="Apple">
                         <img src="assets/img/shop/electronics/brands/apple-dark-mode.svg" class="d-none d-block-dark"
@@ -1837,7 +1837,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="shop-catalog-electronics.html">
+                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="{{ route('categories.index') }}">
                         <img src="assets/img/shop/electronics/brands/motorola-light-mode.svg" class="d-none-dark"
                             alt="Apple">
                         <img src="assets/img/shop/electronics/brands/motorola-dark-mode.svg" class="d-none d-block-dark"
@@ -1845,7 +1845,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="shop-catalog-electronics.html">
+                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="{{ route('categories.index') }}">
                         <img src="assets/img/shop/electronics/brands/canon-light-mode.svg" class="d-none-dark"
                             alt="Apple">
                         <img src="assets/img/shop/electronics/brands/canon-dark-mode.svg" class="d-none d-block-dark"
@@ -1853,7 +1853,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="shop-catalog-electronics.html">
+                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="{{ route('categories.index') }}">
                         <img src="assets/img/shop/electronics/brands/samsung-light-mode.svg" class="d-none-dark"
                             alt="Apple">
                         <img src="assets/img/shop/electronics/brands/samsung-dark-mode.svg" class="d-none d-block-dark"
@@ -1861,7 +1861,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="shop-catalog-electronics.html">
+                    <a class="p-3 btn btn-outline-secondary w-100 rounded-4" href="{{ route('categories.index') }}">
                         <img src="assets/img/shop/electronics/brands/sony-light-mode.svg" class="d-none-dark"
                             alt="Apple">
                         <img src="assets/img/shop/electronics/brands/sony-dark-mode.svg" class="d-none d-block-dark"
@@ -1870,7 +1870,7 @@
                 </div>
                 <div class="col">
                     <a class="p-3 btn btn-outline-secondary w-100 h-100 rounded-4"
-                        href="shop-categories-electronics.html">
+                        href="{{ route('categories.index') }}">
                         All brands
                         <i class="ci-plus-circle fs-base ms-2"></i>
                     </a>
@@ -1918,7 +1918,7 @@
                                 <div class="ps-3">
                                     <div class="mb-2 fs-xs text-body-secondary lh-sm">6:16</div>
                                     <a class="p-0 nav-link fs-sm hover-effect-underline stretched-link" href="#!">5
-                                        New Cool Gadgets You Must See on Cartzilla - Cheap Budget</a>
+                                        New Cool Gadgets You Must See on Apex - Cheap Budget</a>
                                 </div>
                             </li>
                             <li class="nav flex-nowrap align-items-center position-relative">
@@ -1927,7 +1927,7 @@
                                 <div class="ps-3">
                                     <div class="mb-2 fs-xs text-body-secondary lh-sm">10:20</div>
                                     <a class="p-0 nav-link fs-sm hover-effect-underline stretched-link" href="#!">5
-                                        Super Useful Gadgets on Cartzilla You Must Have in 2023</a>
+                                        Super Useful Gadgets on Apex You Must Have in 2023</a>
                                 </div>
                             </li>
                             <li class="nav flex-nowrap align-items-center position-relative">
@@ -1936,7 +1936,7 @@
                                 <div class="ps-3">
                                     <div class="mb-2 fs-xs text-body-secondary lh-sm">8:40</div>
                                     <a class="p-0 nav-link fs-sm hover-effect-underline stretched-link"
-                                        href="#!">Top 5 New Amazing Gadgets on Cartzilla You Must See</a>
+                                        href="#!">Top 5 New Amazing Gadgets on Apex You Must See</a>
                                 </div>
                             </li>
                         </ul>

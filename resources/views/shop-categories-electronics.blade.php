@@ -24,42 +24,54 @@
             <div class="overflow-auto" data-simplebar="" data-simplebar-auto-hide="false">
                 <div class="row row-cols-6 g-0" style="min-width: 960px">
                     <div class="col">
-                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="shop-catalog-electronics.html">
+                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="{{ route('categories.index') }}">
                             <div class="ratio" style="max-width: 164px; --cz-aspect-ratio: calc(80 / 164 * 100%)">
-                                <img src="assets/img/shop/electronics/brands/apple-light-mode.svg" class="d-none-dark" alt="Apple">
-                                <img src="assets/img/shop/electronics/brands/apple-dark-mode.svg" class="d-none d-block-dark" alt="Apple">
+                                <img src="assets/img/shop/electronics/brands/apple-light-mode.svg" class="d-none-dark"
+                                    alt="Apple">
+                                <img src="assets/img/shop/electronics/brands/apple-dark-mode.svg"
+                                    class="d-none d-block-dark" alt="Apple">
                             </div>
                         </a>
                     </div>
                     <div class="col">
-                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="shop-catalog-electronics.html">
-                <img src="assets/img/shop/electronics/brands/motorola-light-mode.svg" class="d-none-dark" alt="Motorola">
-                <img src="assets/img/shop/electronics/brands/motorola-dark-mode.svg" class="d-none d-block-dark" alt="Motorola">
-              </a>
+                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="{{ route('categories.index') }}">
+                            <img src="assets/img/shop/electronics/brands/motorola-light-mode.svg" class="d-none-dark"
+                                alt="Motorola">
+                            <img src="assets/img/shop/electronics/brands/motorola-dark-mode.svg" class="d-none d-block-dark"
+                                alt="Motorola">
+                        </a>
                     </div>
                     <div class="col">
-                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="shop-catalog-electronics.html">
-                <img src="assets/img/shop/electronics/brands/xiaomi-light-mode.svg" class="d-none-dark" alt="Xiaomi">
-                <img src="assets/img/shop/electronics/brands/xiaomi-dark-mode.svg" class="d-none d-block-dark" alt="Xiaomi">
-              </a>
+                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="{{ route('categories.index') }}">
+                            <img src="assets/img/shop/electronics/brands/xiaomi-light-mode.svg" class="d-none-dark"
+                                alt="Xiaomi">
+                            <img src="assets/img/shop/electronics/brands/xiaomi-dark-mode.svg" class="d-none d-block-dark"
+                                alt="Xiaomi">
+                        </a>
                     </div>
                     <div class="col">
-                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="shop-catalog-electronics.html">
-                <img src="assets/img/shop/electronics/brands/canon-light-mode.svg" class="d-none-dark" alt="Canon">
-                <img src="assets/img/shop/electronics/brands/canon-dark-mode.svg" class="d-none d-block-dark" alt="Canon">
-              </a>
+                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="{{ route('categories.index') }}">
+                            <img src="assets/img/shop/electronics/brands/canon-light-mode.svg" class="d-none-dark"
+                                alt="Canon">
+                            <img src="assets/img/shop/electronics/brands/canon-dark-mode.svg" class="d-none d-block-dark"
+                                alt="Canon">
+                        </a>
                     </div>
                     <div class="col">
-                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="shop-catalog-electronics.html">
-                <img src="assets/img/shop/electronics/brands/samsung-light-mode.svg" class="d-none-dark" alt="Samsung">
-                <img src="assets/img/shop/electronics/brands/samsung-dark-mode.svg" class="d-none d-block-dark" alt="Samsung">
-              </a>
+                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="{{ route('categories.index') }}">
+                            <img src="assets/img/shop/electronics/brands/samsung-light-mode.svg" class="d-none-dark"
+                                alt="Samsung">
+                            <img src="assets/img/shop/electronics/brands/samsung-dark-mode.svg" class="d-none d-block-dark"
+                                alt="Samsung">
+                        </a>
                     </div>
                     <div class="col">
-                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="shop-catalog-electronics.html">
-                <img src="assets/img/shop/electronics/brands/sony-light-mode.svg" class="d-none-dark" alt="Sony">
-                <img src="assets/img/shop/electronics/brands/sony-dark-mode.svg" class="d-none d-block-dark" alt="Sony">
-              </a>
+                        <a class="d-flex justify-content-center py-3 px-2 px-xl-3" href="{{ route('categories.index') }}">
+                            <img src="assets/img/shop/electronics/brands/sony-light-mode.svg" class="d-none-dark"
+                                alt="Sony">
+                            <img src="assets/img/shop/electronics/brands/sony-dark-mode.svg" class="d-none d-block-dark"
+                                alt="Sony">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -73,29 +85,36 @@
                 <!-- Category -->
                 <div class="col">
                     <div class="hover-effect-scale">
-                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="shop-catalog-electronics.html">
+                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="{{ route('categories.index') }}">
                             <div class="ratio" style="--cz-aspect-ratio: calc(184 / 258 * 100%)">
-                                <img src="assets/img/shop/electronics/categories/01.png" class="hover-effect-target" alt="Smartphones">
+                                <img src="assets/img/shop/electronics/categories/01.png" class="hover-effect-target"
+                                    alt="Smartphones">
                             </div>
                         </a>
                         <h2 class="h6 d-flex w-100 pb-2 mb-1">
-                            <a class="animate-underline animate-target d-inline text-truncate" href="shop-catalog-electronics.html">Smartphones</a>
+                            <a class="animate-underline animate-target d-inline text-truncate"
+                                href="{{ route('categories.index') }}">Smartphones</a>
                         </h2>
                         <ul class="nav flex-column gap-2 mt-n1">
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Apple iPhone</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Apple iPhone</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Samsung</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Samsung</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Xiaomi</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Xiaomi</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Nokia</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Nokia</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Meizu</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Meizu</a>
                             </li>
                         </ul>
                     </div>
@@ -104,32 +123,40 @@
                 <!-- Category -->
                 <div class="col">
                     <div class="hover-effect-scale">
-                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="shop-catalog-electronics.html">
+                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="{{ route('categories.index') }}">
                             <div class="ratio" style="--cz-aspect-ratio: calc(184 / 258 * 100%)">
-                                <img src="assets/img/shop/electronics/categories/02.png" class="hover-effect-target" alt="Powerbank">
+                                <img src="assets/img/shop/electronics/categories/02.png" class="hover-effect-target"
+                                    alt="Powerbank">
                             </div>
                         </a>
                         <h2 class="h6 d-flex w-100 pb-2 mb-1">
-                            <a class="animate-underline animate-target d-inline text-truncate" href="shop-catalog-electronics.html">Accessories</a>
+                            <a class="animate-underline animate-target d-inline text-truncate"
+                                href="{{ route('categories.index') }}">Accessories</a>
                         </h2>
                         <ul class="nav flex-column gap-2 mt-n1">
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Accessory Kits</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Accessory Kits</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Batteries &amp; Battery Packs</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Batteries &amp; Battery Packs</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Cables</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Cables</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Car Accessories</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Car Accessories</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Charges &amp; Power Adapters</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Charges &amp; Power Adapters</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">FM Transmitters</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">FM Transmitters</a>
                             </li>
                         </ul>
                     </div>
@@ -138,29 +165,36 @@
                 <!-- Category -->
                 <div class="col">
                     <div class="hover-effect-scale">
-                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="shop-catalog-electronics.html">
+                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="{{ route('categories.index') }}">
                             <div class="ratio" style="--cz-aspect-ratio: calc(184 / 258 * 100%)">
-                                <img src="assets/img/shop/electronics/categories/03.png" class="hover-effect-target" alt="Tablets">
+                                <img src="assets/img/shop/electronics/categories/03.png" class="hover-effect-target"
+                                    alt="Tablets">
                             </div>
                         </a>
                         <h2 class="h6 d-flex w-100 pb-2 mb-1">
-                            <a class="animate-underline animate-target d-inline text-truncate" href="shop-catalog-electronics.html">Tablets</a>
+                            <a class="animate-underline animate-target d-inline text-truncate"
+                                href="{{ route('categories.index') }}">Tablets</a>
                         </h2>
                         <ul class="nav flex-column gap-2 mt-n1">
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Apple iPad</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Apple iPad</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Android Tablets</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Android Tablets</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Samsung</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Samsung</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Xiaomi</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Xiaomi</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Lenovo</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Lenovo</a>
                             </li>
                         </ul>
                     </div>
@@ -169,32 +203,40 @@
                 <!-- Category -->
                 <div class="col">
                     <div class="hover-effect-scale">
-                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="shop-catalog-electronics.html">
+                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="{{ route('categories.index') }}">
                             <div class="ratio" style="--cz-aspect-ratio: calc(184 / 258 * 100%)">
-                                <img src="assets/img/shop/electronics/categories/04.png" class="hover-effect-target" alt="Wearable Electronics">
+                                <img src="assets/img/shop/electronics/categories/04.png" class="hover-effect-target"
+                                    alt="Wearable Electronics">
                             </div>
                         </a>
                         <h2 class="h6 d-flex w-100 pb-2 mb-1">
-                            <a class="animate-underline animate-target d-inline text-truncate" href="shop-catalog-electronics.html">Wearable Electronics</a>
+                            <a class="animate-underline animate-target d-inline text-truncate"
+                                href="{{ route('categories.index') }}">Wearable Electronics</a>
                         </h2>
                         <ul class="nav flex-column gap-2 mt-n1">
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Smart Watches</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Smart Watches</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Fitness Trackers</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Fitness Trackers</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Smart Glasses</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Smart Glasses</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">E-books</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">E-books</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Clips, Arm &amp; Wristbands</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Clips, Arm &amp; Wristbands</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Voice Recorders</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Voice Recorders</a>
                             </li>
                         </ul>
                     </div>
@@ -203,29 +245,36 @@
                 <!-- Category -->
                 <div class="col">
                     <div class="hover-effect-scale">
-                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="shop-catalog-electronics.html">
+                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="{{ route('categories.index') }}">
                             <div class="ratio" style="--cz-aspect-ratio: calc(184 / 258 * 100%)">
-                                <img src="assets/img/shop/electronics/categories/05.png" class="hover-effect-target" alt="Computers">
+                                <img src="assets/img/shop/electronics/categories/05.png" class="hover-effect-target"
+                                    alt="Computers">
                             </div>
                         </a>
                         <h2 class="h6 d-flex w-100 pb-2 mb-1">
-                            <a class="animate-underline animate-target d-inline text-truncate" href="shop-catalog-electronics.html">Computers &amp; Laptops</a>
+                            <a class="animate-underline animate-target d-inline text-truncate"
+                                href="{{ route('categories.index') }}">Computers &amp; Laptops</a>
                         </h2>
                         <ul class="nav flex-column gap-2 mt-n1">
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Asus</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Asus</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Acer</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Acer</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">HP (Hewlett Packard)</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">HP (Hewlett Packard)</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Lenovo</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Lenovo</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Apple MacBook</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Apple MacBook</a>
                             </li>
                         </ul>
                     </div>
@@ -234,35 +283,44 @@
                 <!-- Category -->
                 <div class="col">
                     <div class="hover-effect-scale">
-                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="shop-catalog-electronics.html">
+                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="{{ route('categories.index') }}">
                             <div class="ratio" style="--cz-aspect-ratio: calc(184 / 258 * 100%)">
-                                <img src="assets/img/shop/electronics/categories/06.png" class="hover-effect-target" alt="Cameras">
+                                <img src="assets/img/shop/electronics/categories/06.png" class="hover-effect-target"
+                                    alt="Cameras">
                             </div>
                         </a>
                         <h2 class="h6 d-flex w-100 pb-2 mb-1">
-                            <a class="animate-underline animate-target d-inline text-truncate" href="shop-catalog-electronics.html">Cameras, Photo &amp; Video</a>
+                            <a class="animate-underline animate-target d-inline text-truncate"
+                                href="{{ route('categories.index') }}">Cameras, Photo &amp; Video</a>
                         </h2>
                         <ul class="nav flex-column gap-2 mt-n1">
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Photo Cameras</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Photo Cameras</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Video Cameras</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Video Cameras</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Action Cameras</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Action Cameras</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Camcorders</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Camcorders</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Studio Equipment</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Studio Equipment</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Tripods</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Tripods</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Bags and Covers</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Bags and Covers</a>
                             </li>
                         </ul>
                     </div>
@@ -271,32 +329,40 @@
                 <!-- Category -->
                 <div class="col">
                     <div class="hover-effect-scale">
-                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="shop-catalog-electronics.html">
+                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="{{ route('categories.index') }}">
                             <div class="ratio" style="--cz-aspect-ratio: calc(184 / 258 * 100%)">
-                                <img src="assets/img/shop/electronics/categories/07.png" class="hover-effect-target" alt="Headphones">
+                                <img src="assets/img/shop/electronics/categories/07.png" class="hover-effect-target"
+                                    alt="Headphones">
                             </div>
                         </a>
                         <h2 class="h6 d-flex w-100 pb-2 mb-1">
-                            <a class="animate-underline animate-target d-inline text-truncate" href="shop-catalog-electronics.html">Headphones</a>
+                            <a class="animate-underline animate-target d-inline text-truncate"
+                                href="{{ route('categories.index') }}">Headphones</a>
                         </h2>
                         <ul class="nav flex-column gap-2 mt-n1">
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Apple</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Apple</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Defunc</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Defunc</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">HyperX</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">HyperX</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">JBL</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">JBL</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Logitech</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Logitech</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Panasonic</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Panasonic</a>
                             </li>
                         </ul>
                     </div>
@@ -305,35 +371,44 @@
                 <!-- Category -->
                 <div class="col">
                     <div class="hover-effect-scale">
-                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="shop-catalog-electronics.html">
+                        <a class="d-block bg-body-tertiary rounded p-4 mb-4" href="{{ route('categories.index') }}">
                             <div class="ratio" style="--cz-aspect-ratio: calc(184 / 258 * 100%)">
-                                <img src="assets/img/shop/electronics/categories/08.png" class="hover-effect-target" alt="Video Games">
+                                <img src="assets/img/shop/electronics/categories/08.png" class="hover-effect-target"
+                                    alt="Video Games">
                             </div>
                         </a>
                         <h2 class="h6 d-flex w-100 pb-2 mb-1">
-                            <a class="animate-underline animate-target d-inline text-truncate" href="shop-catalog-electronics.html">Video Games</a>
+                            <a class="animate-underline animate-target d-inline text-truncate"
+                                href="{{ route('categories.index') }}">Video Games</a>
                         </h2>
                         <ul class="nav flex-column gap-2 mt-n1">
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">PlayStation 5</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">PlayStation 5</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">PlayStation Controllers</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">PlayStation Controllers</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">PlayStation Games</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">PlayStation Games</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Gaming PCs</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Gaming PCs</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Nintendo Switch</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Nintendo Switch</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Xbox Series X/S</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Xbox Series X/S</a>
                             </li>
                             <li class="d-flex w-100 pt-1">
-                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Gaming Peripherals</a>
+                                <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0"
+                                    href="{{ route('categories.index') }}">Gaming Peripherals</a>
                             </li>
                         </ul>
                     </div>
@@ -346,16 +421,20 @@
         <section class="container pb-4 pt-5 mb-3">
             <div class="row g-3 g-lg-4">
                 <div class="col-md-7">
-                    <div class="position-relative d-flex flex-column flex-sm-row align-items-center h-100 rounded-5 overflow-hidden px-5 px-sm-0 pe-sm-4">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 d-none-dark rtl-flip" style="background: linear-gradient(90deg, #accbee 0%, #e7f0fd 100%)"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 d-none d-block-dark rtl-flip" style="background: linear-gradient(90deg, #1b273a 0%, #1f2632 100%)"></span>
-                        <div class="position-relative z-1 text-center text-sm-start pt-4 pt-sm-0 ps-xl-4 mt-2 mt-sm-0 order-sm-2">
+                    <div
+                        class="position-relative d-flex flex-column flex-sm-row align-items-center h-100 rounded-5 overflow-hidden px-5 px-sm-0 pe-sm-4">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 d-none-dark rtl-flip"
+                            style="background: linear-gradient(90deg, #accbee 0%, #e7f0fd 100%)"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 d-none d-block-dark rtl-flip"
+                            style="background: linear-gradient(90deg, #1b273a 0%, #1f2632 100%)"></span>
+                        <div
+                            class="position-relative z-1 text-center text-sm-start pt-4 pt-sm-0 ps-xl-4 mt-2 mt-sm-0 order-sm-2">
                             <h2 class="h3 mb-2">iPhone 14</h2>
                             <p class="fs-sm text-light-emphasis mb-sm-4">Apple iPhone 14 128GB Blue</p>
                             <a class="btn btn-primary" href="shop-product-general-electronics.html">
-                  From $899
-                  <i class="ci-arrow-up-right fs-base ms-1 me-n1"></i>
-                </a>
+                                From $899
+                                <i class="ci-arrow-up-right fs-base ms-1 me-n1"></i>
+                            </a>
                         </div>
                         <div class="position-relative z-1 w-100 align-self-end order-sm-1" style="max-width: 416px">
                             <div class="ratio rtl-flip" style="--cz-aspect-ratio: calc(320 / 416 * 100%)">
@@ -365,9 +444,12 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <div class="position-relative d-flex flex-column align-items-center justify-content-between h-100 rounded-5 overflow-hidden pt-3">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 d-none-dark rtl-flip" style="background: linear-gradient(90deg, #fdcbf1 0%, #fdcbf1 1%, #ffecfa 100%)"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 d-none d-block-dark rtl-flip" style="background: linear-gradient(90deg, #362131 0%, #322730 100%)"></span>
+                    <div
+                        class="position-relative d-flex flex-column align-items-center justify-content-between h-100 rounded-5 overflow-hidden pt-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 d-none-dark rtl-flip"
+                            style="background: linear-gradient(90deg, #fdcbf1 0%, #fdcbf1 1%, #ffecfa 100%)"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 d-none d-block-dark rtl-flip"
+                            style="background: linear-gradient(90deg, #362131 0%, #322730 100%)"></span>
                         <div class="position-relative z-1 text-center pt-3 mx-4">
                             <i class="ci-apple text-body-emphasis fs-3 mb-3"></i>
                             <p class="fs-sm text-light-emphasis mb-1">Deal of the week</p>
@@ -394,39 +476,46 @@
                         <div class="position-relative">
                             <div class="position-absolute top-0 end-0 z-2 hover-effect-target opacity-0 mt-3 me-3">
                                 <div class="d-flex flex-column gap-2">
-                                    <button type="button" class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex" aria-label="Add to Wishlist">
-                      <i class="ci-heart fs-base animate-target"></i>
-                    </button>
-                                    <button type="button" class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex" aria-label="Compare">
-                      <i class="ci-refresh-cw fs-base animate-target"></i>
-                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex"
+                                        aria-label="Add to Wishlist">
+                                        <i class="ci-heart fs-base animate-target"></i>
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex"
+                                        aria-label="Compare">
+                                        <i class="ci-refresh-cw fs-base animate-target"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="dropdown d-lg-none position-absolute top-0 end-0 z-2 mt-2 me-2">
-                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
-                    <i class="ci-more-vertical fs-lg"></i>
-                  </button>
+                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
+                                    <i class="ci-more-vertical fs-lg"></i>
+                                </button>
                                 <ul class="dropdown-menu dropdown-menu-end fs-xs p-2" style="min-width: auto">
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-heart fs-sm ms-n1 me-2"></i>
-                        Add to Wishlist
-                      </a>
+                                            <i class="ci-heart fs-sm ms-n1 me-2"></i>
+                                            Add to Wishlist
+                                        </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
-                        Compare
-                      </a>
+                                            <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
+                                            Compare
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4" href="shop-product-general-electronics.html">
-                  <span class="badge bg-danger position-absolute top-0 start-0 mt-2 ms-2 mt-lg-3 ms-lg-3">-21%</span>
-                  <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
-                    <img src="assets/img/shop/electronics/01.png" alt="VR Glasses">
-                  </div>
-                </a>
+                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4"
+                                href="shop-product-general-electronics.html">
+                                <span
+                                    class="badge bg-danger position-absolute top-0 start-0 mt-2 ms-2 mt-lg-3 ms-lg-3">-21%</span>
+                                <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
+                                    <img src="assets/img/shop/electronics/01.png" alt="VR Glasses">
+                                </div>
+                            </a>
                         </div>
                         <div class="w-100 min-w-0 px-1 pb-2 px-sm-3 pb-sm-3">
                             <div class="d-flex align-items-center gap-2 mb-2">
@@ -440,18 +529,23 @@
                                 <span class="text-body-tertiary fs-xs">(123)</span>
                             </div>
                             <h3 class="pb-1 mb-2">
-                                <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-general-electronics.html">
-                    <span class="animate-target">VRB01 Virtual Reality Glasses</span>
-                  </a>
+                                <a class="d-block fs-sm fw-medium text-truncate"
+                                    href="shop-product-general-electronics.html">
+                                    <span class="animate-target">VRB01 Virtual Reality Glasses</span>
+                                </a>
                             </h3>
                             <div class="d-flex align-items-center justify-content-between">
-                                <div class="h5 lh-1 mb-0">$340.99 <del class="text-body-tertiary fs-sm fw-normal">$430.00</del></div>
-                                <button type="button" class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2" aria-label="Add to Cart">
-                    <i class="ci-shopping-cart fs-base animate-target"></i>
-                  </button>
+                                <div class="h5 lh-1 mb-0">$340.99 <del
+                                        class="text-body-tertiary fs-sm fw-normal">$430.00</del></div>
+                                <button type="button"
+                                    class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2"
+                                    aria-label="Add to Cart">
+                                    <i class="ci-shopping-cart fs-base animate-target"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
+                        <div
+                            class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
                             <span class="position-absolute top-0 start-0 w-100 bg-body mt-n2 py-2"></span>
                             <ul class="list-unstyled d-flex flex-column gap-2 m-0">
                                 <li class="d-flex align-items-center">
@@ -485,34 +579,40 @@
                         <div class="position-relative">
                             <div class="position-absolute top-0 end-0 z-2 hover-effect-target opacity-0 mt-3 me-3">
                                 <div class="d-flex flex-column gap-2">
-                                    <button type="button" class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex" aria-label="Add to Wishlist">
-                      <i class="ci-heart fs-base animate-target"></i>
-                    </button>
-                                    <button type="button" class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex" aria-label="Compare">
-                      <i class="ci-refresh-cw fs-base animate-target"></i>
-                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex"
+                                        aria-label="Add to Wishlist">
+                                        <i class="ci-heart fs-base animate-target"></i>
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex"
+                                        aria-label="Compare">
+                                        <i class="ci-refresh-cw fs-base animate-target"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="dropdown d-lg-none position-absolute top-0 end-0 z-2 mt-2 me-2">
-                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
-                    <i class="ci-more-vertical fs-lg"></i>
-                  </button>
+                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
+                                    <i class="ci-more-vertical fs-lg"></i>
+                                </button>
                                 <ul class="dropdown-menu dropdown-menu-end fs-xs p-2" style="min-width: auto">
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-heart fs-sm ms-n1 me-2"></i>
-                        Add to Wishlist
-                      </a>
+                                            <i class="ci-heart fs-sm ms-n1 me-2"></i>
+                                            Add to Wishlist
+                                        </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
-                        Compare
-                      </a>
+                                            <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
+                                            Compare
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4" href="shop-product-general-electronics.html">
+                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4"
+                                href="shop-product-general-electronics.html">
                                 <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
                                     <img src="assets/img/shop/electronics/02.png" alt="iPhone 14">
                                 </div>
@@ -530,18 +630,22 @@
                                 <span class="text-body-tertiary fs-xs">(142)</span>
                             </div>
                             <h3 class="pb-1 mb-2">
-                                <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-general-electronics.html">
-                    <span class="animate-target">Apple iPhone 14 128GB White</span>
-                  </a>
+                                <a class="d-block fs-sm fw-medium text-truncate"
+                                    href="shop-product-general-electronics.html">
+                                    <span class="animate-target">Apple iPhone 14 128GB White</span>
+                                </a>
                             </h3>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="h5 lh-1 mb-0">$899.00</div>
-                                <button type="button" class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2" aria-label="Add to Cart">
-                    <i class="ci-shopping-cart fs-base animate-target"></i>
-                  </button>
+                                <button type="button"
+                                    class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2"
+                                    aria-label="Add to Cart">
+                                    <i class="ci-shopping-cart fs-base animate-target"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
+                        <div
+                            class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
                             <span class="position-absolute top-0 start-0 w-100 bg-body mt-n2 py-2"></span>
                             <ul class="list-unstyled d-flex flex-column gap-2 m-0">
                                 <li class="d-flex align-items-center">
@@ -580,34 +684,40 @@
                         <div class="position-relative">
                             <div class="position-absolute top-0 end-0 z-2 hover-effect-target opacity-0 mt-3 me-3">
                                 <div class="d-flex flex-column gap-2">
-                                    <button type="button" class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex" aria-label="Add to Wishlist">
-                      <i class="ci-heart fs-base animate-target"></i>
-                    </button>
-                                    <button type="button" class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex" aria-label="Compare">
-                      <i class="ci-refresh-cw fs-base animate-target"></i>
-                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex"
+                                        aria-label="Add to Wishlist">
+                                        <i class="ci-heart fs-base animate-target"></i>
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex"
+                                        aria-label="Compare">
+                                        <i class="ci-refresh-cw fs-base animate-target"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="dropdown d-lg-none position-absolute top-0 end-0 z-2 mt-2 me-2">
-                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
-                    <i class="ci-more-vertical fs-lg"></i>
-                  </button>
+                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
+                                    <i class="ci-more-vertical fs-lg"></i>
+                                </button>
                                 <ul class="dropdown-menu dropdown-menu-end fs-xs p-2" style="min-width: auto">
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-heart fs-sm ms-n1 me-2"></i>
-                        Add to Wishlist
-                      </a>
+                                            <i class="ci-heart fs-sm ms-n1 me-2"></i>
+                                            Add to Wishlist
+                                        </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
-                        Compare
-                      </a>
+                                            <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
+                                            Compare
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4" href="shop-product-general-electronics.html">
+                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4"
+                                href="shop-product-general-electronics.html">
                                 <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
                                     <img src="assets/img/shop/electronics/03.png" alt="Smart Watch">
                                 </div>
@@ -625,18 +735,22 @@
                                 <span class="text-body-tertiary fs-xs">(67)</span>
                             </div>
                             <h3 class="pb-1 mb-2">
-                                <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-general-electronics.html">
-                    <span class="animate-target">Smart Watch Series 7, White</span>
-                  </a>
+                                <a class="d-block fs-sm fw-medium text-truncate"
+                                    href="shop-product-general-electronics.html">
+                                    <span class="animate-target">Smart Watch Series 7, White</span>
+                                </a>
                             </h3>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="h5 lh-1 mb-0">$429.00</div>
-                                <button type="button" class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2" aria-label="Add to Cart">
-                    <i class="ci-shopping-cart fs-base animate-target"></i>
-                  </button>
+                                <button type="button"
+                                    class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2"
+                                    aria-label="Add to Cart">
+                                    <i class="ci-shopping-cart fs-base animate-target"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
+                        <div
+                            class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
                             <span class="position-absolute top-0 start-0 w-100 bg-body mt-n2 py-2"></span>
                             <ul class="list-unstyled d-flex flex-column gap-2 m-0">
                                 <li class="d-flex align-items-center">
@@ -675,39 +789,46 @@
                         <div class="position-relative">
                             <div class="position-absolute top-0 end-0 z-2 hover-effect-target opacity-0 mt-3 me-3">
                                 <div class="d-flex flex-column gap-2">
-                                    <button type="button" class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex" aria-label="Add to Wishlist">
-                      <i class="ci-heart fs-base animate-target"></i>
-                    </button>
-                                    <button type="button" class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex" aria-label="Compare">
-                      <i class="ci-refresh-cw fs-base animate-target"></i>
-                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex"
+                                        aria-label="Add to Wishlist">
+                                        <i class="ci-heart fs-base animate-target"></i>
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex"
+                                        aria-label="Compare">
+                                        <i class="ci-refresh-cw fs-base animate-target"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="dropdown d-lg-none position-absolute top-0 end-0 z-2 mt-2 me-2">
-                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
-                    <i class="ci-more-vertical fs-lg"></i>
-                  </button>
+                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
+                                    <i class="ci-more-vertical fs-lg"></i>
+                                </button>
                                 <ul class="dropdown-menu dropdown-menu-end fs-xs p-2" style="min-width: auto">
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-heart fs-sm ms-n1 me-2"></i>
-                        Add to Wishlist
-                      </a>
+                                            <i class="ci-heart fs-sm ms-n1 me-2"></i>
+                                            Add to Wishlist
+                                        </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
-                        Compare
-                      </a>
+                                            <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
+                                            Compare
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4" href="shop-product-general-electronics.html">
-                  <span class="badge bg-info position-absolute top-0 start-0 mt-2 ms-2 mt-lg-3 ms-lg-3">New</span>
-                  <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
-                    <img src="assets/img/shop/electronics/04.png" alt="MacBook">
-                  </div>
-                </a>
+                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4"
+                                href="shop-product-general-electronics.html">
+                                <span
+                                    class="badge bg-info position-absolute top-0 start-0 mt-2 ms-2 mt-lg-3 ms-lg-3">New</span>
+                                <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
+                                    <img src="assets/img/shop/electronics/04.png" alt="MacBook">
+                                </div>
+                            </a>
                         </div>
                         <div class="w-100 min-w-0 px-1 pb-2 px-sm-3 pb-sm-3">
                             <div class="d-flex align-items-center gap-2 mb-2">
@@ -721,18 +842,22 @@
                                 <span class="text-body-tertiary fs-xs">(51)</span>
                             </div>
                             <h3 class="pb-1 mb-2">
-                                <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-general-electronics.html">
-                    <span class="animate-target">Laptop Apple MacBook Pro 13 M2</span>
-                  </a>
+                                <a class="d-block fs-sm fw-medium text-truncate"
+                                    href="shop-product-general-electronics.html">
+                                    <span class="animate-target">Laptop Apple MacBook Pro 13 M2</span>
+                                </a>
                             </h3>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="h5 lh-1 mb-0">$1,200.00</div>
-                                <button type="button" class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2" aria-label="Add to Cart">
-                    <i class="ci-shopping-cart fs-base animate-target"></i>
-                  </button>
+                                <button type="button"
+                                    class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2"
+                                    aria-label="Add to Cart">
+                                    <i class="ci-shopping-cart fs-base animate-target"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
+                        <div
+                            class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
                             <span class="position-absolute top-0 start-0 w-100 bg-body mt-n2 py-2"></span>
                             <ul class="list-unstyled d-flex flex-column gap-2 m-0">
                                 <li class="d-flex align-items-center">
@@ -766,34 +891,40 @@
                         <div class="posittion-relative">
                             <div class="position-absolute top-0 end-0 z-2 hover-effect-target opacity-0 mt-3 me-3">
                                 <div class="d-flex flex-column gap-2">
-                                    <button type="button" class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex" aria-label="Add to Wishlist">
-                      <i class="ci-heart fs-base animate-target"></i>
-                    </button>
-                                    <button type="button" class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex" aria-label="Compare">
-                      <i class="ci-refresh-cw fs-base animate-target"></i>
-                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex"
+                                        aria-label="Add to Wishlist">
+                                        <i class="ci-heart fs-base animate-target"></i>
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex"
+                                        aria-label="Compare">
+                                        <i class="ci-refresh-cw fs-base animate-target"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="dropdown d-lg-none position-absolute top-0 end-0 z-2 mt-2 me-2">
-                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
-                    <i class="ci-more-vertical fs-lg"></i>
-                  </button>
+                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
+                                    <i class="ci-more-vertical fs-lg"></i>
+                                </button>
                                 <ul class="dropdown-menu dropdown-menu-end fs-xs p-2" style="min-width: auto">
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-heart fs-sm ms-n1 me-2"></i>
-                        Add to Wishlist
-                      </a>
+                                            <i class="ci-heart fs-sm ms-n1 me-2"></i>
+                                            Add to Wishlist
+                                        </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
-                        Compare
-                      </a>
+                                            <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
+                                            Compare
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4" href="shop-product-general-electronics.html">
+                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4"
+                                href="shop-product-general-electronics.html">
                                 <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
                                     <img src="assets/img/shop/electronics/05.png" alt="iPad Air">
                                 </div>
@@ -811,18 +942,22 @@
                                 <span class="text-body-tertiary fs-xs">(12)</span>
                             </div>
                             <h3 class="pb-1 mb-2">
-                                <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-general-electronics.html">
-                    <span class="animate-target">Tablet Apple iPad Air M1</span>
-                  </a>
+                                <a class="d-block fs-sm fw-medium text-truncate"
+                                    href="shop-product-general-electronics.html">
+                                    <span class="animate-target">Tablet Apple iPad Air M1</span>
+                                </a>
                             </h3>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="h5 lh-1 mb-0">$540.00</div>
-                                <button type="button" class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2" aria-label="Add to Cart">
-                    <i class="ci-shopping-cart fs-base animate-target"></i>
-                  </button>
+                                <button type="button"
+                                    class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2"
+                                    aria-label="Add to Cart">
+                                    <i class="ci-shopping-cart fs-base animate-target"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
+                        <div
+                            class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
                             <span class="position-absolute top-0 start-0 w-100 bg-body mt-n2 py-2"></span>
                             <ul class="list-unstyled d-flex flex-column gap-2 m-0">
                                 <li class="d-flex align-items-center">
@@ -861,34 +996,40 @@
                         <div class="position-relative">
                             <div class="position-absolute top-0 end-0 z-2 hover-effect-target opacity-0 mt-3 me-3">
                                 <div class="d-flex flex-column gap-2">
-                                    <button type="button" class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex" aria-label="Add to Wishlist">
-                      <i class="ci-heart fs-base animate-target"></i>
-                    </button>
-                                    <button type="button" class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex" aria-label="Compare">
-                      <i class="ci-refresh-cw fs-base animate-target"></i>
-                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex"
+                                        aria-label="Add to Wishlist">
+                                        <i class="ci-heart fs-base animate-target"></i>
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex"
+                                        aria-label="Compare">
+                                        <i class="ci-refresh-cw fs-base animate-target"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="dropdown d-lg-none position-absolute top-0 end-0 z-2 mt-2 me-2">
-                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
-                    <i class="ci-more-vertical fs-lg"></i>
-                  </button>
+                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
+                                    <i class="ci-more-vertical fs-lg"></i>
+                                </button>
                                 <ul class="dropdown-menu dropdown-menu-end fs-xs p-2" style="min-width: auto">
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-heart fs-sm ms-n1 me-2"></i>
-                        Add to Wishlist
-                      </a>
+                                            <i class="ci-heart fs-sm ms-n1 me-2"></i>
+                                            Add to Wishlist
+                                        </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
-                        Compare
-                      </a>
+                                            <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
+                                            Compare
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4" href="shop-product-general-electronics.html">
+                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4"
+                                href="shop-product-general-electronics.html">
                                 <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
                                     <img src="assets/img/shop/electronics/06.png" alt="AirPods 2">
                                 </div>
@@ -906,18 +1047,22 @@
                                 <span class="text-body-tertiary fs-xs">(78)</span>
                             </div>
                             <h3 class="pb-1 mb-2">
-                                <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-general-electronics.html">
-                    <span class="animate-target">Headphones Apple AirPods 2 Pro</span>
-                  </a>
+                                <a class="d-block fs-sm fw-medium text-truncate"
+                                    href="shop-product-general-electronics.html">
+                                    <span class="animate-target">Headphones Apple AirPods 2 Pro</span>
+                                </a>
                             </h3>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="h5 lh-1 mb-0">$224.00</div>
-                                <button type="button" class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2" aria-label="Add to Cart">
-                    <i class="ci-shopping-cart fs-base animate-target"></i>
-                  </button>
+                                <button type="button"
+                                    class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2"
+                                    aria-label="Add to Cart">
+                                    <i class="ci-shopping-cart fs-base animate-target"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
+                        <div
+                            class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
                             <span class="position-absolute top-0 start-0 w-100 bg-body mt-n2 py-2"></span>
                             <ul class="list-unstyled d-flex flex-column gap-2 m-0">
                                 <li class="d-flex align-items-center">
@@ -951,34 +1096,40 @@
                         <div class="posittion-relative">
                             <div class="position-absolute top-0 end-0 z-2 hover-effect-target opacity-0 mt-3 me-3">
                                 <div class="d-flex flex-column gap-2">
-                                    <button type="button" class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex" aria-label="Add to Wishlist">
-                      <i class="ci-heart fs-base animate-target"></i>
-                    </button>
-                                    <button type="button" class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex" aria-label="Compare">
-                      <i class="ci-refresh-cw fs-base animate-target"></i>
-                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex"
+                                        aria-label="Add to Wishlist">
+                                        <i class="ci-heart fs-base animate-target"></i>
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex"
+                                        aria-label="Compare">
+                                        <i class="ci-refresh-cw fs-base animate-target"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="dropdown d-lg-none position-absolute top-0 end-0 z-2 mt-2 me-2">
-                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
-                    <i class="ci-more-vertical fs-lg"></i>
-                  </button>
+                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
+                                    <i class="ci-more-vertical fs-lg"></i>
+                                </button>
                                 <ul class="dropdown-menu dropdown-menu-end fs-xs p-2" style="min-width: auto">
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-heart fs-sm ms-n1 me-2"></i>
-                        Add to Wishlist
-                      </a>
+                                            <i class="ci-heart fs-sm ms-n1 me-2"></i>
+                                            Add to Wishlist
+                                        </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
-                        Compare
-                      </a>
+                                            <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
+                                            Compare
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4" href="shop-product-general-electronics.html">
+                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4"
+                                href="shop-product-general-electronics.html">
                                 <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
                                     <img src="assets/img/shop/electronics/07.png" alt="iPad Pro">
                                 </div>
@@ -996,18 +1147,22 @@
                                 <span class="text-body-tertiary fs-xs">(49)</span>
                             </div>
                             <h3 class="pb-1 mb-2">
-                                <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-general-electronics.html">
-                    <span class="animate-target">Tablet Apple iPad Pro M1</span>
-                  </a>
+                                <a class="d-block fs-sm fw-medium text-truncate"
+                                    href="shop-product-general-electronics.html">
+                                    <span class="animate-target">Tablet Apple iPad Pro M1</span>
+                                </a>
                             </h3>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="h5 lh-1 mb-0">$739.00</div>
-                                <button type="button" class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2" aria-label="Add to Cart">
-                    <i class="ci-shopping-cart fs-base animate-target"></i>
-                  </button>
+                                <button type="button"
+                                    class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2"
+                                    aria-label="Add to Cart">
+                                    <i class="ci-shopping-cart fs-base animate-target"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
+                        <div
+                            class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
                             <span class="position-absolute top-0 start-0 w-100 bg-body mt-n2 py-2"></span>
                             <ul class="list-unstyled d-flex flex-column gap-2 m-0">
                                 <li class="d-flex align-items-center">
@@ -1046,34 +1201,40 @@
                         <div class="posittion-relative">
                             <div class="position-absolute top-0 end-0 z-2 hover-effect-target opacity-0 mt-3 me-3">
                                 <div class="d-flex flex-column gap-2">
-                                    <button type="button" class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex" aria-label="Add to Wishlist">
-                      <i class="ci-heart fs-base animate-target"></i>
-                    </button>
-                                    <button type="button" class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex" aria-label="Compare">
-                      <i class="ci-refresh-cw fs-base animate-target"></i>
-                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex"
+                                        aria-label="Add to Wishlist">
+                                        <i class="ci-heart fs-base animate-target"></i>
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex"
+                                        aria-label="Compare">
+                                        <i class="ci-refresh-cw fs-base animate-target"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="dropdown d-lg-none position-absolute top-0 end-0 z-2 mt-2 me-2">
-                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
-                    <i class="ci-more-vertical fs-lg"></i>
-                  </button>
+                                <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
+                                    <i class="ci-more-vertical fs-lg"></i>
+                                </button>
                                 <ul class="dropdown-menu dropdown-menu-end fs-xs p-2" style="min-width: auto">
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-heart fs-sm ms-n1 me-2"></i>
-                        Add to Wishlist
-                      </a>
+                                            <i class="ci-heart fs-sm ms-n1 me-2"></i>
+                                            Add to Wishlist
+                                        </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#!">
-                        <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
-                        Compare
-                      </a>
+                                            <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
+                                            Compare
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4" href="shop-product-general-electronics.html">
+                            <a class="d-block rounded-top overflow-hidden p-3 p-sm-4"
+                                href="shop-product-general-electronics.html">
                                 <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
                                     <img src="assets/img/shop/electronics/08.png" alt="Bluetooth Headphones">
                                 </div>
@@ -1091,18 +1252,22 @@
                                 <span class="text-body-tertiary fs-xs">(136)</span>
                             </div>
                             <h3 class="pb-1 mb-2">
-                                <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-general-electronics.html">
-                    <span class="animate-target">Wireless Bluetooth Headphones Sony</span>
-                  </a>
+                                <a class="d-block fs-sm fw-medium text-truncate"
+                                    href="shop-product-general-electronics.html">
+                                    <span class="animate-target">Wireless Bluetooth Headphones Sony</span>
+                                </a>
                             </h3>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="h5 lh-1 mb-0">$299.00</div>
-                                <button type="button" class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2" aria-label="Add to Cart">
-                    <i class="ci-shopping-cart fs-base animate-target"></i>
-                  </button>
+                                <button type="button"
+                                    class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2"
+                                    aria-label="Add to Cart">
+                                    <i class="ci-shopping-cart fs-base animate-target"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
+                        <div
+                            class="product-card-details position-absolute top-100 start-0 w-100 bg-body rounded-bottom shadow mt-n2 p-3 pt-1">
                             <span class="position-absolute top-0 start-0 w-100 bg-body mt-n2 py-2"></span>
                             <ul class="list-unstyled d-flex flex-column gap-2 m-0">
                                 <li class="d-flex align-items-center">
@@ -1139,57 +1304,65 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-5 mb-5 mb-md-0">
                         <h2 class="h4 mb-2">Sign up to our newsletter</h2>
-                        <p class="text-body pb-2 pb-ms-3">Receive our latest updates about our products &amp; promotions</p>
+                        <p class="text-body pb-2 pb-ms-3">Receive our latest updates about our products &amp; promotions
+                        </p>
                         <form class="d-flex needs-validation pb-1 pb-sm-2 pb-md-3 pb-lg-0 mb-4 mb-lg-5" novalidate="">
                             <div class="position-relative w-100 me-2">
-                                <input type="email" class="form-control form-control-lg" placeholder="Your email" required="">
+                                <input type="email" class="form-control form-control-lg" placeholder="Your email"
+                                    required="">
                             </div>
                             <button type="submit" class="btn btn-lg btn-primary">Subscribe</button>
                         </form>
                         <div class="d-flex gap-3">
                             <a class="btn btn-icon btn-secondary rounded-circle" href="#!" aria-label="Instagram">
-                  <i class="ci-instagram fs-base"></i>
-                </a>
+                                <i class="ci-instagram fs-base"></i>
+                            </a>
                             <a class="btn btn-icon btn-secondary rounded-circle" href="#!" aria-label="Facebook">
-                  <i class="ci-facebook fs-base"></i>
-                </a>
+                                <i class="ci-facebook fs-base"></i>
+                            </a>
                             <a class="btn btn-icon btn-secondary rounded-circle" href="#!" aria-label="YouTube">
-                  <i class="ci-youtube fs-base"></i>
-                </a>
+                                <i class="ci-youtube fs-base"></i>
+                            </a>
                             <a class="btn btn-icon btn-secondary rounded-circle" href="#!" aria-label="Telegram">
-                  <i class="ci-telegram fs-base"></i>
-                </a>
+                                <i class="ci-telegram fs-base"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
                         <ul class="list-unstyled d-flex flex-column gap-4 ps-md-4 ps-lg-0 mb-3">
                             <li class="nav flex-nowrap align-items-center position-relative">
-                                <img src="assets/img/home/electronics/vlog/01.jpg" class="rounded" width="140" alt="Video cover">
+                                <img src="assets/img/home/electronics/vlog/01.jpg" class="rounded" width="140"
+                                    alt="Video cover">
                                 <div class="ps-3">
                                     <div class="fs-xs text-body-secondary lh-sm mb-2">6:16</div>
-                                    <a class="nav-link fs-sm hover-effect-underline stretched-link p-0" href="#!">5 New Cool Gadgets You Must See on Cartzilla - Cheap Budget</a>
+                                    <a class="nav-link fs-sm hover-effect-underline stretched-link p-0" href="#!">5
+                                        New Cool Gadgets You Must See on Apex - Cheap Budget</a>
                                 </div>
                             </li>
                             <li class="nav flex-nowrap align-items-center position-relative">
-                                <img src="assets/img/home/electronics/vlog/02.jpg" class="rounded" width="140" alt="Video cover">
+                                <img src="assets/img/home/electronics/vlog/02.jpg" class="rounded" width="140"
+                                    alt="Video cover">
                                 <div class="ps-3">
                                     <div class="fs-xs text-body-secondary lh-sm mb-2">10:20</div>
-                                    <a class="nav-link fs-sm hover-effect-underline stretched-link p-0" href="#!">5 Super Useful Gadgets on Cartzilla You Must Have in 2023</a>
+                                    <a class="nav-link fs-sm hover-effect-underline stretched-link p-0" href="#!">5
+                                        Super Useful Gadgets on Apex You Must Have in 2023</a>
                                 </div>
                             </li>
                             <li class="nav flex-nowrap align-items-center position-relative">
-                                <img src="assets/img/home/electronics/vlog/03.jpg" class="rounded" width="140" alt="Video cover">
+                                <img src="assets/img/home/electronics/vlog/03.jpg" class="rounded" width="140"
+                                    alt="Video cover">
                                 <div class="ps-3">
                                     <div class="fs-xs text-body-secondary lh-sm mb-2">8:40</div>
-                                    <a class="nav-link fs-sm hover-effect-underline stretched-link p-0" href="#!">Top 5 New Amazing Gadgets on Cartzilla You Must See</a>
+                                    <a class="nav-link fs-sm hover-effect-underline stretched-link p-0"
+                                        href="#!">Top 5 New Amazing Gadgets on Apex You Must See</a>
                                 </div>
                             </li>
                         </ul>
                         <div class="nav ps-md-4 ps-lg-0">
                             <a class="btn nav-link animate-underline text-decoration-none px-0" href="#!">
-                  <span class="animate-target">View all</span>
-                  <i class="ci-chevron-right fs-base ms-1"></i>
-                </a>
+                                <span class="animate-target">View all</span>
+                                <i class="ci-chevron-right fs-base ms-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

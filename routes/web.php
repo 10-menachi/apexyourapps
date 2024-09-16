@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -19,9 +20,7 @@ Route::get('contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('categories', function () {
-    return view('categories');
-})->name('categories');
+Route::resource('categories', CategoryController::class);
 
 Route::get('privacy-policy', function () {
     return view('privacy-policy');
