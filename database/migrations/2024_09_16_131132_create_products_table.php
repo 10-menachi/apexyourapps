@@ -11,18 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('subcategory_id');
-            $table->string('name');
-            $table->text('description');
-            $table->decimal('price', 8, 2);
-            $table->string('image');
-            $table->boolean('featured')->default(false);
+        if (!Schema::hasTable('products')) {
 
-            $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
-            $table->timestamps();
-        });
+            Schema::create('products', function (Blueprint $table) {
+                $table->id();
+                $table->unsignedBigInteger('subcategory_id');
+                $table->string('name');
+                $table->text('description');
+                $table->decimal('price', 8, 2);
+                $table->string('image');
+                $table->boolean('featured')->default(false);
+
+                $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

@@ -98,12 +98,23 @@
 
                     <!-- Account button logged in state visible on screens > 768px wide (md breakpoint) -->
                     <div class="position-relative" id="accountBtn">
-                        <a class="btn btn-icon btn-lg btn-secondary animate-scale fs-5 fw-normal position-relative rounded-circle ms-2 d-none d-md-inline-flex"
-                            href="{{ route('orders') }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                            data-bs-custom-class="tooltip-sm text-nowrap" data-bs-container="#accountBtn"
-                            title="{{ Auth::user()->name }}">
-                            <span class="animate-target">{{ Auth::user()->name[0] }}</span>
-                        </a>
+                        @if (Auth::check())
+                            <a class="btn btn-icon btn-lg btn-secondary animate-scale fs-5 fw-normal position-relative rounded-circle ms-2 d-none d-md-inline-flex"
+                                href="{{ route('orders') }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                data-bs-custom-class="tooltip-sm text-nowrap" data-bs-container="#accountBtn"
+                                title="{{ Auth::user()->name }}">
+                                <span class="animate-target">{{ Auth::user()->name[0] }}</span>
+                            </a>
+                        @else
+                            <a class="btn btn-icon btn-lg btn-secondary animate-scale fs-5 fw-normal position-relative rounded-circle ms-2 d-none d-md-inline-flex"
+                                href="{{ route('login') }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                data-bs-custom-class="tooltip-sm text-nowrap" data-bs-container="#accountBtn"
+                                title="Login">
+                                <span class="animate-target">
+                                    <i class="ci-login"></i>
+                                </span>
+                            </a>
+                        @endif
                     </div>
 
                     <!-- Cart button -->
