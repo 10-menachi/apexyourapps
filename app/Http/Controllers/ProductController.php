@@ -7,6 +7,7 @@ use App\Models\Product;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
@@ -45,7 +46,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Log::info('REQUEST');
+        Log::info($request->all());
     }
 
     /**
