@@ -2,29 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Order;
-use App\Models\Product;
-use App\Models\User;
-use Exception;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        try {
-            $products = Product::all();
-            $customers = User::where('role', 'user')->get();
-            $categories = Category::all();
-            $revenue = Order::where('status', 'completed')->sum('total');
-            return view('admin.dashboard', compact('products', 'customers', 'categories', 'revenue'));
-        } catch (Exception $e) {
-            return redirect()->back()->with('error', $e->getMessage());
-        }
+        //
     }
 
     /**
@@ -46,7 +34,7 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Order $order)
     {
         //
     }
@@ -54,7 +42,7 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Order $order)
     {
         //
     }
@@ -62,7 +50,7 @@ class AdminController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Order $order)
     {
         //
     }
@@ -70,7 +58,7 @@ class AdminController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Order $order)
     {
         //
     }

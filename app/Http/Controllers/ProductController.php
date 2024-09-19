@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -15,6 +17,9 @@ class ProductController extends Controller
     {
         $products = Product::all();
         $categories = Category::all();
+        if (Auth::user()->role == 'admin') {
+            return view('products.admin.index', compact('products', 'categories'));
+        }
         return view('products.index', compact('products', 'categories'));
     }
 
@@ -23,7 +28,16 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        try {
+            if (Auth::user()->role == 'admin') {
+                $categories = Category::all();
+                return view('products.admin.create', compact('categories'));
+            } else {
+                return redirect()->back()->with('error', 'Unauthorized');
+            }
+        } catch (Exception $e) {
+            return redirect()->route('products.index');
+        }
     }
 
     /**

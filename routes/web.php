@@ -23,7 +23,7 @@ Route::get('contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::resource('products', ProductController::class);
+Route::resource('product', ProductController::class);
 
 Route::get('privacy-policy', function () {
     return view('privacy-policy');
@@ -40,6 +40,3 @@ require __DIR__ . '/admin.php';
 
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage.view');
-
-
-Route::get('/admin-panel', [AdminController::class,'index'])->name('admin.panel.view');
