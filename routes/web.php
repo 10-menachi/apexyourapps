@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
-use App\Models\Category;
+use App\Http\Controllers\CategoryController;
 
 Route::get('cart', function () {
     return view('cart');
@@ -38,3 +39,6 @@ require __DIR__ . '/account.php';
 
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage.view');
+
+
+Route::get('/admin-panel', [AdminController::class,'index'])->name('admin.panel.view');
