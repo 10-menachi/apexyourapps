@@ -17,4 +17,9 @@ class Product extends Model
         'image',
         'featured',
     ];
+
+    public function subcategory()
+    {
+        return $this->belongsTo(Subcategory::class);
+    }
 }

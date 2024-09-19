@@ -23,7 +23,7 @@ Route::get('contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::resource('products', ProductController::class);
+Route::resource('product', ProductController::class);
 
 Route::get('privacy-policy', function () {
     return view('privacy-policy');

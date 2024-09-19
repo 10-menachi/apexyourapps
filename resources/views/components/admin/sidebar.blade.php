@@ -42,7 +42,7 @@
                         </a>
 
 
-                        <a href="{{ route('products.index') }}"
+                        <a href="{{ route('product.index') }}"
                             class="nav-link hover:bg-transparent hover:text-black  rounded-md dark:hover:text-slate-200   flex items-center  decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200">
                             <span data-lucide="grid"
                                 class="w-5 h-5 text-center text-slate-800 me-2 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></span>

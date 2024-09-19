@@ -22,7 +22,7 @@
                             </li>
                             <li class="pt-1 d-flex w-100">
                                 <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"
-                                    href="{{ route('products.index') }}">Products</a>
+                                    href="{{ route('product.index') }}">Products</a>
                             </li>
                             <li class="pt-1 d-flex w-100">
                                 <a class="p-0 nav-link animate-underline animate-target d-inline fw-normal text-truncate"

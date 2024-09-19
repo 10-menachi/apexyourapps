@@ -8,10 +8,13 @@
             <div class="w-full bg-white border rounded-md dark:bg-gray-900 border-slate-200 dark:border-slate-700/40">
                 <div class="grid grid-cols-12 gap-4 p-4">
                     <div class="col-span-12 text-right">
-                        <a href="{{ route('categories.create') }}"
-                            class="px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700">
-                            <i class="fas fa-plus"></i> Add Subcategory
-                        </a>
+                        <div class="flex justify-end">
+                            <a href="{{ route('subcategories.create') }}"
+                                class="flex items-center justify-center max-w-xs px-4 py-1 text-center text-white bg-blue-600 rounded-md hover:bg-blue-700">
+                                <i class="mr-2 text-2xl fas fa-plus"></i>
+                                Add Subcategory
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="px-4 py-3 border-b border-slate-200 dark:border-slate-700/40 dark:text-slate-300/70">
