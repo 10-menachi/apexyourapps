@@ -1,6 +1,6 @@
 @font-face {
     font-family: Apex-icons;
-    src: url(Apex-icons.woff2) format("woff2");
+    src: url(apex-icons.woff2) format("woff2");
 }
 
 [class*=" ci-"]:before,
