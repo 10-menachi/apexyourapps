@@ -40,6 +40,3 @@ require __DIR__ . '/admin.php';
 
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage.view');
-
-
-Route::get('/admin-panel', [AdminController::class,'index'])->name('admin.panel.view');

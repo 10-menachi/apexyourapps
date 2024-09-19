@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-     <!-- SEO Meta Tags -->
+    <!-- SEO Meta Tags -->
     <title>Apex | @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta content="Apex Admin E-commerce" name="description" />
@@ -22,3 +22,6 @@
 
 <body data-layout-mode="light" data-sidebar-size="default" data-theme-layout="vertical"
     class="bg-[#EEF0FC] dark:bg-gray-900">
+</body>
+
+</html>
