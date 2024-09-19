@@ -2,22 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Address;
-use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class AddressesController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $addresses = Auth::user()->addresses;
-        $categories = Category::all();
-
-        return view('profile.addresses', compact('addresses', 'categories'));
+        return view('admin.dashboard');
     }
 
     /**
@@ -39,7 +33,7 @@ class AddressesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Address $address)
+    public function show(string $id)
     {
         //
     }
@@ -47,7 +41,7 @@ class AddressesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Address $address)
+    public function edit(string $id)
     {
         //
     }
@@ -55,7 +49,7 @@ class AddressesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Address $address)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -63,7 +57,7 @@ class AddressesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Address $address)
+    public function destroy(string $id)
     {
         //
     }

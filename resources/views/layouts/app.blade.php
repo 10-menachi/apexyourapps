@@ -44,6 +44,15 @@
     <link rel="preload" href="{{ asset('assets/css/theme.rtl.min.css') }}" as="style">
     <link rel="stylesheet" href="{{ asset('assets/css/theme.min.css') }}" id="theme-styles">
     <script src="https://kit.fontawesome.com/71ffb6d986.js" crossorigin="anonymous"></script>
+    <style>
+        #toast-danger {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 9999;
+        }
+    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
@@ -52,6 +61,9 @@
 <!-- Body -->
 
 <body>
+
+
+    @include('components.toast')
     @include('components.customizer-offcanvas-and-shopping-cart-offcanvas')
 
 

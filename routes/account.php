@@ -10,7 +10,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('orders', function () {
-        return view('profile.orders');
+        $categories = Category::all();
+        return view('profile.orders', compact('categories'));
     })->name('orders');
 
     Route::get('favorites', function () {

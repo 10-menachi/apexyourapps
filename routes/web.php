@@ -35,6 +35,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 require __DIR__ . '/account.php';
+require __DIR__ . '/admin.php';
 
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage.view');
