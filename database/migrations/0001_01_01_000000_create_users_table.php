@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('dob')->nullable();
             $table->string('lang', 2)->default('en');
             $table->string('phone', 15)->nullable();
+            $table->enum('role', ['admin', 'user'])->default('user');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Address;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,8 +15,9 @@ class AddressesController extends Controller
     public function index()
     {
         $addresses = Auth::user()->addresses;
+        $categories = Category::all();
 
-        return view('profile.addresses', compact('addresses'));
+        return view('profile.addresses', compact('addresses', 'categories'));
     }
 
     /**
