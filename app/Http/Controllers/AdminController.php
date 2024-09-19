@@ -11,7 +11,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin-panel.add-product');
+        return view('admin-panel.auth-login');
     }
 
     /**
