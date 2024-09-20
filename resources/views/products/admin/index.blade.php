@@ -71,11 +71,11 @@
                                         {{ $product->price }}
                                     </td>
                                     <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                        <a href="{{ route('categories.edit', $subcategory->id) }}"
+                                        <a href="{{ route('product.edit', $product->id) }}"
                                             class="text-blue-500 hover:underline">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <form action="{{ route('categories.destroy', $subcategory->id) }}" method="POST"
+                                        <form action="{{ route('product.destroy', $product->id) }}" method="POST"
                                             class="inline">
                                             @csrf
                                             @method('DELETE')
