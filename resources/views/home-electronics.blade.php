@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Apex Your App Ltd E-Commerce')
+@section('title', 'Home')
 @section('content')
 
     <!-- Page content -->
