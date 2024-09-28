@@ -35,6 +35,11 @@ class AdminController extends Controller
         //
     }
 
+
+     public function indexTwo(){
+        return view('admin.index2');
+     }
+
     /**
      * Store a newly created resource in storage.
      */
