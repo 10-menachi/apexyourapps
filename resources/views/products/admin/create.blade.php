@@ -95,3 +95,103 @@
         </script>
     </div>
 @endsection
+
+
+
+            <div class="container">
+                <div class="page-inner">
+                    <div class="page-header">
+                        <h3 class="fw-bold mb-3">Create</h3>
+                        <ul class="breadcrumbs mb-3">
+                            <li class="nav-home">
+                                <a href="#">
+                                    <i class="icon-home"></i>
+                                </a>
+                            </li>
+                            <li class="separator">
+                                <i class="icon-arrow-right"></i>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">Create A Product</a>
+                            </li>
+                            <li class="separator">
+                                <i class="icon-arrow-right"></i>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">Create A New</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">Product Create Form</div>
+                                </div>
+                                <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
+                                <div class="card-body">                                
+                                    <div class="row">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="form-group">
+                                                <label for="email2">Name</label>
+                                                <input type="email" class="form-control" id="email2"
+                                                    placeholder="Enter Email" />
+                                                
+                                            </div>
+                                           
+                                        </div> 
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="form-group">
+                                                <label for="email2">Name</label>
+                                                <input type="email" class="form-control" id="email2"
+                                                    placeholder="Enter Email" />
+                                                
+                                            </div>
+                                           
+                                        </div> 
+                                         <div class="col-md-6 col-lg-4">
+                                            <div class="form-group">
+                                                <label for="email2">Category</label>
+                                                 <select name="category_id" id="categories"
+                                    class="w-full px-3 py-2 bg-transparent border rounded-md form-input border-slate-300/60 dark:border-slate-700 dark:text-slate-300 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700">
+                                    <option value="">Select Category</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                                                
+                                            </div>
+                                           
+                                        </div> 
+                                         <div class="col-md-6 col-lg-4">
+                                            <div class="form-group">
+                                                <label for="email2">Sub Category</label>
+                                                 <select name="subcategory_id" id="subcategories"
+                                    class="w-full px-3 py-2 bg-transparent border rounded-md form-input border-slate-300/60 dark:border-slate-700 dark:text-slate-300 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700">
+                                    <option value="">Select Subcategory</option>
+                                </select>
+                                                
+                                            </div>
+                                           
+                                        </div> 
+                                         <div class="col-md-6 col-lg-4">
+                                            <div class="form-group">
+                                                <label for="email2">Price</label>
+                                                <input type="email" class="form-control" id="email2"
+                                                    placeholder="Enter Email" />
+                                                
+                                            </div>
+                                           
+                                        </div>                                       
+                                    </div>
+                                </div>
+                                <div class="card-action">
+                                    <button class="btn btn-success">Submit</button>
+                                    <button class="btn btn-danger">Cancel</button>
+                                </div>  
+                                </form>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
