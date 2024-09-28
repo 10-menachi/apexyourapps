@@ -1,12 +1,15 @@
-<div class="fixed bottom-0 right-0 block print:hidden border-t p-4 h-[52px] dark:border-slate-700/40">
+<!-- footer -->
+<div class="absolute bottom-0 -left-4 -right-4 block print:hidden border-t p-4 h-[52px] dark:border-slate-700/40">
     <div class="container">
-        <footer
-            class="flex justify-between font-medium text-center bg-transparent footer text-slate-600 dark:text-slate-400 md:text-left ">
-            <span>
-                &copy;
-                {{ date('Y') }}
-                <a href="https://yourapps.co.ke">Apex | Your Apps Limited</a>
-            </span>
+        <!-- Footer Start -->
+        <footer class="footer bg-transparent  text-center  font-medium text-slate-600 dark:text-slate-400 md:text-left ">
+            &copy;
+            {{ date('Y') }}
+            <a href="https://yourapps.co.ke">Apex | Your Apps Limited</a>
+            <span class="float-right hidden text-slate-600 dark:text-slate-400 md:inline-block">Design & Developed <i
+                    class="ti ti-heart text-red-500"></i> by
+                Your Apps Limited</span>
         </footer>
+        <!-- end Footer -->
     </div>
 </div>

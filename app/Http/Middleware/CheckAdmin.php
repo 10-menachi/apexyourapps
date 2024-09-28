@@ -19,6 +19,6 @@ class CheckAdmin
         if ($request->user() && $request->user()->role == 'admin') {
             return $next($request);
         }
-        return redirect()->route('homepage.view')->with('error', 'Unauthorized');
+        return redirect()->route('admin.homepage.view')->with('error', 'Unauthorized');
     }
 }

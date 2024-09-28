@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="{{ asset('admin-assets/libs/icofont/icofont.min.css') }}">
     <link href="{{ asset('admin-assets/libs/flatpickr/flatpickr.min.css') }}" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('admin-assets/css/tailwind.min.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('admin-assets/css/bootstrap.min.css') }}">
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="{{ asset('admin-assets/css/dataTables.bootstrap5.css') }}">
 </head>
 
 <body>
@@ -31,9 +37,24 @@
     <script src="{{ asset('admin-assets/libs/apexcharts/apexcharts.min.js') }}"></script>
     <script src="{{ asset('admin-assets/js/pages/analytics-index.init.js') }}"></script>
     <script src="{{ asset('admin-assets/js/app.js') }}"></script>
+ <!-- jQuery -->
+    <script src="{{ asset('admin-assets/js/jquery-3.7.1.js') }}"></script>
+
+    <!-- Bootstrap Bundle (includes Popper) -->
+    <script src="{{ asset('admin-assets/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- DataTables -->
+    <script src="{{ asset('admin-assets/js/dataTables.js') }}"></script>
+    <script src="{{ asset('admin-assets/js/dataTables.bootstrap5.js') }}"></script>
 
 
     <script>
+
+        {{-- new DataTable('#example'); --}}
+        
+          $(document).ready(function() {
+            $('#example').DataTable();
+        });
         // Initialize FilePond after script inclusion
         FilePond.registerPlugin(FilePondPluginImagePreview);
         const inputElements = document.querySelectorAll('input[type="file"]');
