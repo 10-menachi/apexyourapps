@@ -39,7 +39,8 @@
                                             <p class="small">
                                                 Add a new category for our products
                                             </p>
-                                            <form action="{{ route('admin.categories.store') }}" method="POST">
+                                            <form action="{{ route('admin.categories.store') }}" method="POST"
+                                                enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="row">
                                                     <div class="col-sm-12">
@@ -96,16 +97,92 @@
                                                 <td>{!! $category->description !!}</td>
                                                 <td>
                                                     <div class="form-button-action">
-                                                        <button type="button" data-bs-toggle="tooltip" title="Edit"
+                                                        <button type="button" data-bs-toggle="modal"
+                                                            data-bs-target="#editCategoryModal{{ $category->id }}"
                                                             class="btn btn-link btn-primary btn-lg">
                                                             <i class="fa fa-edit"></i>
                                                         </button>
+
+                                                        <div class="modal fade" id="editCategoryModal{{ $category->id }}"
+                                                            tabindex="-1" role="dialog" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="border-0 modal-header">
+                                                                        <h5 class="modal-title">
+                                                                            <span class="fw-mediumbold">Edit
+                                                                                {{ $category->name }}</span>
+                                                                        </h5>
+                                                                        <button type="button" class="close"
+                                                                            data-bs-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p class="small">
+                                                                            Edit {{ $category->name }}
+                                                                        </p>
+                                                                        <form
+                                                                            action="{{ route('admin.categories.update', $category->id) }}"
+                                                                            method="POST" enctype="multipart/form-data">
+                                                                            @csrf
+                                                                            @method('PUT')
+                                                                            <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                    <div
+                                                                                        class="form-group form-group-default">
+                                                                                        <label>Name</label>
+                                                                                        <input id="name" name="name"
+                                                                                            type="text"
+                                                                                            class="form-control"
+                                                                                            placeholder="Name" required
+                                                                                            value="{{ old('name', $category->name) }}" />
+                                                                                        <!-- Set the value -->
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6 pe-0">
+                                                                                    <div
+                                                                                        class="form-group form-group-default">
+                                                                                        <label>Description</label>
+                                                                                        <input id="description"
+                                                                                            name="description"
+                                                                                            type="text"
+                                                                                            class="form-control"
+                                                                                            placeholder="Description"
+                                                                                            value="{{ old('description', $category->description) }}" />
+                                                                                        <!-- Set the value -->
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div
+                                                                                        class="form-group form-group-default">
+                                                                                        <label>Image</label>
+                                                                                        <input id="image"
+                                                                                            name="image" type="file"
+                                                                                            class="form-control" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                    </div>
+                                                                    <div class="border-0 modal-footer">
+                                                                        <button type="submit" class="btn btn-primary">
+                                                                            Update
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-danger"
+                                                                            data-bs-dismiss="modal">
+                                                                            Close
+                                                                        </button>
+                                                                    </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <button type="button" data-bs-toggle="tooltip" title="Remove"
                                                             class="btn btn-link btn-danger">
                                                             <i class="fa fa-times"></i>
                                                         </button>
                                                     </div>
                                                 </td>
+
                                             </tr>
                                         @endforeach
                                     </tbody>

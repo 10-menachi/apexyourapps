@@ -27,13 +27,15 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         try {
-
             $data = $request->all();
+
+            Log::info('STORE CATEGORY REQUEST DATA');
+            Log::info($data);
 
             $validator = Validator::make($data, [
                 'name' => 'required|string|max:255',
                 'description' => 'required|string',
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+                'image' => 'required|image|max:2048',
             ]);
 
             if ($validator->fails()) {
@@ -48,13 +50,17 @@ class CategoryController extends Controller
 
             $image_name = $slug . '.' . $image->extension();
 
-            $image->move(public_path('images/categories'), $image_name);
+            // Store the image in the storage/app/public/images/categories directory
+            $image->storeAs('images/categories', $image_name, 'public');
+
+            // Update the image path to be the public URL
+            $image_path = 'storage/images/categories/' . $image_name;
 
             Category::create([
                 'name' => $data['name'],
                 'slug' => $slug,
                 'description' => $data['description'],
-                'image' => $image_name,
+                'image' => $image_path,  // Save the path to the database
             ]);
 
             return back()->with('success', 'Category created successfully');
@@ -65,6 +71,7 @@ class CategoryController extends Controller
         }
     }
 
+
     /**
      * Display the specified resource.
      */
@@ -73,21 +80,46 @@ class CategoryController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Category $category)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Category $category)
     {
-        //
+        try {
+            $data = $request->all();
+
+            // Update category information except the image
+            $category->update([
+                'name' => $data['name'],
+                'description' => $data['description'],
+            ]);
+
+            // Check if there's a new image uploaded
+            if ($request->hasFile('image')) {
+                $image = $request->file('image');
+                $image_name = $category->slug . '.' . $image->extension();
+
+                // Store the image in the storage/app/public/images/categories directory
+                $image->storeAs('images/categories', $image_name, 'public');
+
+                // Update the image path to be the public URL
+                $image_path = 'storage/images/categories/' . $image_name;
+
+                // Update the category with the new image path
+                $category->update([
+                    'image' => $image_path,
+                ]);
+            }
+
+            return back()->with('success', 'Category updated successfully');
+        } catch (Exception $e) {
+            Log::info('UPDATE CATEGORY EXCEPTION');
+            Log::error($e);
+            return back()->with('error', 'Error updating category');
+        }
     }
+
 
     /**
      * Remove the specified resource from storage.

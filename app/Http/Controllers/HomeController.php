@@ -13,8 +13,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->role == 'admin') {
-            return redirect()->route('admin.homepage.view');
+        if (Auth::user()) {
+            if (Auth::user()->role == 'admin') {
+                return redirect()->route('admin.homepage.view');
+            }
         }
         $categories = Category::all();
         return view("home-electronics", compact("categories"));
