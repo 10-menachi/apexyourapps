@@ -29,6 +29,19 @@
         });
     </script>
 
+    <style>
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            /* Adjust as needed */
+            right: 20px;
+            /* Adjust as needed */
+            z-index: 1050;
+            /* Ensure it's above other elements */
+        }
+    </style>
+
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="{{ asset('admin-assets/assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin-assets/assets/css/plugins.min.css') }}" />
