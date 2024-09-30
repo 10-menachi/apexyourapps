@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubCategoryController;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('cart', function () {
     return view('cart');
