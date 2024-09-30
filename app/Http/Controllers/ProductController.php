@@ -12,10 +12,35 @@ use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
+    /*************************************************************
+     * 
+     * Customer and guests user of the system
+     * 
+     *************************************************************/
+
+    // Display a listing of the products.
     public function index()
+    {
+        $products = Product::all();
+        return view('products.index', compact('products'));
+    }
+
+    // Display the specified product.
+    public function show($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('products.show', compact('product'));
+    }
+
+    /*************************************************************
+     * 
+     * Super Admin of the system
+     * 
+     *************************************************************/
+
+    // Display a listing of the products for the admin.
+    public function adminIndex()
     {
         $products = Product::all();
         $categories = Category::all();
@@ -25,9 +50,7 @@ class ProductController extends Controller
         return view('product.index', compact('products', 'categories'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    // Show the form for creating a new product.
     public function create()
     {
         try {
@@ -42,9 +65,7 @@ class ProductController extends Controller
         }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    // Store a newly created product in storage.
     public function store(Request $request)
     {
         try {
@@ -91,35 +112,44 @@ class ProductController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Product $product)
+    // Display the specified product for the admin.
+    public function adminShow($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        return view('admin.products.show', compact('product'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Product $product)
+    // Show the form for editing the specified product.
+    public function edit($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        return view('admin.products.edit', compact('product'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Product $product)
+    // Update the specified product in storage.
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required|numeric',
+        ]);
+
+        $product = Product::findOrFail($id);
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->save();
+
+        return redirect()->route('admin.product.update', $product->id)->with('success', 'Product updated successfully.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Product $product)
+    // Remove the specified product from storage.
+    public function destroy($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->delete();
+
+        return redirect()->route('admin.product.destroy')->with('success', 'Product deleted successfully.');
     }
 }

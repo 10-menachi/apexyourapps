@@ -24,16 +24,10 @@
      <div class="sidebar-wrapper scrollbar scrollbar-inner">
          <div class="sidebar-content">
              <ul class="nav nav-secondary">
-                 <li class="nav-item {{ Request::routeIs('admin.dashboard') ? 'active' : '' }}">
-                     <a href="{{ route('admin.dashboard') }}">
+                 <li class="nav-item active">
+                     <a href="admin">
                          <i class="fas fa-home"></i>
                          <p>Dashboard</p>
-                     </a>
-                 </li>
-                 <li class="nav-item {{ Request::routeIs('admin.categories') ? 'active' : '' }}">
-                     <a href="{{ route('admin.categories') }}">
-                         <i class="fas fa-home"></i>
-                         <p>Categories</p>
                      </a>
                  </li>
                  <li class="nav-section">
@@ -51,12 +45,12 @@
                      <div class="collapse" id="base">
                          <ul class="nav nav-collapse">
                              <li>
-                                 <a href="products.admin.index">
+                                 <a href="route{{ 'admin.product.index' }}">
                                      <span class="sub-item">All Products</span>
                                  </a>
                              </li>
                              <li>
-                                 <a href="products.admin.create">
+                                 <a href="route{{ 'admin.product.create' }}">
                                      <span class="sub-item">Add Product</span>
                                  </a>
                              </li>
@@ -72,7 +66,7 @@
                      <div class="collapse" id="sidebarLayouts">
                          <ul class="nav nav-collapse">
                              <li>
-                                 <a href="admin.product-categories">
+                                 <a href="route{{ 'admin.categories.index' }}">
                                      <span class="sub-item">All Categories</span>
                                  </a>
                              </li>
