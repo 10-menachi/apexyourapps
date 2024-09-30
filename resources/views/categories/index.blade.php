@@ -3,77 +3,284 @@
 @section('title', 'Categories')
 
 @section('content')
-    <div class="page-wrapper relative w-[calc(100%-260px)] p-10 pt-[64px] duration-300 ltr:ml-auto rtl:ml-0 rtl:mr-auto">
-        <div class="w-full min-h-[calc(100vh-152px)] pb-14">
-            <div class="w-full bg-white border rounded-md dark:bg-gray-900 border-slate-200 dark:border-slate-700/40">
-                <div class="grid grid-cols-12 gap-4 p-4">
-                    <div class="col-span-12 text-right">
-                        <div class="flex justify-end">
-                            <a href="{{ route('categories.create') }}"
-                                class="flex items-center justify-center max-w-xs px-4 py-1 text-center text-white bg-blue-600 rounded-md hover:bg-blue-700">
-                                <i class="mr-2 text-2xl fas fa-plus"></i>
-                                Add Category
-                            </a>
+    <div class="container">
+        <div class="page-inner">
+            <div class="page-header">
+                <h3 class="mb-3 fw-bold">Categories</h3>
+            </div>
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="d-flex align-items-center">
+                                <h4 class="card-title">Categories</h4>
+                                <button class="btn btn-primary btn-round ms-auto" data-bs-toggle="modal"
+                                    data-bs-target="#addCategoryModal">
+                                    <i class="fa fa-plus"></i>
+                                    Add Category
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Modal -->
+                            <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="border-0 modal-header">
+                                            <h5 class="modal-title">
+                                                <span class="fw-mediumbold">Add Category</span>
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="small">
+                                                Add a new category for our products
+                                            </p>
+                                            <form action="{{ route('admin.categories.store') }}" method="POST">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group form-group-default">
+                                                            <label>Name</label>
+                                                            <input id="name" type="text" class="form-control"
+                                                                placeholder="Name" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 pe-0">
+                                                        <div class="form-group form-group-default">
+                                                            <label>Position</label>
+                                                            <input id="addPosition" type="text" class="form-control"
+                                                                placeholder="fill position" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group form-group-default">
+                                                            <label>Office</label>
+                                                            <input id="addOffice" type="text" class="form-control"
+                                                                placeholder="fill office" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="border-0 modal-footer">
+                                            <button type="button" id="addRowButton" class="btn btn-primary">
+                                                Add
+                                            </button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">
+                                                Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table id="add-row" class="table display table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th style="width: 10%">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-primary btn-lg"
+                                                        data-original-title="Edit Task">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-danger" data-original-title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-primary btn-lg"
+                                                        data-original-title="Edit Task">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-danger" data-original-title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>San Francisco</td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-primary btn-lg"
+                                                        data-original-title="Edit Task">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-danger" data-original-title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cedric Kelly</td>
+                                            <td>Senior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-primary btn-lg"
+                                                        data-original-title="Edit Task">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-danger" data-original-title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Airi Satou</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-primary btn-lg"
+                                                        data-original-title="Edit Task">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-danger" data-original-title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brielle Williamson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>New York</td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-primary btn-lg"
+                                                        data-original-title="Edit Task">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-danger" data-original-title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Herrod Chandler</td>
+                                            <td>Sales Assistant</td>
+                                            <td>San Francisco</td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-primary btn-lg"
+                                                        data-original-title="Edit Task">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-danger" data-original-title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rhona Davidson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>Tokyo</td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-primary btn-lg"
+                                                        data-original-title="Edit Task">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-danger" data-original-title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colleen Hurst</td>
+                                            <td>Javascript Developer</td>
+                                            <td>San Francisco</td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-primary btn-lg"
+                                                        data-original-title="Edit Task">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-danger" data-original-title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sonya Frost</td>
+                                            <td>Software Engineer</td>
+                                            <td>Edinburgh</td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-primary btn-lg"
+                                                        data-original-title="Edit Task">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                        class="btn btn-link btn-danger" data-original-title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="px-4 py-3 border-b border-slate-200 dark:border-slate-700/40 dark:text-slate-300/70">
-                    <div class="flex">
-                        <h4 class="flex-1 text-lg font-medium">Categories</h4>
-                    </div>
-                </div>
-                <div class="w-full p-4 overflow-x-auto">
-                    <table class="w-full border-collapse" id="datatable_1">
-                        <thead class="bg-slate-100 dark:bg-slate-700/20">
-                            <tr>
-                                <th
-                                    class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                    Name
-                                </th>
-                                <th
-                                    class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                    Slug
-                                </th>
-                                <th
-                                    class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                    Description
-                                </th>
-                                <th
-                                    class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                    Action
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($categories as $category)
-                                <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700">
-                                    <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
-                                        {{ $category->name }}
-                                    </td>
-                                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                        {{ $category->slug }}
-                                    </td>
-                                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                        {{ $category->description }}
-                                    </td>
-                                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                        <a href="{{ route('categories.edit', $category->id) }}"
-                                            class="text-blue-500 hover:underline">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <form action="{{ route('categories.destroy', $category->id) }}" method="POST"
-                                            class="inline">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="text-red-500 hover:underline">
-                                                <i class="fas fa-trash"></i>
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>

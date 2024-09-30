@@ -17,11 +17,16 @@ class AdminController extends Controller
     public function index()
     {
         try {
-            $products = Product::all();
-            $customers = User::where('role', 'user')->get();
-            $categories = Category::all();
-            $revenue = Order::where('status', 'completed')->sum('total');
-            return view('admin.dashboard', compact('products', 'customers', 'categories', 'revenue'));
+            $statuses = [
+                ['category' => 'Visitors', 'value' => '1,294', 'icon' => 'fas fa-users', 'color' => 'primary'],
+                ['category' => 'Subscribers', 'value' => '1,303', 'icon' => 'fas fa-user-check', 'color' => 'info'],
+                ['category' => 'Sales | Revenue', 'value' => 'KES 25', 'icon' => 'fas fa-luggage-cart', 'color' => 'success'],
+                ['category' => 'Order', 'value' => '576', 'icon' => 'far fa-check-circle', 'color' => 'secondary'],
+                ['category' => 'Products', 'value' => '12', 'icon' => 'far fa-check-circle', 'color' => 'secondary'],
+                ['category' => 'Customers', 'value' => '18', 'icon' => 'far fa-check-circle', 'color' => 'secondary'],
+                ['category' => 'Categories', 'value' => '12', 'icon' => 'far fa-check-circle', 'color' => 'secondary'],
+            ];
+            return view('admin.index', compact('statuses'));
         } catch (Exception $e) {
             return redirect()->back()->with('error', $e->getMessage());
         }
