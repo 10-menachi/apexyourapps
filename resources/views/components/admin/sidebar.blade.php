@@ -25,9 +25,15 @@
          <div class="sidebar-content">
              <ul class="nav nav-secondary">
                  <li class="nav-item active">
-                     <a href="admin">
+                     <a href="{{ route('dashboard') }}">
                          <i class="fas fa-home"></i>
                          <p>Dashboard</p>
+                     </a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="{{ route('admin.categories.index') }}">
+                         <i class="fas fa-home"></i>
+                         <p>Categories</p>
                      </a>
                  </li>
                  <li class="nav-section">

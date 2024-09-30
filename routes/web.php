@@ -78,7 +78,7 @@ Route::get('privacy-policy', function () {
 
 Route::get('/dashboard', function () {
     if (Auth::user()->role == 'admin') {
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('admin.homepage.view');
     }
     $categories = Category::all();
     return view('home-electronics', compact('categories'));

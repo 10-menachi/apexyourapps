@@ -18,7 +18,7 @@ Route::get('admin', [AdminController::class, 'index'])->name('admin.homepage.vie
 Route::middleware(['auth', 'verified', CheckAdmin::class])->group(function () {
 
     // Display a listing of the categories.
-    Route::get('admin/categories', [CategoryController::class, 'adminIndex'])->name('admin.categories.index');
+    Route::get('admin/categories', [CategoryController::class, 'index'])->name('admin.categories.index');
 
     // Show the form for creating a new category.
     Route::get('admin/categories/create', [CategoryController::class, 'create'])->name('admin.categories.create');

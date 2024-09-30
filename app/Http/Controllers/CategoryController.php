@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -18,19 +22,47 @@ class CategoryController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        try {
+
+            $data = $request->all();
+
+            $validator = Validator::make($data, [
+                'name' => 'required|string|max:255',
+                'description' => 'required|string',
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            ]);
+
+            if ($validator->fails()) {
+                Log::info('STORE CATEGORY VALIDATION FAILED');
+                Log::error($validator->errors());
+                return back()->withErrors($validator)->withInput();
+            }
+
+            $slug = Str::slug($data['name']);
+
+            $image = $request->file('image');
+
+            $image_name = $slug . '.' . $image->extension();
+
+            $image->move(public_path('images/categories'), $image_name);
+
+            Category::create([
+                'name' => $data['name'],
+                'slug' => $slug,
+                'description' => $data['description'],
+                'image' => $image_name,
+            ]);
+
+            return back()->with('success', 'Category created successfully');
+        } catch (Exception $e) {
+            Log::info('STORE CATEGORY EXCEPTION');
+            Log::error($e);
+            return back()->with('error', 'Error creating category');
+        }
     }
 
     /**
