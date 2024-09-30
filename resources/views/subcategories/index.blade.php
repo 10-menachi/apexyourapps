@@ -23,7 +23,8 @@
                     </div>
                 </div>
                 <div class="w-full p-4 overflow-x-auto">
-                    <table class="w-full border-collapse" id="datatable_1">
+                    {{-- <table class="w-full border-collapse" id="datatable_1"> --}}
+                    <table class="w-full border-collapse" id="basic-datatables">
                         <thead class="bg-slate-100 dark:bg-slate-700/20">
                             <tr>
                                 <th

@@ -3,195 +3,132 @@
 @section('title', 'Create Product')
 
 @section('content')
-    <div class="page-wrapper relative w-[calc(100%-260px)] p-10 pt-[64px] duration-300 ltr:ml-auto rtl:ml-0 rtl:mr-auto">
-        <div class="w-full min-h-[calc(100vh-152px)] pb-14">
-            <div class="w-full bg-white border rounded-md dark:bg-gray-900 border-slate-200 dark:border-slate-700/40">
-                <form action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="grid grid-cols-12 gap-4 p-4">
-                        <div class="col-span-12 text-right">
-                            <div class="flex justify-end">
-                                <a href="{{ route('admin.product.index') }}"
-                                    class="flex items-center justify-center max-w-xs px-4 py-1 text-center text-white bg-blue-600 rounded-md hover:bg-blue-700">
-                                    Back
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-4 py-3 border-b border-slate-200 dark:border-slate-700/40 dark:text-slate-300/70">
-                        <div class="flex">
-                            <h4 class="flex-1 text-lg font-medium">Add Product</h4>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                            <div>
-                                <select name="category_id" id="categories"
-                                    class="w-full px-3 py-2 bg-transparent border rounded-md form-input border-slate-300/60 dark:border-slate-700 dark:text-slate-300 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700">
-                                    <option value="">Select Category</option>
-                                    @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div>
-                                <select name="subcategory_id" id="subcategories"
-                                    class="w-full px-3 py-2 bg-transparent border rounded-md form-input border-slate-300/60 dark:border-slate-700 dark:text-slate-300 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700">
-                                    <option value="">Select Subcategory</option>
-                                </select>
-                            </div>
-                            <div>
-                                <input type="text" name="name" placeholder="Name"
-                                    class="w-full px-3 py-2 bg-transparent border rounded-md form-input border-slate-300/60 dark:border-slate-700 dark:text-slate-300 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700">
-                            </div>
-                            <div>
-                                <input type="number" name="price" placeholder="Price"
-                                    class="w-full px-3 py-2 bg-transparent border rounded-md form-input border-slate-300/60 dark:border-slate-700 dark:text-slate-300 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700">
-                            </div>
-                            <div>
-                                <textarea name="description" placeholder="Description"
-                                    class="w-full px-3 py-2 bg-transparent border rounded-md form-input border-slate-300/60 dark:border-slate-700 dark:text-slate-300 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700"></textarea>
-                            </div>
-                            <div>
-                                <input type="file" name="image"
-                                    class="w-full px-3 py-2 bg-transparent border rounded-md form-input border-slate-300/60 dark:border-slate-700 dark:text-slate-300 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700">
-                            </div>
-                        </div>
-                        <div class="flex justify-end mt-4">
-                            <button type="submit"
-                                class="px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-0">Add</button>
-                        </div>
-                    </div>
-                </form>
+
+    <div class="container">
+        <div class="page-inner">
+            <div class="page-header">
+                <h3 class="fw-bold mb-3">New Product</h3>
+                <ul class="breadcrumbs mb-3">
+                    <li class="nav-home">
+                        <a href="{{ route('admin.homepage.view') }}">
+                            <i class="icon-home"></i>
+                        </a>
+                    </li>
+                    <li class="separator">
+                        <i class="icon-arrow-right"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.product.index')  }}">Products</a>
+                    </li>
+                    <li class="separator">
+                        <i class="icon-arrow-right"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Add New Product</a>
+                    </li>
+                </ul>
             </div>
-        </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const categoryInput = document.getElementById('categories');
-                categoryInput.addEventListener('change', async (e) => {
-                    try {
-                        const response = await fetch(`/api/cat/${e.target.value}`);
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        const data = await response.json();
-                        console.log(data);
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Product Create Form</div>
+                        </div>
+                        <form action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf <!-- Add CSRF token for form security -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Product Name -->
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="productName">Product Name</label>
+                                            <input type="text" class="form-control" id="productName" name="name"
+                                                placeholder="Enter Product Name" required />
+                                        </div>
+                                    </div>
 
-                        // Populate subcategories based on the response data
-                        const subcategorySelect = document.getElementById('subcategories');
-                        subcategorySelect.innerHTML = '';
-                        data.forEach(subcategory => {
-                            const option = document.createElement('option');
-                            option.value = subcategory.id;
-                            option.textContent = subcategory.name;
-                            subcategorySelect.appendChild(option);
-                        });
-                    } catch (error) {
-                        console.error('There was a problem with the fetch operation:', error);
-                    }
-                });
-            });
-        </script>
-    </div>
-@endsection
+                                    <!-- Product Description -->
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="productDescription">Product Description</label>
+                                            <input type="text" class="form-control" id="productDescription"
+                                                name="description" placeholder="Enter Product Description" required />
+                                        </div>
+                                    </div>
 
-
-
-            {{-- <div class="container">
-                <div class="page-inner">
-                    <div class="page-header">
-                        <h3 class="fw-bold mb-3">Create</h3>
-                        <ul class="breadcrumbs mb-3">
-                            <li class="nav-home">
-                                <a href="#">
-                                    <i class="icon-home"></i>
-                                </a>
-                            </li>
-                            <li class="separator">
-                                <i class="icon-arrow-right"></i>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#">Create A Product</a>
-                            </li>
-                            <li class="separator">
-                                <i class="icon-arrow-right"></i>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#">Create A New</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="card-title">Product Create Form</div>
-                                </div>
-                                <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
-                                <div class="card-body">                                
-                                    <div class="row">
-                                        <div class="col-md-6 col-lg-4">
-                                            <div class="form-group">
-                                                <label for="email2">Name</label>
-                                                <input type="email" class="form-control" id="email2"
-                                                    placeholder="Enter Email" />
-                                                
-                                            </div>
-                                           
-                                        </div> 
-                                        <div class="col-md-6 col-lg-4">
-                                            <div class="form-group">
-                                                <label for="email2">Name</label>
-                                                <input type="email" class="form-control" id="email2"
-                                                    placeholder="Enter Email" />
-                                                
-                                            </div>
-                                           
-                                        </div> 
-                                         <div class="col-md-6 col-lg-4">
-                                            <div class="form-group">
-                                                <label for="email2">Category</label>
-                                                 <select name="category_id" id="categories"
-                                    class="w-full px-3 py-2 bg-transparent border rounded-md form-input border-slate-300/60 dark:border-slate-700 dark:text-slate-300 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700">
-                                    <option value="">Select Category</option>
-                                    @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                    @endforeach
-                                </select>
-                                                
-                                            </div>
-                                           
-                                        </div> 
-                                         <div class="col-md-6 col-lg-4">
-                                            <div class="form-group">
-                                                <label for="email2">Sub Category</label>
-                                                 <select name="subcategory_id" id="subcategories"
-                                    class="w-full px-3 py-2 bg-transparent border rounded-md form-input border-slate-300/60 dark:border-slate-700 dark:text-slate-300 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700">
-                                    <option value="">Select Subcategory</option>
-                                </select>
-                                                
-                                            </div>
-                                           
-                                        </div> 
-                                         <div class="col-md-6 col-lg-4">
-                                            <div class="form-group">
-                                                <label for="email2">Price</label>
-                                                <input type="email" class="form-control" id="email2"
-                                                    placeholder="Enter Email" />
-                                                
-                                            </div>
-                                           
-                                        </div>                                       
+                                    <!-- Category Selection -->
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="form-group form-group-default">
+                                            <label for="categories">Select Category</label>
+                                            <select class="form-select" id="categories" name="category_id" required>
+                                                <option value="">Select Category</option>
+                                                @foreach ($categories as $category)
+                                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="card-action">
-                                    <button class="btn btn-success">Submit</button>
-                                    <button class="btn btn-danger">Cancel</button>
-                                </div>  
-                                </form>                              
+
+                                <!-- Subcategory Selection -->
+                                <div class="row mb-3">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="form-floating form-floating-custom mb-3">
+                                            <select class="form-select" id="subcategories" name="subcategory_id" required>
+                                                <option value="">Select Subcategory</option>
+                                            </select>
+                                            <label for="selectFloatingLabel">Select Subcategory</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product Avatar Upload -->
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="productAvatar">Product Avatar</label>
+                                            <input type="file" class="form-control-file" id="productAvatar"
+                                                name="avatar" required />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+
+                            <div class="card-action">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="reset" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </div> --}}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryInput = document.getElementById('categories');
+            categoryInput.addEventListener('change', async (e) => {
+                try {
+                    const response = await fetch(`/api/cat/${e.target.value}`);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    const data = await response.json();
+
+                    // Populate subcategories based on the response data
+                    const subcategorySelect = document.getElementById('subcategories');
+                    subcategorySelect.innerHTML =
+                    '<option value="">Select Subcategory</option>'; // Clear existing options
+                    data.forEach(subcategory => {
+                        const option = document.createElement('option');
+                        option.value = subcategory.id;
+                        option.textContent = subcategory.name;
+                        subcategorySelect.appendChild(option);
+                    });
+                } catch (error) {
+                    console.error('There was a problem with the fetch operation:', error);
+                }
+            });
+        });
+    </script>
+@endsection

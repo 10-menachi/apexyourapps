@@ -6,7 +6,7 @@
     <div class="container">
         <div class="page-inner">
             <div class="page-header">
-                <h3 class="mb-3 fw-bold">Categories</h3>
+                <h1 class="mb-3 fw-bold">Categories HERE </h1>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -75,7 +75,7 @@
                             </div>
 
                             <div class="table-responsive">
-                                <table id="add-row" class="table display table-striped table-hover">
+                               <table id="basic-datatables" class="display table table-striped table-hover">
                                     <thead>
                                         <tr>
                                             <th>Name</th>

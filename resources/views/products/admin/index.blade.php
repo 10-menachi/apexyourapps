@@ -4,13 +4,16 @@
 
 @section('content')
 
+
+
+
     <div class="container">
         <div class="page-inner">
             <div class="page-header">
-                <h3 class="fw-bold mb-3">All Products</h3>
+                <h3 class="fw-bold mb-3">My Products</h3>
                 <ul class="breadcrumbs mb-3">
                     <li class="nav-home">
-                        <a href="#">
+                        <a href="{{ route('admin.homepage.view') }}">
                             <i class="icon-home"></i>
                         </a>
                     </li>
@@ -18,13 +21,13 @@
                         <i class="icon-arrow-right"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="#">All products</a>
+                        <a href="{{ route('admin.product.create') }}">Add New</a>
                     </li>
                     <li class="separator">
                         <i class="icon-arrow-right"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Apex</a>
+                        <a href="{{ route('admin.product.index') }}">Products</a>
                     </li>
                 </ul>
             </div>
@@ -32,12 +35,13 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Products</h4>
+                            <h4 class="card-title">All Apex Products</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table id="basic-datatables" class="display table table-striped table-hover">
                                     <thead>
+
                                         <tr>
                                             <th>Category</th>
                                             <th>Sub Category</th>
@@ -57,6 +61,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
+                                    <tbody>
                                     <tbody>
                                         @foreach ($products as $product)
                                             <tr>
@@ -82,7 +87,8 @@
                                                     </form>
                                                 </td>
                                             </tr>
-                                            @endforeach
+                                        @endforeach
+                                    </tbody>
                                     </tbody>
                                 </table>
                             </div>
@@ -92,4 +98,5 @@
             </div>
         </div>
     </div>
+
 @endsection
