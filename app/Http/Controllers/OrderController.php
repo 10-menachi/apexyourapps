@@ -12,7 +12,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        // For admin: display all orders
+        $orders = Order::all();
+        return view('admin.orders.index', compact('orders'));
     }
 
     /**
@@ -20,7 +22,8 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        // Show form for customers to create an order
+        return view('orders.create');
     }
 
     /**
@@ -28,7 +31,22 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate the request data
+        $request->validate([
+            'product_id' => 'required|exists:products,id',
+            'quantity' => 'required|integer|min:1',
+            // Add other validation rules as necessary
+        ]);
+
+        // Create a new order
+        $order = Order::create([
+            'user_id' => auth()->id(), // Assuming user is logged in
+            'product_id' => $request->product_id,
+            'quantity' => $request->quantity,
+            // Add other fields as necessary
+        ]);
+
+        return redirect()->route('orders.show', $order)->with('success', 'Order created successfully.');
     }
 
     /**
@@ -36,7 +54,8 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        // Display order details for customers and admin
+        return view('orders.show', compact('order'));
     }
 
     /**
@@ -44,7 +63,8 @@ class OrderController extends Controller
      */
     public function edit(Order $order)
     {
-        //
+        // Show form for admin to edit an order
+        return view('admin.orders.edit', compact('order'));
     }
 
     /**
@@ -52,7 +72,17 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
-        //
+        // Validate the request data
+        $request->validate([
+            'product_id' => 'required|exists:products,id',
+            'quantity' => 'required|integer|min:1',
+            // Add other validation rules as necessary
+        ]);
+
+        // Update the order
+        $order->update($request->only('product_id', 'quantity'));
+
+        return redirect()->route('admin.orders.index')->with('success', 'Order updated successfully.');
     }
 
     /**
@@ -60,6 +90,9 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+        // Delete the order
+        $order->delete();
+
+        return redirect()->route('admin.orders.index')->with('success', 'Order deleted successfully.');
     }
 }

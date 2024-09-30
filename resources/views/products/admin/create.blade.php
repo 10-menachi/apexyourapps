@@ -6,12 +6,12 @@
     <div class="page-wrapper relative w-[calc(100%-260px)] p-10 pt-[64px] duration-300 ltr:ml-auto rtl:ml-0 rtl:mr-auto">
         <div class="w-full min-h-[calc(100vh-152px)] pb-14">
             <div class="w-full bg-white border rounded-md dark:bg-gray-900 border-slate-200 dark:border-slate-700/40">
-                <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="grid grid-cols-12 gap-4 p-4">
                         <div class="col-span-12 text-right">
                             <div class="flex justify-end">
-                                <a href="{{ route('product.index') }}"
+                                <a href="{{ route('admin.product.index') }}"
                                     class="flex items-center justify-center max-w-xs px-4 py-1 text-center text-white bg-blue-600 rounded-md hover:bg-blue-700">
                                     Back
                                 </a>
@@ -98,7 +98,7 @@
 
 
 
-            <div class="container">
+            {{-- <div class="container">
                 <div class="page-inner">
                     <div class="page-header">
                         <h3 class="fw-bold mb-3">Create</h3>
@@ -194,4 +194,4 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}

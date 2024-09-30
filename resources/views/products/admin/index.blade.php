@@ -4,8 +4,6 @@
 
 @section('content')
 
-
-
     <div class="container">
         <div class="page-inner">
             <div class="page-header">
@@ -70,11 +68,11 @@
                                                 <td> {{-- <a href="#"><i class="icofont-ui-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
                                                                     <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
                                                                        --}}
-                                                    <a href="{{ route('product.edit', $product->id) }}"
+                                                    <a href="{{ route('admin.product.edit', $product->id) }}"
                                                         class="text-blue-500 hover:underline">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <form action="{{ route('product.destroy', $product->id) }}"
+                                                    <form action="{{ route('admin.product.destroy', $product->id) }}"
                                                         method="POST" class="inline">
                                                         @csrf
                                                         @method('DELETE')
@@ -84,6 +82,7 @@
                                                     </form>
                                                 </td>
                                             </tr>
+                                            @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -93,7 +92,4 @@
             </div>
         </div>
     </div>
-
-
-
 @endsection

@@ -3,9 +3,11 @@
 use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\CustomerServiceController;
 
@@ -118,4 +120,42 @@ Route::middleware(['auth', 'verified', CheckAdmin::class])->group(function () {
 
     // Remove the specified customer service from storage.
     Route::delete('admin/customer-services/{customerService}', [CustomerServiceController::class, 'destroy'])->name('admin.customer-services.destroy');
+
+    // Display all orders (Admin)
+    Route::get('admin/orders', [OrderController::class, 'index'])->name('admin.orders.index');
+
+    Route::get('admin/orders/reports', [OrderController::class, 'index'])->name('admin.orders.reports');
+
+    // Show form to create a new order (Customer)
+    Route::get('orders/create', [OrderController::class, 'create'])->name('admin.orders.create');
+
+    // Store a new order (Customer)
+    Route::post('orders', [OrderController::class, 'store'])->name('admin.orders.store');
+
+    // Display specific order details (Customer and Admin)
+    Route::get('orders/{order}', [OrderController::class, 'show'])->name('admin.orders.show');
+
+    // Show form for editing an order (Admin)
+    Route::get('admin/orders/{order}/edit', [OrderController::class, 'edit'])->name('admin.orders.edit');
+
+    // Update specific order (Admin)
+    Route::put('admin/orders/{order}', [OrderController::class, 'update'])->name('admin.orders.update');
+
+    // Delete specific order (Admin)
+    Route::delete('admin/orders/{order}', [OrderController::class, 'destroy'])->name('admin.orders.destroy');
+
+
+    Route::get('purchases', [PurchaseController::class, 'index'])->name('admin.purchases.index');
+
+    Route::get('purchases/create', [PurchaseController::class, 'create'])->name('admin.purchases.create');
+
+    Route::post('purchases', [PurchaseController::class, 'store'])->name('admin.purchases.store');
+
+    Route::get('purchases/{purchase}', [PurchaseController::class, 'show'])->name('admin.purchases.show');
+
+    Route::get('purchases/{purchase}/edit', [PurchaseController::class, 'edit'])->name('admin.purchases.edit');
+
+    Route::put('purchases/{purchase}', [PurchaseController::class, 'update'])->name('admin.purchases.update');
+
+    Route::delete('purchases/{purchase}', [PurchaseController::class, 'destroy'])->name('admin.purchases.destroy');
 });

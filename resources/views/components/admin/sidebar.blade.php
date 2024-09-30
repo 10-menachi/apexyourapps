@@ -45,12 +45,12 @@
                      <div class="collapse" id="base">
                          <ul class="nav nav-collapse">
                              <li>
-                                 <a href="route{{ 'admin.product.index' }}">
+                                 <a href="{{ route('admin.product.index') }}">
                                      <span class="sub-item">All Products</span>
                                  </a>
                              </li>
                              <li>
-                                 <a href="route{{ 'admin.product.create' }}">
+                                 <a href="{{ route('admin.product.create') }}">
                                      <span class="sub-item">Add Product</span>
                                  </a>
                              </li>
@@ -66,12 +66,12 @@
                      <div class="collapse" id="sidebarLayouts">
                          <ul class="nav nav-collapse">
                              <li>
-                                 <a href="route{{ 'admin.categories.index' }}">
+                                 <a href="{{ route('admin.categories.index') }}">
                                      <span class="sub-item">All Categories</span>
                                  </a>
                              </li>
                              <li>
-                                 <a href="admin.product-category-create">
+                                 <a href="{{ route('admin.categories.create') }}">
                                      <span class="sub-item">Add Category</span>
                                  </a>
                              </li>
@@ -87,12 +87,12 @@
                      <div class="collapse" id="forms">
                          <ul class="nav nav-collapse">
                              <li>
-                                 <a href="admin.product-sub-categories">
+                                 <a href="{{ route('admin.subcategories.index') }}">
                                      <span class="sub-item">All Sub Categories</span>
                                  </a>
                              </li>
                              <li>
-                                 <a href="admin.product-sub-category-create">
+                                 <a href="{{ route('admin.subcategories.create') }}">
                                      <span class="sub-item">Add New</span>
                                  </a>
                              </li>
@@ -108,12 +108,12 @@
                      <div class="collapse" id="tables">
                          <ul class="nav nav-collapse">
                              <li>
-                                 <a href="admin.orders">
+                                 <a href="{{ route('admin.orders.index') }}">
                                      <span class="sub-item">All Orders</span>
                                  </a>
                              </li>
                              <li>
-                                 <a href="admin.order.reports">
+                                 <a href="{{ route('admin.orders.reports') }}">
                                      <span class="sub-item">Generate Report</span>
                                  </a>
                              </li>
@@ -129,12 +129,12 @@
                      <div class="collapse" id="maps">
                          <ul class="nav nav-collapse">
                              <li>
-                                 <a href="admin.purchases">
+                                 <a href="{{ route('admin.purchases.index') }}">
                                      <span class="sub-item">All Purchases</span>
                                  </a>
                              </li>
                              <li>
-                                 <a href="admin.purchase.create">
+                                 <a href="{{ route('admin.purchases.create') }}">
                                      <span class="sub-item">Add new Purchase</span>
                                  </a>
                              </li>
@@ -150,12 +150,12 @@
                      <div class="collapse" id="charts">
                          <ul class="nav nav-collapse">
                              <li>
-                                 <a href="admin.customers">
+                                 <a href="{{ route('admin.customer-services.index') }}">
                                      <span class="sub-item">All Customers</span>
                                  </a>
                              </li>
                              <li>
-                                 <a href="admin.customer.create">
+                                 <a href="{{ route('admin.customer-services.create') }}">
                                      <span class="sub-item">Add New Customer</span>
                                  </a>
                              </li>
