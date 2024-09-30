@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubCategoryController;
 
 Route::get('cart', function () {
     return view('cart');
@@ -47,10 +48,10 @@ Route::get('product/{product}', [ProductController::class, 'show'])->name('produ
  * 
  * 
  */
-Route::get('admin/product', [ProductController::class, 'adminIndex'])->name('admin.product.store');
+Route::get('admin/product', [ProductController::class, 'adminIndex'])->name('admin.product.index');
 
 // Show the form for creating a new product.
-Route::get('admin/product/create', [ProductController::class, 'create'])->name('admin.product.store');
+Route::get('admin/product/create', [ProductController::class, 'create'])->name('admin.product.create');
 
 // Store a newly created product in storage.
 Route::post('admin/product', [ProductController::class, 'store'])->name('admin.product.store');
@@ -59,7 +60,7 @@ Route::post('admin/product', [ProductController::class, 'store'])->name('admin.p
 Route::get('admin/product/{product}', [ProductController::class, 'adminShow'])->name('admin.product.show');
 
 // Show the form for editing the specified product.
-Route::get('admin/product/{product}/edit', [ProductController::class, 'edit'])->name('admin.product.store');
+Route::get('admin/product/{product}/edit', [ProductController::class, 'edit'])->name('admin.product.edit');
 
 // Update the specified product in storage.
 Route::put('admin/product/{product}', [ProductController::class, 'update'])->name('admin.product.update');
@@ -85,3 +86,16 @@ require __DIR__ . '/admin.php';
 
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage.view');
+
+
+//Users and Customers  Show Categories
+Route::get('categories', [CategoryController::class, 'index'])->name('user.categories.index');
+
+Route::get('categories', [CategoryController::class, 'index'])->name('user.categories.index');
+
+
+// Display a listing of the subcategories. For Customers and users
+Route::get('subcategories', [SubCategoryController::class, 'index'])->name('user.subcategories.index');
+
+// Show the form for creating a new subcategory.
+Route::get('subcategories/{subcategory}', [SubCategoryController::class, 'show'])->name('user.subcategories.create');

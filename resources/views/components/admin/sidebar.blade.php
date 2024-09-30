@@ -45,12 +45,12 @@
                             <div class="collapse" id="base">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="products.admin.index">
+                                        <a href="route{{ 'admin.product.index' }}">
                                             <span class="sub-item">All Products</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="products.admin.create">
+                                        <a href="route{{ 'admin.product.create' }}">
                                             <span class="sub-item">Add Product</span>
                                         </a>
                                     </li>                                   
@@ -66,7 +66,7 @@
                             <div class="collapse" id="sidebarLayouts">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="admin.product-categories">
+                                        <a href="route{{ 'admin.categories.index' }}">
                                             <span class="sub-item">All Categories</span>
                                         </a>
                                     </li>
