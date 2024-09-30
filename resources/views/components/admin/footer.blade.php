@@ -1,15 +1,27 @@
       <footer class="footer">
-          <div class="container-fluid d-flex justify-content-end">
-              <div class="flex justify-end copyright">
-                  {{ date('Y') }} &copy;
-                  <a class="nav-link float-end" href="yourapps.co.ke" target="_blank">
-                      YourApps
-                  </a>
+          <div class="container-fluid d-flex justify-content-between">
+              <nav class="pull-left">
+                  <ul class="nav">
+                      <li class="nav-item">
+                          <a class="nav-link" href="https://yourapps.co.ke/">
+                              Apex E-commerce
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#"> Help </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#"> Licenses </a>
+                      </li>
+                  </ul>
+              </nav>
+              <div class="copyright">
+                  &copy; {{ date('Y') }}, Design & Developed by
+                  <a href="https://yourapps.co.ke/">Your Apps Ltd</a>
               </div>
           </div>
       </footer>
       </div>
-
       </div>
       <!--   Core JS Files   -->
       <script src="{{ asset('admin-assets/assets/js/core/jquery-3.7.1.min.js') }}"></script>

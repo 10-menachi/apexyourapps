@@ -62,33 +62,32 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                    <tbody>
                                         @foreach ($products as $product)
                                             <tr>
                                                 <td> {{ $product->subcategory->category->name }}</td>
                                                 <td>{{ $product->subcategory->name }}</td>
                                                 <td>{{ $product->name }}</td>
                                                 <td>{{ $product->description }}</td>
-                                                <td>{{ $product->price }}</td>
-                                                <td> {{-- <a href="#"><i class="icofont-ui-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                <td>Kes . {{ $product->price }}</td>
+                                                <td class="d-flex "> {{-- <a href="#"><i class="icofont-ui-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
                                                                     <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
                                                                        --}}
                                                     <a href="{{ route('admin.product.edit', $product->id) }}"
                                                         class="text-blue-500 hover:underline">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
+                                                    <span></span>
                                                     <form action="{{ route('admin.product.destroy', $product->id) }}"
                                                         method="POST" class="inline">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="text-red-500 hover:underline">
+                                                        <button type="submit" class="text-danger hover:underline">
                                                             <i class="fas fa-trash"></i>
                                                         </button>
                                                     </form>
                                                 </td>
                                             </tr>
                                         @endforeach
-                                    </tbody>
                                     </tbody>
                                 </table>
                             </div>

@@ -18,13 +18,13 @@
                         <i class="icon-arrow-right"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('admin.product.index')  }}">Products</a>
+                        <a href="{{ route('admin.product.index') }}">Products</a>
                     </li>
                     <li class="separator">
                         <i class="icon-arrow-right"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Add New Product</a>
+                        <a href="#">Add New Product HERE</a>
                     </li>
                 </ul>
             </div>
@@ -56,7 +56,11 @@
                                                 name="description" placeholder="Enter Product Description" required />
                                         </div>
                                     </div>
+                                </div>
+                            </div>
 
+                            <div class="card-body">
+                                <div class="row">
                                     <!-- Category Selection -->
                                     <div class="col-md-6 col-lg-4">
                                         <div class="form-group form-group-default">
@@ -69,10 +73,6 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
-
-                                <!-- Subcategory Selection -->
-                                <div class="row mb-3">
                                     <div class="col-md-6 col-lg-4">
                                         <div class="form-floating form-floating-custom mb-3">
                                             <select class="form-select" id="subcategories" name="subcategory_id" required>
@@ -80,9 +80,11 @@
                                             </select>
                                             <label for="selectFloatingLabel">Select Subcategory</label>
                                         </div>
-                                    </div>
-
-                                    <!-- Product Avatar Upload -->
+                                    </div>                                   
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
                                     <div class="col-md-6 col-lg-4">
                                         <div class="form-group">
                                             <label for="productAvatar">Product Avatar</label>
@@ -95,7 +97,8 @@
 
                             <div class="card-action">
                                 <button type="submit" class="btn btn-success">Submit</button>
-                                <button type="reset" class="btn btn-danger">Cancel</button>
+                                
+                        <a href="{{ route('admin.product.index') }}" class="btn btn-danger">Cancel</a>
                             </div>
                         </form>
                     </div>
@@ -118,7 +121,7 @@
                     // Populate subcategories based on the response data
                     const subcategorySelect = document.getElementById('subcategories');
                     subcategorySelect.innerHTML =
-                    '<option value="">Select Subcategory</option>'; // Clear existing options
+                        '<option value="">Select Subcategory</option>'; // Clear existing options
                     data.forEach(subcategory => {
                         const option = document.createElement('option');
                         option.value = subcategory.id;

@@ -6,7 +6,7 @@
     <div class="container">
         <div class="page-inner">
             <div class="page-header">
-                <h1 class="mb-3 fw-bold">Categories HERE </h1>
+                <h1 class="mb-3 fw-bold">Product Categories</h1>
             </div>
             <div class="row">
                 <div class="col-md-12">
