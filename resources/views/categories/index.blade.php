@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <!-- Modal -->
+                            <!-- Add Category Modal -->
                             <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -36,9 +36,7 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <p class="small">
-                                                Add a new category for our products
-                                            </p>
+                                            <p class="small">Add a new category for our products</p>
                                             <form action="{{ route('admin.categories.store') }}" method="POST"
                                                 enctype="multipart/form-data">
                                                 @csrf
@@ -67,12 +65,9 @@
                                                 </div>
                                         </div>
                                         <div class="border-0 modal-footer">
-                                            <button type="submit" class="btn btn-primary">
-                                                Add
-                                            </button>
-                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                                                Close
-                                            </button>
+                                            <button type="submit" class="btn btn-primary">Add</button>
+                                            <button type="button" class="btn btn-danger"
+                                                data-bs-dismiss="modal">Close</button>
                                         </div>
                                         </form>
                                     </div>
@@ -103,6 +98,7 @@
                                                             <i class="fa fa-edit"></i>
                                                         </button>
 
+                                                        <!-- Edit Category Modal -->
                                                         <div class="modal fade" id="editCategoryModal{{ $category->id }}"
                                                             tabindex="-1" role="dialog" aria-hidden="true">
                                                             <div class="modal-dialog" role="document">
@@ -118,9 +114,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                        <p class="small">
-                                                                            Edit {{ $category->name }}
-                                                                        </p>
+                                                                        <p class="small">Edit {{ $category->name }}</p>
                                                                         <form
                                                                             action="{{ route('admin.categories.update', $category->id) }}"
                                                                             method="POST" enctype="multipart/form-data">
@@ -136,7 +130,6 @@
                                                                                             class="form-control"
                                                                                             placeholder="Name" required
                                                                                             value="{{ old('name', $category->name) }}" />
-                                                                                        <!-- Set the value -->
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-md-6 pe-0">
@@ -149,7 +142,6 @@
                                                                                             class="form-control"
                                                                                             placeholder="Description"
                                                                                             value="{{ old('description', $category->description) }}" />
-                                                                                        <!-- Set the value -->
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-md-6">
@@ -164,25 +156,57 @@
                                                                             </div>
                                                                     </div>
                                                                     <div class="border-0 modal-footer">
-                                                                        <button type="submit" class="btn btn-primary">
-                                                                            Update
-                                                                        </button>
+                                                                        <button type="submit"
+                                                                            class="btn btn-primary">Update</button>
                                                                         <button type="button" class="btn btn-danger"
-                                                                            data-bs-dismiss="modal">
-                                                                            Close
-                                                                        </button>
+                                                                            data-bs-dismiss="modal">Close</button>
                                                                     </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <button type="button" data-bs-toggle="tooltip" title="Remove"
+
+                                                        <!-- Delete Button -->
+                                                        <button type="button" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteCategoryModal{{ $category->id }}"
                                                             class="btn btn-link btn-danger">
                                                             <i class="fa fa-times"></i>
                                                         </button>
+
+                                                        <!-- Delete Category Modal -->
+                                                        <div class="modal fade"
+                                                            id="deleteCategoryModal{{ $category->id }}" tabindex="-1"
+                                                            role="dialog" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="border-0 modal-header">
+                                                                        <h5 class="modal-title">Delete Category</h5>
+                                                                        <button type="button" class="close"
+                                                                            data-bs-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p>Are you sure you want to delete the category
+                                                                            "{{ $category->name }}"?</p>
+                                                                    </div>
+                                                                    <div class="border-0 modal-footer">
+                                                                        <form
+                                                                            action="{{ route('admin.categories.destroy', $category->id) }}"
+                                                                            method="POST">
+                                                                            @csrf
+                                                                            @method('DELETE')
+                                                                            <button type="submit"
+                                                                                class="btn btn-danger">Delete</button>
+                                                                        </form>
+                                                                        <button type="button" class="btn btn-secondary"
+                                                                            data-bs-dismiss="modal">Cancel</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </td>
-
                                             </tr>
                                         @endforeach
                                     </tbody>

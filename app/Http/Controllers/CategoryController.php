@@ -126,6 +126,13 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        try {
+            $category->delete();
+            return back()->with('success', 'Category deleted successfully');
+        } catch (Exception $e) {
+            Log::info('DELETE CATEGORY EXCEPTION');
+            Log::error($e);
+            return back()->with('error', 'Error deleting category');
+        }
     }
 }
