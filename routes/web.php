@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('cart', function () {
     return view('cart');
@@ -30,6 +31,9 @@ Route::get('privacy-policy', function () {
 })->name('privacy-policy');
 
 Route::get('/dashboard', function () {
+    if (Auth::user()->role == 'admin') {
+        return redirect()->route('admin.dashboard');
+    }
     $categories = Category::all();
     return view('home-electronics', compact('categories'));
 })->name('dashboard');
