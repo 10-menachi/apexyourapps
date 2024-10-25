@@ -36,6 +36,12 @@
                          <p>Categories</p>
                      </a>
                  </li>
+                 <li class="nav-item">
+                     <a href="{{ route('admin.product.index') }}">
+                         <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                         <p>Products</p>
+                     </a>
+                 </li>
                  <li class="nav-section">
                      <span class="sidebar-mini-icon">
                          <i class="fa fa-ellipsis-h"></i>

@@ -5,9 +5,6 @@
 
 <div class="main-panel">
 
-    {{ Log::info('STATUSSSS') }}
-    {{ Log::info($errors->any()) }}
-
     <div class="toast-container">
         @if (session('success'))
             <div class="toast show">

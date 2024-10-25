@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\SubCategory;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +13,7 @@ use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
-    
+
     /*************************************************************
      * 
      * Customer and guests user of the system
@@ -44,8 +45,9 @@ class ProductController extends Controller
     {
         $products = Product::all();
         $categories = Category::all();
+        $subcategories = SubCategory::all();
         if (Auth::user()->role == 'admin') {
-            return view('products.admin.index', compact('products', 'categories'));
+            return view('products.admin.index', compact('products', 'categories', 'subcategories'));
         }
         return view('product.index', compact('products', 'categories'));
     }
@@ -56,7 +58,8 @@ class ProductController extends Controller
         try {
             if (Auth::user()->role == 'admin') {
                 $categories = Category::all();
-                return view('products.admin.create', compact('categories'));
+                $subcategories = SubCategory::all();
+                return view('products.admin.create', compact('categories', 'subcategories'));
             } else {
                 return redirect()->back()->with('error', 'Unauthorized');
             }
@@ -70,6 +73,8 @@ class ProductController extends Controller
     {
         try {
             $data = $request->all();
+            Log::info('PRODUCT DATA');
+            Log::info($data);
 
             $validator = Validator::make($data, [
                 'category_id' => 'required|integer|exists:product_categories,id',
@@ -104,7 +109,7 @@ class ProductController extends Controller
                 'image' => $imagePath,
             ]);
 
-            return redirect()->route('product.index')->with('success', 'Product created successfully');
+            return redirect()->route('admin.product.index')->with('success', 'Product created successfully');
         } catch (Exception $e) {
             Log::error('STORE PRODUCT ERROR');
             Log::error($e);
