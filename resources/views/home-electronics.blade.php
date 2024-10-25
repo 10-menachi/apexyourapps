@@ -173,7 +173,7 @@
 
         <!-- New arrivals (List) -->
         <section class="container pt-5 mt-1 mt-sm-2 mt-md-3 mt-lg-4">
-            <h2 class="pb-2 h3 pb-sm-3">New arrivals</h2>
+            <h2 class="pb-2 h3 pb-sm-3">Products</h2>
             <div class="row">
 
                 <!-- Banner -->
@@ -195,222 +195,33 @@
 
                 <!-- Product list -->
                 <div class="gap-3 pt-4 col-sm-6 col-lg-4 d-flex flex-column py-lg-4">
-
-                    <!-- Item -->
-                    <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
-                        <div class="flex-shrink-0 ratio ratio-1x1" style="width: 110px">
-                            <img src="assets/img/shop/electronics/thumbs/01.png" alt="Smart Watch">
-                        </div>
-                        <div class="min-w-0 w-100 ps-2 ps-sm-3">
-                            <div class="gap-2 mb-2 d-flex align-items-center">
-                                <div class="gap-1 d-flex fs-xs">
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
+                    @foreach ($products as $product)
+                        <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
+                            <div class="flex-shrink-0 ratio ratio-1x1" style="width: 110px">
+                                <img src="{{ asset($product->thumbnail) }}" alt="{{ $product->name }}">
+                            </div>
+                            <div class="min-w-0 w-100 ps-2 ps-sm-3">
+                                <div class="gap-2 mb-2 d-flex align-items-center">
+                                    <div class="gap-1 d-flex fs-xs">
+                                        @for ($i = 0; $i < 5; $i++)
+                                            <i class="ci-star-filled text-warning"></i>
+                                        @endfor
+                                    </div>
+                                    <span class="text-body-tertiary fs-xs">{{ $product->reviews_count }}</span>
                                 </div>
-                                <span class="text-body-tertiary fs-xs">45</span>
-                            </div>
-                            <h4 class="mb-2">
-                                <a class="stretched-link d-block fs-sm fw-medium text-truncate"
-                                    href="shop-product-general-electronics.html">
-                                    <span class="animate-target">Smart Watch Series 7, White</span>
-                                </a>
-                            </h4>
-                            <div class="mb-0 h5">$449.00</div>
-                        </div>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
-                        <div class="flex-shrink-0 ratio ratio-1x1" style="width: 110px">
-                            <img src="assets/img/shop/electronics/thumbs/03.png" width="110" alt="VR Glasses">
-                        </div>
-                        <div class="min-w-0 w-100 ps-2 ps-sm-3">
-                            <div class="gap-2 mb-2 d-flex align-items-center">
-                                <div class="gap-1 d-flex fs-xs">
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-half text-warning"></i>
-                                    <i class="opacity-75 ci-star text-body-tertiary"></i>
-                                </div>
-                                <span class="text-body-tertiary fs-xs">123</span>
-                            </div>
-                            <h4 class="mb-2">
-                                <a class="stretched-link d-block fs-sm fw-medium text-truncate"
-                                    href="shop-product-general-electronics.html">
-                                    <span class="animate-target">VRB01 Virtual Reality Glasses</span>
-                                </a>
-                            </h4>
-                            <div class="mb-0 h5">$340.99</div>
-                        </div>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
-                        <div class="flex-shrink-0 ratio ratio-1x1" style="width: 110px">
-                            <img src="assets/img/shop/electronics/thumbs/05.png" width="110"
-                                alt="Bluetooth Headphones">
-                        </div>
-                        <div class="min-w-0 w-100 ps-2 ps-sm-3">
-                            <div class="gap-2 mb-2 d-flex align-items-center">
-                                <div class="gap-1 d-flex fs-xs">
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="opacity-75 ci-star text-body-tertiary"></i>
-                                </div>
-                                <span class="text-body-tertiary fs-xs">34</span>
-                            </div>
-                            <h4 class="mb-2">
-                                <a class="stretched-link d-block fs-sm fw-medium text-truncate"
-                                    href="shop-product-general-electronics.html">
-                                    <span class="animate-target">Wireless Bluetooth Headphones Sony</span>
-                                </a>
-                            </h4>
-                            <div class="mb-0 h5">$357.00</div>
-                        </div>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
-                        <div class="flex-shrink-0 ratio ratio-1x1" style="width: 110px">
-                            <img src="assets/img/shop/electronics/thumbs/07.png" width="110" alt="MacBook">
-                        </div>
-                        <div class="min-w-0 w-100 ps-2 ps-sm-3">
-                            <div class="gap-2 mb-2 d-flex align-items-center">
-                                <div class="gap-1 d-flex fs-xs">
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                </div>
-                                <span class="text-body-tertiary fs-xs">34</span>
-                            </div>
-                            <h4 class="mb-2">
-                                <a class="stretched-link d-block fs-sm fw-medium text-truncate"
-                                    href="shop-product-general-electronics.html">
-                                    <span class="animate-target">Laptop Apple MacBook Pro 13 M2</span>
-                                </a>
-                            </h4>
-                            <div class="mb-0 h5">$1,200.00</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product list -->
-                <div class="gap-3 pt-3 col-sm-6 col-lg-4 d-flex flex-column py-lg-4">
-
-                    <!-- Item -->
-                    <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
-                        <div class="flex-shrink-0 ratio ratio-1x1" style="width: 110px">
-                            <img src="assets/img/shop/electronics/thumbs/02.png" width="110" alt="iPad Pro">
-                        </div>
-                        <div class="min-w-0 w-100 ps-2 ps-sm-3">
-                            <div class="gap-2 mb-2 d-flex align-items-center">
-                                <div class="gap-1 d-flex fs-xs">
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="opacity-75 ci-star text-body-tertiary"></i>
-                                </div>
-                                <span class="text-body-tertiary fs-xs">126</span>
-                            </div>
-                            <h4 class="mb-2">
-                                <a class="stretched-link d-block fs-sm fw-medium text-truncate"
-                                    href="shop-product-general-electronics.html">
-                                    <span class="animate-target">Tablet Apple iPad Air M1</span>
-                                </a>
-                            </h4>
-                            <div class="mb-0 h5">$540.00</div>
-                        </div>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
-                        <div class="flex-shrink-0 ratio ratio-1x1" style="width: 110px">
-                            <img src="assets/img/shop/electronics/thumbs/04.png" width="110" alt="AirPods 2 Pro">
-                        </div>
-                        <div class="min-w-0 w-100 ps-2 ps-sm-3">
-                            <div class="gap-2 mb-2 d-flex align-items-center">
-                                <div class="gap-1 d-flex fs-xs">
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                </div>
-                                <span class="text-body-tertiary fs-xs">340</span>
-                            </div>
-                            <h4 class="mb-2">
-                                <a class="stretched-link d-block fs-sm fw-medium text-truncate"
-                                    href="shop-product-general-electronics.html"><span class="animate-target">Headphones
-                                        Apple AirPods 2 Pro</span></a>
-                            </h4>
-                            <div class="mb-0 h5">$209.99 <del class="text-body-tertiary fs-sm fw-normal">$356.00</del>
+                                <h4 class="mb-2">
+                                    <a class="stretched-link d-block fs-sm fw-medium text-truncate"
+                                        href="{{ route('product.show', $product->id) }}">
+                                        <span class="animate-target">{{ $product->name }}</span>
+                                    </a>
+                                </h4>
+                                <div class="mb-0 h5">${{ number_format($product->price, 2) }}</div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
-                        <div class="flex-shrink-0 ratio ratio-1x1" style="width: 110px">
-                            <img src="assets/img/shop/electronics/thumbs/06.png" width="110" alt="Power Bank">
-                        </div>
-                        <div class="min-w-0 w-100 ps-2 ps-sm-3">
-                            <div class="gap-2 mb-2 d-flex align-items-center">
-                                <div class="gap-1 d-flex fs-xs">
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="opacity-75 ci-star text-body-tertiary"></i>
-                                </div>
-                                <span class="text-body-tertiary fs-xs">29</span>
-                            </div>
-                            <h4 class="mb-2">
-                                <a class="stretched-link d-block fs-sm fw-medium text-truncate"
-                                    href="shop-product-general-electronics.html">
-                                    <span class="animate-target">Power Bank PBS 10000 mAh Black</span>
-                                </a>
-                            </h4>
-                            <div class="mb-0 h5">$49.99</div>
-                        </div>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="position-relative animate-underline d-flex align-items-center ps-xl-3">
-                        <div class="flex-shrink-0 ratio ratio-1x1" style="width: 110px">
-                            <img src="assets/img/shop/electronics/thumbs/08.png" width="110" alt="iPhone 14">
-                        </div>
-                        <div class="min-w-0 w-100 ps-2 ps-sm-3">
-                            <div class="gap-2 mb-2 d-flex align-items-center">
-                                <div class="gap-1 d-flex fs-xs">
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                    <i class="ci-star-filled text-warning"></i>
-                                </div>
-                                <span class="text-body-tertiary fs-xs">12</span>
-                            </div>
-                            <h4 class="mb-2">
-                                <a class="stretched-link d-block fs-sm fw-medium text-truncate"
-                                    href="shop-product-general-electronics.html">
-                                    <span class="animate-target">Apple iPhone 14 128GB White</span>
-                                </a>
-                            </h4>
-                            <div class="mb-0 h5">$899.00 <del class="text-body-tertiary fs-sm fw-normal">$958.00</del>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
+
         </section>
 
 
@@ -1464,8 +1275,7 @@
                                         </button>
                                     </div>
                                     <div class="mb-2 progress" role="progressbar" aria-label="Available in stock"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                                        style="height: 4px">
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 4px">
                                         <div class="progress-bar rounded-pill" style="width: 25%"></div>
                                     </div>
                                     <div class="text-body-secondary fs-sm">Available: <span
@@ -1478,8 +1288,7 @@
                         <div class="swiper-slide">
                             <div class="rounded product-card animate-underline hover-effect-opacity bg-body">
                                 <div class="position-relative">
-                                    <div
-                                        class="top-0 mt-3 opacity-0 position-absolute end-0 z-2 hover-effect-target me-3">
+                                    <div class="top-0 mt-3 opacity-0 position-absolute end-0 z-2 hover-effect-target me-3">
                                         <div class="gap-2 d-flex flex-column">
                                             <button type="button"
                                                 class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex"
@@ -1547,8 +1356,7 @@
                                         </button>
                                     </div>
                                     <div class="mb-2 progress" role="progressbar" aria-label="Available in stock"
-                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                        style="height: 4px">
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 4px">
                                         <div class="progress-bar rounded-pill" style="width: 50%"></div>
                                     </div>
                                     <div class="text-body-secondary fs-sm">Available: <span
@@ -1561,8 +1369,7 @@
                         <div class="swiper-slide">
                             <div class="rounded product-card animate-underline hover-effect-opacity bg-body">
                                 <div class="position-relative">
-                                    <div
-                                        class="top-0 mt-3 opacity-0 position-absolute end-0 z-2 hover-effect-target me-3">
+                                    <div class="top-0 mt-3 opacity-0 position-absolute end-0 z-2 hover-effect-target me-3">
                                         <div class="gap-2 d-flex flex-column">
                                             <button type="button"
                                                 class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex"
@@ -1630,8 +1437,7 @@
                                         </button>
                                     </div>
                                     <div class="mb-2 progress" role="progressbar" aria-label="Available in stock"
-                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                                        style="height: 4px">
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 4px">
                                         <div class="progress-bar rounded-pill" style="width: 75%"></div>
                                     </div>
                                     <div class="text-body-secondary fs-sm">Available: <span
