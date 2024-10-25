@@ -24,24 +24,26 @@
      <div class="sidebar-wrapper scrollbar scrollbar-inner">
          <div class="sidebar-content">
              <ul class="nav nav-secondary">
-                 <li class="nav-item active">
+                 {{ Log::info(request()->route()->getName()) }}
+                 <li class="nav-item {{ request()->routeIs('admin.homepage.view') ? 'active' : '' }}">
                      <a href="{{ route('dashboard') }}">
                          <i class="fas fa-home"></i>
                          <p>Dashboard</p>
                      </a>
                  </li>
-                 <li class="nav-item">
+                 <li class="nav-item" {{ request()->routeIs('admin.categories.index') ? 'active' : '' }}>
                      <a href="{{ route('admin.categories.index') }}">
-                         <i class="fas fa-home"></i>
+                         <i class="fa fa-folder" aria-hidden="true"></i>
                          <p>Categories</p>
                      </a>
                  </li>
-                 <li class="nav-item">
+                 <li class="nav-item {{ request()->routeIs('admin.product.index') ? 'active' : '' }}">
                      <a href="{{ route('admin.product.index') }}">
                          <i class="fa fa-cart-plus" aria-hidden="true"></i>
                          <p>Products</p>
                      </a>
                  </li>
+
                  <li class="nav-section">
                      <span class="sidebar-mini-icon">
                          <i class="fa fa-ellipsis-h"></i>
