@@ -187,7 +187,7 @@
                         <h3 class="mb-2 display-2">MacBook</h3>
                         <p class="mb-4 text-body fw-medium">Be Pro Anywhere</p>
                         <a class="btn btn-sm btn-primary" href="#!">
-                            From $1,199
+                            From Ksh39,199
                             <i class="ci-arrow-up-right fs-base ms-1 me-n1"></i>
                         </a>
                     </div>
@@ -229,7 +229,7 @@
         <section class="container pt-5 mt-2 mt-sm-3 mt-lg-4">
 
             <!-- Heading -->
-            <div class="pb-3 d-flex align-items-center justify-content-between border-bottom pb-md-4">
+            <div class="pb-3 d-flealign-items-center justify-content-between border-bottom pb-md-4">
                 <h2 class="mb-0 h3">New Products</h2>
                 <div class="nav ms-3">
                     <a class="px-0 py-2 nav-link animate-underline" href="#">
