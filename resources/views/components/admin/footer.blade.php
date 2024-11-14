@@ -193,6 +193,9 @@
               });
           });
 
+
+
+          //Admin  Product Form  Image Preview
           function previewImage(event, previewId) {
               const imagePreview = document.getElementById(previewId);
               const file = event.target.files[0];
@@ -218,7 +221,7 @@
 
 
 
-
+          //Admin product Category select autopopulate to select
           document.getElementById('category').addEventListener('change', function() {
               var categoryId = this.value;
               var subcategorySelect = document.getElementById('subcategory');

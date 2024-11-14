@@ -770,6 +770,8 @@
 
 
         <script>
+
+        ///product variant  additional input fields 
             let variantIndex = {{ count($product->variants) }}; // Start from the number of existing variants
 
             // Models and colors from Laravel blade
