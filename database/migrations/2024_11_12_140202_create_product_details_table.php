@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('product_details', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
-            $table->string('category');  // e.g., 'general_specs', 'display', 'power_and_battery', 'size_and_weight'
-            $table->string('key');       // e.g., 'model', 'manufacturer', 'finish', etc.
-            $table->string('value');     // e.g., actual value like 'iPhone 12', 'Apple', etc.
+            $table->string('category')->nullable();  // e.g., 'General Specs', 'Display', 'Power_and Battery', 'Size and Weight'
+            $table->string('key')->nullable();    // e.g., 'model', 'manufacturer', 'finish', etc.
+            $table->string('value')->nullable();    // e.g., actual value like 'iPhone 12', 'Apple',128Gb etc.
             $table->timestamps();
         });
     }

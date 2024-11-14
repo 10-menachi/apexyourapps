@@ -46,6 +46,7 @@ Route::get('product/{product}', [ProductController::class, 'show'])->name('produ
 
 
 
+
 Route::get('privacy-policy', function () {
     return view('privacy-policy');
 })->name('privacy-policy');

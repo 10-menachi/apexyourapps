@@ -17,15 +17,22 @@ return new class extends Migration {
                 $table->unsignedBigInteger('subcategory_id');
                 $table->string('name');
                 $table->text('description');
-                $table->decimal('price', 8, 2);
-                $table->string('model');
-                $table->string('color');
                 $table->string('warranty')->nullable();
+                $table->string('qr_code')->nullable();
+                $table->string('sku')->nullable();
                 $table->string('payment_and_credit')->nullable();
-                $table->string('image');
+                $table->string('main_avatar');
+                $table->string('avatar_2')->nullable();
+                $table->string('avatar_3')->nullable();
+                $table->string('avatar_4')->nullable();
+                $table->string('avatar_5')->nullable();
+                $table->string('avatar_6')->nullable();
+                $table->string('avatar_7')->nullable();
+                $table->unsignedBigInteger('tag_id')->nullable();
                 $table->boolean('featured')->default(false);
 
                 $table->foreign('subcategory_id')->references('id')->on('sub_categories')->onDelete('cascade');
+                $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
                 $table->timestamps();
             });
         }

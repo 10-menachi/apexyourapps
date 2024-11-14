@@ -53,12 +53,18 @@
       <!-- Sweet Alert -->
       <script src="{{ asset('admin-assets/assets/js/plugin/sweetalert/sweetalert.min.js') }}"></script>
 
-      <!-- Kaiadmin JS -->
-      <script src="{{ asset('admin-assets/assets/js/kaiadmin.min.js') }}"></script>
+      <!-- apexadmin JS -->
+      <script src="{{ asset('admin-assets/assets/js/apexadmin.min.js') }}"></script>
 
-      <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+      <!-- apexadmin DEMO methods, don't include it in your project! -->
       <script src="{{ asset('admin-assets/assets/js/setting-demo.js') }}"></script>
       <script src="{{ asset('admin-assets/assets/js/demo.js') }}"></script>
+
+      <!-- Select2 Initialization for Tags Multi-Select -->
+      <script src="{{ asset('admin-assets/assets/js/select2.min.js>') }}"></script>
+      </script>
+
+
       <script>
           $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
               type: "line",
@@ -142,7 +148,100 @@
                   $("#addRowModal").modal("hide");
               });
           });
+
+
+
+
+          document.addEventListener('DOMContentLoaded', function() {
+              console.log('Document Ready');
+
+              const categorySelect = document.getElementById('category');
+              const subcategorySelect = document.getElementById('subcategory');
+
+              categorySelect.addEventListener('change', function() {
+                  console.log('Category Changed');
+                  const categoryId = this.value;
+
+                  if (categoryId) {
+                      fetch('/api/cat/' + categoryId)
+                          .then(response => {
+                              if (!response.ok) {
+                                  throw new Error('Network response was not ok: ' + response.statusText);
+                              }
+                              return response.json();
+                          })
+                          .then(data => {
+                              // Clear existing options
+                              subcategorySelect.innerHTML = '';
+                              // Add default option
+                              subcategorySelect.appendChild(new Option('Select Sub Category', ''));
+
+                              // Populate subcategory options
+                              data.forEach(item => {
+                                  const option = new Option(item.name, item.id);
+                                  subcategorySelect.appendChild(option);
+                              });
+                          })
+                          .catch(error => {
+                              console.error('Fetch error:', error);
+                          });
+                  } else {
+                      // Clear subcategory if no category is selected
+                      subcategorySelect.innerHTML = '';
+                      subcategorySelect.appendChild(new Option('Select Sub Category', ''));
+                  }
+              });
+          });
+
+          function previewImage(event, previewId) {
+              const imagePreview = document.getElementById(previewId);
+              const file = event.target.files[0];
+
+              if (file) {
+                  const reader = new FileReader();
+                  reader.onload = function(e) {
+                      imagePreview.src = e.target.result;
+                      imagePreview.style.display = 'block';
+                  };
+                  reader.readAsDataURL(file);
+              } else {
+                  imagePreview.style.display = 'none';
+                  imagePreview.src = '';
+              }
+          }
+
+
+          $(document).ready(function() {
+              $('.js-example-basic-single').select2();
+          });
+
+
+
+
+
+          document.getElementById('category').addEventListener('change', function() {
+              var categoryId = this.value;
+              var subcategorySelect = document.getElementById('subcategory');
+
+              // Clear current subcategory options
+              subcategorySelect.innerHTML = '<option value="">Select Sub Category</option>';
+
+              if (categoryId) {
+                  fetch('/api/cat/' + categoryId)
+                      .then(response => response.json())
+                      .then(data => {
+                          data.subcategories.forEach(subcategory => {
+                              var option = document.createElement('option');
+                              option.value = subcategory.id;
+                              option.textContent = subcategory.name;
+                              subcategorySelect.appendChild(option);
+                          });
+                      })
+                      .catch(error => console.error('Error:', error));
+              }
+          });
       </script>
+
       </body>
 
       </html>

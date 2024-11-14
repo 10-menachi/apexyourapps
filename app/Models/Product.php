@@ -1,7 +1,5 @@
 <?php
 
-// app/Models/Product.php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -16,65 +14,67 @@ class Product extends Model
         'subcategory_id',
         'name',
         'description',
-        'price',
-        'model',
-        'color',
         'warranty',
+        'qr_code',
+        'sku',
         'payment_and_credit',
-        'image',
+        'main_avatar',
+        'avatar_2',
+        'avatar_3',
+        'avatar_4',
+        'avatar_5',
+        'avatar_6',
+        'avatar_7',
+        'tag_id',
         'featured',
     ];
 
-    /**
-     * Define the relationship with the subcategory.
-     * Assuming a Product belongs to a single SubCategory.
-     */
+    // Relationship with SubCategory
     public function subcategory()
     {
         return $this->belongsTo(SubCategory::class);
     }
 
-    /**
-     * Define the relationship with product details.
-     * A product has many details that fall into different specification categories.
-     */
+    // Relationship with ProductDetail
     public function details()
     {
         return $this->hasMany(ProductDetail::class);
     }
 
-    /**
-     * Define the relationship with reviews.
-     * A product can have many reviews from customers.
-     */
+    // Relationship with ProductReview
     public function reviews()
     {
-        return $this->hasMany(Review::class);
+        return $this->hasMany(ProductReview::class);
     }
 
-    /**
-     * Get featured products only.
-     * A scope method to allow easy retrieval of featured products.
-     */
+    // Many-to-many relationship with Tag
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'product_tag', 'product_id', 'tag_id');
+    }
+
+    // Scope to get featured products
     public function scopeFeatured($query)
     {
         return $query->where('featured', true);
     }
 
-    /**
-     * Accessor to get the formatted price with currency symbol.
-     */
+    // Accessor for formatted price
     public function getFormattedPriceAttribute()
     {
-        return '$' . number_format($this->price, 2);
+        return 'Kes' . number_format($this->price, 2);
     }
 
-    /**
-     * Accessor to return the product's image URL.
-     * Assuming images are stored in the 'storage/app/public/images/' directory.
-     */
+
+    // product varaints that the Colors and models
+    public function variants()
+    {
+        return $this->hasMany(ProductVariant::class);
+    }
+
+    // Accessor to get the image URL
     public function getImageUrlAttribute()
     {
-        return asset('storage/images/' . $this->image);
+        return asset('uploads/product_avatars' . $this->image);
     }
 }
