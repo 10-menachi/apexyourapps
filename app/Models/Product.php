@@ -50,7 +50,7 @@ class Product extends Model
     // Many-to-many relationship with Tag
     public function tags()
     {
-        return $this->belongsToMany(Tag::class, 'product_tag', 'product_id', 'tag_id');
+        return $this->belongsToMany(ApexTag::class, 'product_tag', 'product_id', 'tag_id');
     }
 
     // Scope to get featured products

@@ -33,8 +33,8 @@ class ProductController extends Controller
         $products = Product::all();
         return view('products.index', compact('products'));
     }
+ 
 
-    // Display the specified product.
     public function show($id)
     {
         $product = Product::findOrFail($id);
@@ -228,7 +228,7 @@ class ProductController extends Controller
     public function adminShow($id)
     {
         $product = Product::findOrFail($id);
-        return view('admin.products.show', compact('product'));
+        return view('products.admin.show', compact('product'));
     }
 
     // Show the form for editing the specified product.

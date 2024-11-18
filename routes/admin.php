@@ -59,7 +59,7 @@ Route::middleware(['auth', 'verified', CheckAdmin::class])->group(function () {
     Route::post('admin/categories', [CategoryController::class, 'store'])->name('admin.categories.store');
 
     // Display the specified category.
-    Route::get('admin/categories/{category}', [CategoryController::class, 'adminShow'])->name('admin.categories.show');
+    Route::get('admin/categories/{category}', [CategoryController::class, 'adminCategoryShow'])->name('admin.categories.show');
 
     // Show the form for editing the specified category.
     Route::get('admin/categories/{category}/edit', [CategoryController::class, 'edit'])->name('admin.categories.edit');
@@ -85,7 +85,7 @@ Route::middleware(['auth', 'verified', CheckAdmin::class])->group(function () {
     Route::post('admin/subcategories', [SubCategoryController::class, 'store'])->name('admin.subcategories.store');
 
     // Display the specified subcategory.
-    Route::get('admin/subcategories/{subcategory}', [SubCategoryController::class, 'adminShow'])->name('admin.subcategories.show');
+    Route::get('admin/subcategories/{subcategory}', [SubCategoryController::class, 'adminSubCategoryShow'])->name('admin.subcategories.show');
 
     // Show the form for editing the specified subcategory.
     Route::get('admin/subcategories/{subcategory}/edit', [SubCategoryController::class, 'edit'])->name('admin.subcategories.edit');
@@ -110,7 +110,7 @@ Route::middleware(['auth', 'verified', CheckAdmin::class])->group(function () {
     Route::post('admin/customer-services', [CustomerServiceController::class, 'store'])->name('admin.customer-services.store');
 
     // Display the specified customer service for the admin.
-    Route::get('admin/customer-services/{customerService}', [CustomerServiceController::class, 'adminShow'])->name('admin.customer-services.show');
+    Route::get('admin/customer-services/{customerService}', [CustomerServiceController::class, 'adminCustomerServiceShow'])->name('admin.customer-services.show');
 
     // Show the form for editing the specified customer service.
     Route::get('admin/customer-services/{customerService}/edit', [CustomerServiceController::class, 'edit'])->name('admin.customer-services.edit');

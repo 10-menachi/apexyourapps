@@ -39,11 +39,15 @@
                                                 <td>KES {{ $product->price }}</td>
                                                 <td>{!! $product->description !!}</td>
                                                 <td>
-                                                    <div class="form-button-action">
+                                                    <div class="form-button-action d-flex">
                                                     
                                                         <a href="{{ route('admin.product.edit', $product->id) }}"
                                                             class="#">
                                                             <i class="fa fa-edit"></i>
+                                                        </a>
+                                                         <a href="{{ route('admin.product.show', $product->id) }}"
+                                                            class="#">
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
 
                                                         <!-- Delete Button -->
